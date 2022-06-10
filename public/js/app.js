@@ -13112,17 +13112,17 @@ function genPropsAccessExp(name) {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/App.vue?vue&type=script&lang=js":
-/*!*********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/App.vue?vue&type=script&lang=js ***!
-  \*********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/App.vue?vue&type=script&setup=true&lang=js":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/App.vue?vue&type=script&setup=true&lang=js ***!
+  \********************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+var __default__ = {
   data: function data() {
     return {
       cum: false,
@@ -13161,7 +13161,22 @@ __webpack_require__.r(__webpack_exports__);
       this.question = true;
     }
   }
-});
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/Object.assign(__default__, {
+  name: 'App',
+  setup: function setup(__props, _ref) {
+    var expose = _ref.expose;
+    expose();
+    /*import Story from 'Story'*/
+
+    var __returned__ = {};
+    Object.defineProperty(__returned__, '__isScriptSetup', {
+      enumerable: false,
+      value: true
+    });
+    return __returned__;
+  }
+}));
 
 /***/ }),
 
@@ -13211,7 +13226,7 @@ var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 
 var _hoisted_7 = {
   key: 3,
-  "class": "question 1"
+  "class": "question1"
 };
 
 var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", null, null, -1
@@ -13230,7 +13245,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[1] || (_cache[1] = function ($event) {
       return $options.funnistuff();
     })
-  }, "Language"), _hoisted_2])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.settingsmenu != true && $data.gamestarted != true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, "Sound"), _hoisted_2])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.settingsmenu != true && $data.gamestarted != true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     name: "avaleht",
     "class": "button1",
     onClick: _cache[2] || (_cache[2] = function ($event) {
@@ -13320,7 +13335,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_css_base_css__WEBPACK_IMPORTED_MODULE_1__["default"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(_static_settings_png__WEBPACK_IMPORTED_MODULE_3__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#app {\r\n  margin: 0;\r\n  padding: 2rem;\r\n  font-weight: normal;\n}\nhtml {\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  background-size: cover;\r\n  overflow: hidden;\n}\n.button1 {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 50%;\r\n  position: absolute;\n}\n.kasutaja {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:40%;\r\n  left: 40%;\r\n  position: absolute;\n}\n.enterkasutaja {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 76);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:40%;\r\n  left: 52%;\r\n  position: absolute;\n}\n.settings{\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-position: 0% 0%;\r\n  background-repeat: no-repeat;\r\n  background-size: contain;\r\n  background-color: transparent;\r\n  border-color: rgba(0, 0, 0, 0);\r\n  display: flex;\r\n  width: 3vw;\r\n  height: 3vw;\r\n  cursor: pointer;\r\n  top: 0%;\r\n  left: 0%;\r\n  position: absolute;\n}\n.buttonfunnisetting {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 76);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:10%;\r\n  left: 5%;\r\n  position: absolute;\n}\n.slider{\r\n  position: absolute;\r\n  cursor: pointer;\r\n  top: 12%;\r\n  left: 25%;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: #ccc;\r\n  transition: .4s;\n}\n.localisation{\r\n  position: absolute;\r\n  top: 72%;\r\n  left: 50%;\n}\n.edasi{\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 10vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  position: absolute;\n}\n.button1game {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 50%;\r\n  position: absolute;\n}\n.button2game {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 60%;\r\n  position: absolute;\n}\r\n\r\n/* .switch vaja lisada, praegu lihtsalt checkbox, send help!!!!! */\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#app {\r\n  margin: 0;\r\n  padding: 2rem;\r\n  font-weight: normal;\n}\nhtml {\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  background-size: cover;\r\n  overflow: hidden;\n}\n.button1 {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 50%;\r\n  position: absolute;\n}\n.kasutaja {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:40%;\r\n  left: 40%;\r\n  position: absolute;\n}\n.enterkasutaja {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 76);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:40%;\r\n  left: 52%;\r\n  position: absolute;\n}\n.settings{\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-position: 0% 0%;\r\n  background-repeat: no-repeat;\r\n  background-size: contain;\r\n  background-color: transparent;\r\n  border-color: rgba(0, 0, 0, 0);\r\n  display: flex;\r\n  width: 3vw;\r\n  height: 3vw;\r\n  cursor: pointer;\r\n  top: 0%;\r\n  left: 0%;\r\n  position: absolute;\n}\n.buttonfunnisetting {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 76);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:10%;\r\n  left: 5%;\r\n  position: absolute;\n}\n.slider{\r\n  position: absolute;\r\n  cursor: pointer;\r\n  top: 12%;\r\n  left: 25%;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: #ccc;\r\n  transition: .4s;\n}\n.localisation{\r\n  position: absolute;\r\n  top: 72%;\r\n  left: 50%;\n}\n.edasi{\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 10vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  position: absolute;\n}\n.button1game {\r\n  display: flex;\r\n  background-color: #2bdd58;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(15, 214, 148);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 30%;\r\n  position: absolute;\n}\n.button2game {\r\n  display: flex;\r\n  background-color: #fa0cee;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 60%;\r\n  position: absolute;\n}\r\n\r\n/* .switch vaja lisada, praegu lihtsalt checkbox, send help!!!!! */\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -13833,7 +13848,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _App_vue_vue_type_template_id_332fccf4__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=332fccf4 */ "./resources/js/components/App.vue?vue&type=template&id=332fccf4");
-/* harmony import */ var _App_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue?vue&type=script&lang=js */ "./resources/js/components/App.vue?vue&type=script&lang=js");
+/* harmony import */ var _App_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue?vue&type=script&setup=true&lang=js */ "./resources/js/components/App.vue?vue&type=script&setup=true&lang=js");
 /* harmony import */ var _App_vue_vue_type_style_index_0_id_332fccf4_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.vue?vue&type=style&index=0&id=332fccf4&lang=css */ "./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&lang=css");
 /* harmony import */ var E_Dark_Patterns_2_0_darkpatterns_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
@@ -13843,7 +13858,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,E_Dark_Patterns_2_0_darkpatterns_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_App_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_App_vue_vue_type_template_id_332fccf4__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/App.vue"]])
+const __exports__ = /*#__PURE__*/(0,E_Dark_Patterns_2_0_darkpatterns_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_App_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_App_vue_vue_type_template_id_332fccf4__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/App.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -13852,17 +13867,17 @@ if (false) {}
 
 /***/ }),
 
-/***/ "./resources/js/components/App.vue?vue&type=script&lang=js":
-/*!*****************************************************************!*\
-  !*** ./resources/js/components/App.vue?vue&type=script&lang=js ***!
-  \*****************************************************************/
+/***/ "./resources/js/components/App.vue?vue&type=script&setup=true&lang=js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/App.vue?vue&type=script&setup=true&lang=js ***!
+  \****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_App_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_App_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_App_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./App.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/App.vue?vue&type=script&lang=js");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_App_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./App.vue?vue&type=script&setup=true&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/App.vue?vue&type=script&setup=true&lang=js");
  
 
 /***/ }),

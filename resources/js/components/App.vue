@@ -1,5 +1,5 @@
 <script setup>
-
+/*import Story from 'Story'*/
 </script>
 
 
@@ -49,7 +49,7 @@ export default{
 <template>
 <button class="settings" @click="settingsfunc"></button>
 <div class="settingsmenu" v-if="settingsmenu">
-  <button name="settingsfunni" class="buttonfunnisetting" @click="funnistuff()">Language</button>
+  <button name="settingsfunni" class="buttonfunnisetting" @click="funnistuff()">Sound</button>
   <div class="switch">
   <input class="slider" type="checkbox" name="Sound" id="Sound">
   </div>
@@ -68,11 +68,10 @@ export default{
   </div>
 </div>
 
-<div class="question 1" v-if="gamecounter == 2 && question == true">
+<div class="question1" v-if="gamecounter == 2 && question == true">
   <button name="esimene valik" class="button1game" @click="funnistuff()">{{count}}</button>
   <button name="teine valik" class="button2game" @click="funnistuff()">{{count}}</button>
 </div>
-
   <main>
     
   </main>
@@ -223,10 +222,10 @@ html {
 
 .button1game {
   display: flex;
-  background-color: #a14337;
+  background-color: #2bdd58;
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 0, 0);
+  color: rgb(15, 214, 148);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -236,13 +235,13 @@ html {
   font-size: 1.5vw;
   cursor: pointer;
   top:50%;
-  left: 50%;
+  left: 30%;
   position: absolute;
 }
 
 .button2game {
   display: flex;
-  background-color: #a14337;
+  background-color: #fa0cee;
   border-color: yellow;
   border-radius: 9px;
   color: rgb(0, 0, 0);

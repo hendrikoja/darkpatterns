@@ -1,0 +1,1 @@
+/* Siia kirjutada kõik Story'ga seotud osad, ehk siis osad mis tulevad peale küsimusi */
