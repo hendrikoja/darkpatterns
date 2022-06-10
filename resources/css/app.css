@@ -179,6 +179,7 @@ html {
   left: 18%;
   position: absolute;
   z-index: -1;
+  border-radius: 5000px;
 }
 .storybubbles {
   display: block;
@@ -186,6 +187,7 @@ html {
   left: 23%;
   position: absolute;
   z-index: -1;
+  border-radius: 5000px;
 }
 .storybosspng{
   top: 18.5%;
