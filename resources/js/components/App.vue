@@ -59,6 +59,8 @@ export default{
   <button name="avaleht" class="button1" @click="funnistuff()">{{count}}</button>
   <input class="kasutaja" v-model="kasutajanimi" placeholder="Kasutajanimi" maxlength="14">
   <button class="enterkasutaja" @click="kasutajabaasi()">Alusta mängu</button>
+  <img src="../static/textbubble.png" class="mainmenutextbubble">
+  <img src="../static/interactivescreensmall.png" class="mainmenuusernameplay">
 </div>
 
 <div class="story" v-if="story == true">
@@ -72,6 +74,7 @@ export default{
   <button name="esimene valik" class="button1game" @click="funnistuff()">{{count}}</button>
   <button name="teine valik" class="button2game" @click="funnistuff()">{{count}}</button>
 </div>
+  
 
   <main>
     
@@ -108,8 +111,8 @@ html {
   height: 5vh;
   font-size: 1.5vw;
   cursor: pointer;
-  top:50%;
-  left: 50%;
+  top:95%;
+  left: 90%;
   position: absolute;
 }
 
@@ -127,8 +130,8 @@ html {
   height: 5vh;
   font-size: 1.5vw;
   cursor: pointer;
-  top:40%;
-  left: 40%;
+  top:63%;
+  left: 47%;
   position: absolute;
 }
 
@@ -146,13 +149,13 @@ html {
   height: 4vh;
   font-size: 1.5vw;
   cursor: pointer;
-  top:40%;
-  left: 52%;
+  top:72%;
+  left: 47.25%;
   position: absolute;
 }
 
 .settings{
-  background-image: url("../../static/settings.png");
+  background-image: url("../static/settings.png");
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -257,6 +260,25 @@ html {
   top:50%;
   left: 60%;
   position: absolute;
+}
+
+.mainmenutextbubble {
+  display: flex;
+  width: 70vw;
+  height: 40vh;
+  top: 15%;
+  left: 18%;
+  position: absolute;
+  z-index: -1;
+}
+.mainmenuusernameplay{
+  display: flex;
+  width: 15vw;
+  height: 20vh;
+  left: 45%;
+  top: 60%;
+  position: absolute;
+  z-index: -1;
 }
 
 /* .switch vaja lisada, praegu lihtsalt checkbox, send help!!!!! */
