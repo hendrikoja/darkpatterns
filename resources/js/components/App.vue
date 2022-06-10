@@ -69,6 +69,9 @@ export default{
   <button class="edasi" @click="next()">Järgmine küsimus or smth</button>
   </div>
   <img src="../../static/textbubble.png" class="storymenutextbubble">
+  <img src="../../static/textbubble.png" class="storymenutextbubble2">
+  <img src="../../static/textbubble.png" class="storymenutextbubble3">
+  <img src="../../static/bottomlong.png" class="storymenucontinue">
 </div>
 
 <div class="question 1" v-if="gamecounter == 2 && question == true">
@@ -278,6 +281,33 @@ html {
   height: 20vh;
   top: 15%;
   left: 18%;
+  position: absolute;
+  z-index: -1;
+}
+.storymenutextbubble2 {
+  display: flex;
+  width: 70vw;
+  height: 20vh;
+  top: 35%;
+  left: 18%;
+  position: absolute;
+  z-index: -1;
+}
+.storymenutextbubble3 {
+  display: flex;
+  width: 70vw;
+  height: 20vh;
+  top: 55%;
+  left: 18%;
+  position: absolute;
+  z-index: -1;
+}
+.storymenucontinue {
+  display: flex;
+  width: 30vw;
+  height: 10vh;
+  top: 75%;
+  left: 58%;
   position: absolute;
   z-index: -1;
 }
