@@ -57,7 +57,7 @@ export default{
 
 <template>
 
-<Story v-if="gamecounter == 1" @lolevent="nextstory()"/>
+<Story v-if="gamecounter == 1" @nextstory="nextstory()"/>
 
 <button class="settings" @click="settingsfunc"></button>
 <div class="settingsmenu" v-if="settingsmenu">

@@ -22,7 +22,7 @@ export default{
 <div class="story">
   <div class="localisation">
   <p>Nüüd see on gaming, POG</p>
-  <button class="edasi" @click="nextstory()">Järgmine küsimus or smth</button>
+  <button class="edasi" @click="submit()">Järgmine küsimus or smth</button>
   </div>
 </div> 
 </template>
