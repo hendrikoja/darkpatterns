@@ -57,31 +57,28 @@ export default{
 
 <div class="Openingscreen" v-if="settingsmenu != true && gamestarted != true">
   <button name="avaleht" class="button1" @click="funnistuff()">{{count}}</button>
-  <input class="kasutaja" v-model="kasutajanimi" placeholder="Kasutajanimi" maxlength="14">
-  <button class="enterkasutaja" @click="kasutajabaasi()">Alusta mängu</button>
+  <input class="kasutaja" v-model="kasutajanimi" placeholder="Username" maxlength="14">
+  <button class="enterkasutaja" @click="kasutajabaasi()">Play</button>
   <img src="../../static/textbubble.png" class="mainmenutextbubble">
   <img src="../../static/interactivescreensmall.png" class="mainmenuusernameplay">
 </div>
 
 <div class="story" v-if="story == true">
   <div class="localisation">
-  <p>Nüüd see on gaming, POG</p>
-  <button class="edasi" @click="next()">Järgmine küsimus or smth</button>
+  <button class="edasi" @click="next()">To Work</button>
   </div>
+  <div class="storybubbles">
   <img src="../../static/textbubble.png" class="storymenutextbubble">
-  <img src="../../static/textbubble.png" class="storymenutextbubble2">
-  <img src="../../static/textbubble.png" class="storymenutextbubble3">
-  <img src="../../static/bottomlong.png" class="storymenucontinue">
+  <img src="../../static/textbubble.png" class="storymenutextbubble">
+  <img src="../../static/textbubble.png" class="storymenutextbubble">
+  </div>
 </div>
 
 <div class="question 1" v-if="gamecounter == 2 && question == true">
   <button name="esimene valik" class="button1game" @click="funnistuff()">{{count}}</button>
   <button name="teine valik" class="button2game" @click="funnistuff()">{{count}}</button>
 </div>
-  
-
   <main>
-    
   </main>
 </template>
 
@@ -275,41 +272,16 @@ html {
   position: absolute;
   z-index: -1;
 }
+.storybubbles {
+  display: block;
+  top: 18%;
+  left: 23%;
+  position: absolute;
+  z-index: -1;
+}
 .storymenutextbubble {
-  display: flex;
-  width: 70vw;
-  height: 20vh;
-  top: 15%;
-  left: 18%;
-  position: absolute;
-  z-index: -1;
-}
-.storymenutextbubble2 {
-  display: flex;
-  width: 70vw;
-  height: 20vh;
-  top: 35%;
-  left: 18%;
-  position: absolute;
-  z-index: -1;
-}
-.storymenutextbubble3 {
-  display: flex;
-  width: 70vw;
-  height: 20vh;
-  top: 55%;
-  left: 18%;
-  position: absolute;
-  z-index: -1;
-}
-.storymenucontinue {
-  display: flex;
-  width: 30vw;
-  height: 10vh;
-  top: 75%;
-  left: 58%;
-  position: absolute;
-  z-index: -1;
+  width: 65vw;
+  height: 17vh;
 }
 .mainmenuusernameplay{
   display: flex;
