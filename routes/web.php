@@ -22,12 +22,13 @@ Route::get('/addtest', function () {
     return view('useradd');
 });
 
+//Tagasta kõik küsimused vastustega JSON vormis
+Route::get('/users', [QuestionController::class, "index"]);
+
+//Edetabeli tagastamine JSON vormis
+Route::get('/leaderboard', [UserController::class, "getLeaderboard"]);
+
+//Kasutajate lisamise route
 Route::post("/addtest/add", [UserController::class, "store"]);
 
-/*
-Route::get('/users', function () {
-    return view('usertest');
-});
-*/
 
-Route::get('/users', [QuestionController::class, "index"]);

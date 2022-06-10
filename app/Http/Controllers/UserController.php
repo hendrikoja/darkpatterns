@@ -19,4 +19,13 @@ class UserController extends Controller
 
         return view("useradd");
     }
+
+    public function getLeaderboard(Request $request)
+    {
+        $users = User::orderBy("points", "desc")
+        -> take(10)
+        -> get();
+
+        return response() -> json($users);
+    }
 }
