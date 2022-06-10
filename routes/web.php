@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionController;
-
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +17,12 @@ use App\Http\Controllers\QuestionController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/addtest', function () {
+    return view('useradd');
+});
+
+Route::post("/addtest/add", [UserController::class, "store"]);
 
 /*
 Route::get('/users', function () {
