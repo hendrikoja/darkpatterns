@@ -202,15 +202,9 @@ html {
   transition: .4s;
 }
 
-.localisation{
-  position: absolute;
-  top: 72%;
-  left: 50%;
-}
-
 .edasi{
   display: flex;
-  background-color: #a14337;
+  background-color: #ffffff;
   border-color: yellow;
   border-radius: 9px;
   color: rgb(0, 0, 0);
@@ -218,11 +212,13 @@ html {
   text-decoration: none;
   display: inline-block;
   padding: 0.2rem;
-  width: 10vw;
-  height: 10vh;
+  width: 20vw;
+  height: 6vh;
   font-size: 1.5vw;
   cursor: pointer;
   position: absolute;
+  top: 72%;
+  left: 67.5%;
 }
 
 .button1game {
