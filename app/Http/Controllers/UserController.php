@@ -13,15 +13,10 @@ class UserController extends Controller
         $user->username = $request->username;
         $user->start = date("Y-m-d H:i:s", strtotime($request->start));
         $user->stop = date("Y-m-d H:i:s", strtotime($request->stop));
+        $user->points = $request->points;
 
         $saved = $user->save();
 
-        if(!$saved) {
-            $resultmsg = "Didn't save";
-        } else {
-            $resultmsg = "Saved";
-        }
-
-        return view("useradd", ["result" => $resultmsg]);
+        return view("useradd");
     }
 }

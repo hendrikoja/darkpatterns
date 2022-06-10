@@ -10,6 +10,9 @@
             <label for="username">Username:</label>
             <input type="text" id="username" name="username">
 
+            <label for="points">Points:</label>
+            <input type="number" id="points" name="points">
+
             <label for="start">Start time:</label>
             <input type="datetime-local" id="start" name="start" step="1">
 
