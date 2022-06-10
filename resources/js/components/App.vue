@@ -79,8 +79,9 @@ export default{
 </div>
 
 <div class="question 1" v-if="gamecounter == 2 && question == true">
-  <button name="esimene valik" class="button1game" @click="funnistuff()">{{count}}</button>
-  <button name="teine valik" class="button2game" @click="funnistuff()">{{count}}</button>
+  <img src="../../static/interactivescreenbig.png" class="bigscreen">
+  <img src="../../static/interactivescreenbig.png" class="smallscreen">
+  <img src="../../static/interactivescreenbig.png" class="smallscreen2">
 </div>
   <main>
   </main>

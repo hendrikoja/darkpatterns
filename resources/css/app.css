@@ -218,3 +218,25 @@ html {
   position: absolute;
   z-index: -1;
 }
+.smallscreen {
+  position: absolute;
+  width: 25vw;
+  height: 30vh;
+  top: 15%;
+  left: 70%;
+}
+.smallscreen2 {
+  position: absolute;
+  width: 25vw;
+  height: 30vh;
+  top: 55%;
+  left: 70%;
+}
+.bigscreen {
+  position:absolute;
+  width: 60vw;
+  height: 92.5vh;
+  top: 4%;
+  left: 3%;
+  border-radius: 100px;
+}
