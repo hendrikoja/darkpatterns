@@ -12,10 +12,10 @@ html {
 
 .button1 {
   display: flex;
-  background-color: #a14337;
+  background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 255, 85);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -31,10 +31,10 @@ html {
 
 .kasutaja {
   display: flex;
-  background-color: #a14337;
+  background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 255, 85);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -50,10 +50,10 @@ html {
 
 .enterkasutaja {
   display: flex;
-  background-color: #a14337;
+  background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 255, 76);
+  color: rgb(0, 255, 85);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -85,10 +85,10 @@ html {
 
 .buttonfunnisetting {
   display: flex;
-  background-color: #a14337;
+  background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 255, 76);
+  color: rgb(0, 255, 85);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -116,10 +116,10 @@ html {
 
 .edasi{
   display: flex;
-  background-color: #ffffff;
+  background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 255, 85);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -135,7 +135,7 @@ html {
 
 .button1game {
   display: flex;
-  background-color: #a14337;
+  background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
   color: rgb(0, 0, 0);
@@ -154,7 +154,7 @@ html {
 
 .button2game {
   display: flex;
-  background-color: #a14337;
+  background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
   color: rgb(0, 0, 0);
@@ -184,6 +184,22 @@ html {
   display: block;
   top: 18%;
   left: 23%;
+  position: absolute;
+  z-index: -1;
+}
+.storybosspng{
+  top: 18.5%;
+  left: 9.5%;
+  position: absolute;
+  z-index: -1;
+  width: 13vw;
+  height: 15vh;
+}
+.storybosspng2{
+  width: 13vw;
+  height: 15vh;
+  top: 54.35%;
+  left: 9.5%;
   position: absolute;
   z-index: -1;
 }

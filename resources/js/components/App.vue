@@ -68,9 +68,13 @@ export default{
   <button class="edasi" @click="next()">To Work</button>
   </div>
   <div class="storybubbles">
-  <img src="../../static/textbubble.png" class="storymenutextbubble">
-  <img src="../../static/textbubble.png" class="storymenutextbubble">
-  <img src="../../static/textbubble.png" class="storymenutextbubble">
+    <img src="../../static/textbubble.png" class="storymenutextbubble">
+    <img src="../../static/textbubble.png" class="storymenutextbubble">
+    <img src="../../static/textbubble.png" class="storymenutextbubble">
+  </div>
+  <div class="storybosspics">
+    <img src="../../static/boss2.png" class="storybosspng">
+    <img src="../../static/boss2.png" class="storybosspng2">
   </div>
 </div>
 
