@@ -68,6 +68,7 @@ export default{
   <p>Nüüd see on gaming, POG</p>
   <button class="edasi" @click="next()">Järgmine küsimus or smth</button>
   </div>
+  <img src="../../static/textbubble.png" class="storymenutextbubble">
 </div>
 
 <div class="question 1" v-if="gamecounter == 2 && question == true">
@@ -266,6 +267,15 @@ html {
   display: flex;
   width: 70vw;
   height: 40vh;
+  top: 15%;
+  left: 18%;
+  position: absolute;
+  z-index: -1;
+}
+.storymenutextbubble {
+  display: flex;
+  width: 70vw;
+  height: 20vh;
   top: 15%;
   left: 18%;
   position: absolute;
