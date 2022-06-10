@@ -54,11 +54,12 @@ export default{
 <template>
 <button class="settings" @click="settingsfunc"></button>
 <div class="settingsmenu" v-if="settingsmenu">
-  <button name="settingsfunni" class="buttonfunnisetting" @click="funnistuff()">Sound</button>
+  <button name="Sound" class="Soundbutton" @click="funnistuff()">Sound</button>
 
-  <div class="switch">
-  <input class="slider" type="checkbox" name="Sound" id="Sound">
-  </div>
+  <label class="switch">
+  <input type="checkbox" name="Sound" id="Sound">
+  <span class="slider"></span>
+  </label>
 </div>
 
 <div class="Openingscreen" v-if="settingsmenu != true && gamestarted != true">
