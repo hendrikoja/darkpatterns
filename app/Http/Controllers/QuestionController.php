@@ -11,6 +11,6 @@ class QuestionController extends Controller
     public function index()
     {
         $questions = Question::with("answers") -> get();
-        return view('usertest', ['questions' => json_encode($questions)]);
+        return response() -> json($questions);
     }
 }
