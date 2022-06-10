@@ -13132,7 +13132,8 @@ var __default__ = {
       story: false,
       gamestarted: false,
       gamecounter: 0,
-      question: false
+      question: false,
+      file: "../../assets/Testmusic.mp3"
     };
   },
   methods: {
@@ -13162,6 +13163,23 @@ var __default__ = {
       this.gamecounter++;
       this.story = true;
       this.question = false;
+    },
+    console: function (_console) {
+      function console() {
+        return _console.apply(this, arguments);
+      }
+
+      console.toString = function () {
+        return _console.toString();
+      };
+
+      return console;
+    }(function () {
+      console.log(this.file);
+    }),
+    sound: function sound() {
+      /*var audio = new Audio(require("../../assets/Testmusic.mp3"));*/
+      audio.play();
     }
   }
 };
@@ -13199,56 +13217,60 @@ var _hoisted_1 = {
   key: 0,
   "class": "settingsmenu"
 };
+var _hoisted_2 = {
+  "class": "music-player"
+};
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "class": "switch"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-  "class": "slider",
   type: "checkbox",
   name: "Sound",
   id: "Sound"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "slider"
 })], -1
 /* HOISTED */
 );
 
-var _hoisted_3 = {
+var _hoisted_4 = {
   key: 1,
   "class": "Openingscreen"
 };
-var _hoisted_4 = {
+var _hoisted_5 = {
   key: 2,
   "class": "story"
 };
-var _hoisted_5 = {
+var _hoisted_6 = {
   "class": "localisation"
 };
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Nüüd see on gaming, POG", -1
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Nüüd see on gaming, POG", -1
 /* HOISTED */
 );
 
-var _hoisted_7 = {
+var _hoisted_8 = {
   key: 3,
   "class": "question"
 };
-var _hoisted_8 = {
+var _hoisted_9 = {
   key: 4,
   "class": "story"
 };
-var _hoisted_9 = {
+var _hoisted_10 = {
   "class": "localisation"
 };
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Nüüd see on gaming, POG", -1
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Nüüd see on gaming, POG", -1
 /* HOISTED */
 );
 
-var _hoisted_11 = {
+var _hoisted_12 = {
   key: 5,
   "class": "question"
 };
 
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", null, null, -1
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", null, null, -1
 /* HOISTED */
 );
 
@@ -13258,13 +13280,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[0] || (_cache[0] = function () {
       return $options.settingsfunc && $options.settingsfunc.apply($options, arguments);
     })
-  }), $data.settingsmenu ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    name: "settingsfunni",
-    "class": "buttonfunnisetting",
+  }), $data.settingsmenu ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    name: "Sound",
+    "class": "Soundbutton",
     onClick: _cache[1] || (_cache[1] = function ($event) {
-      return $options.funnistuff();
+      return $options.sound();
     })
-  }, "Sound"), _hoisted_2])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.settingsmenu != true && $data.gamestarted != true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, "Sound")]), _hoisted_3])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.settingsmenu != true && $data.gamestarted != true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     name: "avaleht",
     "class": "button1",
     onClick: _cache[2] || (_cache[2] = function ($event) {
@@ -13286,12 +13308,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[4] || (_cache[4] = function ($event) {
       return $options.kasutajabaasi();
     })
-  }, "Alusta mängu")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 1 && $data.story == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, "Alusta mängu")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 1 && $data.story == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "edasi",
     onClick: _cache[5] || (_cache[5] = function ($event) {
       return $options.nextstory();
     })
-  }, "Järgmine küsimus or smth")])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 2 && $data.question == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, "Järgmine küsimus or smth")])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 2 && $data.question == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     name: "esimene valik",
     "class": "button1game",
     onClick: _cache[6] || (_cache[6] = function ($event) {
@@ -13313,12 +13335,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[8] || (_cache[8] = function ($event) {
       return $options.nextquestion();
     })
-  }, "Advance story or smth")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 3 && $data.story == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, "Advance story or smth")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 3 && $data.story == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "edasi",
     onClick: _cache[9] || (_cache[9] = function ($event) {
       return $options.nextstory();
     })
-  }, "Järgmine küsimus or smth")])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 4 && $data.question == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, "Järgmine küsimus or smth")])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 4 && $data.question == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     name: "esimene valik",
     "class": "button1game",
     onClick: _cache[10] || (_cache[10] = function ($event) {
@@ -13340,7 +13362,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[12] || (_cache[12] = function ($event) {
       return $options.nextquestion();
     })
-  }, "Advance story or smth")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_12], 64
+  }, "Advance story or smth")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_13], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -13413,7 +13435,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_static_settings_png__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#app {\r\n  margin: 0;\r\n  padding: 2rem;\r\n  font-weight: normal;\r\n}\r\n\r\nhtml {\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  background-size: cover;\r\n  overflow: hidden;\r\n}\r\n\r\n.button1 {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 50%;\r\n  position: absolute;\r\n}\r\n\r\n.kasutaja {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:40%;\r\n  left: 40%;\r\n  position: absolute;\r\n}\r\n\r\n.enterkasutaja {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 76);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:40%;\r\n  left: 52%;\r\n  position: absolute;\r\n}\r\n\r\n.settings{\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-position: 0% 0%;\r\n  background-repeat: no-repeat;\r\n  background-size: contain;\r\n  background-color: transparent;\r\n  border-color: rgba(0, 0, 0, 0);\r\n  display: flex;\r\n  width: 3vw;\r\n  height: 3vw;\r\n  cursor: pointer;\r\n  top: 0%;\r\n  left: 0%;\r\n  position: absolute;\r\n}\r\n\r\n.buttonfunnisetting {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 76);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:10%;\r\n  left: 5%;\r\n  position: absolute;\r\n}\r\n\r\n.slider{\r\n  position: absolute;\r\n  cursor: pointer;\r\n  top: 12%;\r\n  left: 25%;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: #ccc;\r\n  -webkit-transition: .4s;\r\n  transition: .4s;\r\n}\r\n\r\n.localisation{\r\n  position: absolute;\r\n  top: 72%;\r\n  left: 50%;\r\n}\r\n\r\n.edasi{\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 10vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  position: absolute;\r\n}\r\n\r\n.button1game {\r\n  display: flex;\r\n  background-color: #2bdd58;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(15, 214, 148);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 30%;\r\n  position: absolute;\r\n}\r\n\r\n.button2game {\r\n  display: flex;\r\n  background-color: #fa0cee;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 60%;\r\n  position: absolute;\r\n}\r\n\r\n.answerbutton {\r\n    display: flex;\r\n    background-color: #a14337;\r\n    border-color: yellow;\r\n    border-radius: 9px;\r\n    color: rgb(0, 0, 0);\r\n    text-align: center;\r\n    text-decoration: none;\r\n    display: inline-block;\r\n    padding: 0.2rem;\r\n    width: 10vw;\r\n    height: 5vh;\r\n    font-size: 1.5vw;\r\n    cursor: pointer;\r\n    top:70%;\r\n    left: 50%;\r\n    position: absolute;\r\n}\r\n/* .switch vaja lisada, praegu lihtsalt checkbox, send help!!!!! */\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#app {\r\n  margin: 0;\r\n  padding: 2rem;\r\n  font-weight: normal;\r\n}\r\n\r\nhtml {\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  background-size: cover;\r\n  overflow: hidden;\r\n}\r\n\r\n.button1 {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 50%;\r\n  position: absolute;\r\n}\r\n\r\n.kasutaja {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:40%;\r\n  left: 40%;\r\n  position: absolute;\r\n}\r\n\r\n.enterkasutaja {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 76);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:40%;\r\n  left: 52%;\r\n  position: absolute;\r\n}\r\n\r\n.settings{\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-position: 0% 0%;\r\n  background-repeat: no-repeat;\r\n  background-size: contain;\r\n  background-color: transparent;\r\n  border-color: rgba(0, 0, 0, 0);\r\n  display: flex;\r\n  width: 3vw;\r\n  height: 3vw;\r\n  cursor: pointer;\r\n  top: 0%;\r\n  left: 0%;\r\n  position: absolute;\r\n}\r\n\r\n.Soundbutton {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 76);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:10%;\r\n  left: 5%;\r\n  position: absolute;\r\n}\r\n\r\n.switch {\r\n    position: absolute;\r\n    display: inline-block;\r\n    width: 80px;\r\n    height: 34px;\r\n    left: 18%;\r\n    top: 10%;\r\n}\r\n\r\n.switch input {\r\n    opacity: 0;\r\n    width: 0;\r\n    height: 0;\r\n}\r\n\r\n\r\n.slider{\r\n  position: absolute;\r\n  cursor: pointer;\r\n  top: 2%;\r\n  left: 25%;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: #ccc;\r\n  -webkit-transition: .4s;\r\n  transition: .4s;\r\n}\r\n\r\n.slider:before {\r\n    position: absolute;\r\n    content: \"\";\r\n    height: 26px;\r\n    width: 26px;\r\n    left: 4px;\r\n    bottom: 4px;\r\n    background-color: white;\r\n    -webkit-transition: .4s;\r\n    transition: .4s;\r\n}\r\n\r\ninput:checked + .slider {\r\n    background-color: #2196F3;\r\n  }\r\n  \r\n  input:focus + .slider {\r\n    box-shadow: 0 0 1px #2196F3;\r\n  }\r\n  \r\n  input:checked + .slider:before {\r\n    -webkit-transform: translateX(26px);\r\n    -ms-transform: translateX(26px);\r\n    transform: translateX(26px);\r\n  }\r\n  \r\n  /* Rounded sliders */\r\n  .slider.round {\r\n    border-radius: 34px;\r\n  }\r\n  \r\n  .slider.round:before {\r\n    border-radius: 50%;\r\n  }\r\n\r\n.localisation{\r\n  position: absolute;\r\n  top: 72%;\r\n  left: 50%;\r\n}\r\n\r\n.edasi{\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 10vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  position: absolute;\r\n}\r\n\r\n.button1game {\r\n  display: flex;\r\n  background-color: #2bdd58;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(15, 214, 148);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 30%;\r\n  position: absolute;\r\n}\r\n\r\n.button2game {\r\n  display: flex;\r\n  background-color: #fa0cee;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 60%;\r\n  position: absolute;\r\n}\r\n\r\n.answerbutton {\r\n    display: flex;\r\n    background-color: #a14337;\r\n    border-color: yellow;\r\n    border-radius: 9px;\r\n    color: rgb(0, 0, 0);\r\n    text-align: center;\r\n    text-decoration: none;\r\n    display: inline-block;\r\n    padding: 0.2rem;\r\n    width: 10vw;\r\n    height: 5vh;\r\n    font-size: 1.5vw;\r\n    cursor: pointer;\r\n    top:70%;\r\n    left: 50%;\r\n    position: absolute;\r\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

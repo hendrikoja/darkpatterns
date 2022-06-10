@@ -15,6 +15,7 @@ export default{
       gamestarted: false,
       gamecounter: 0,
       question: false,
+      file: "../../assets/Testmusic.mp3"
     }
   },
   methods: {
@@ -44,6 +45,13 @@ export default{
       this.gamecounter++;
       this.story = true;
       this.question = false;
+    },
+    console(){
+      console.log(this.file)
+    },
+    sound(){
+      /*var audio = new Audio(require("../../assets/Testmusic.mp3"));*/
+      audio.play();
     }
   }
 }
@@ -54,11 +62,13 @@ export default{
 <template>
 <button class="settings" @click="settingsfunc"></button>
 <div class="settingsmenu" v-if="settingsmenu">
-  <button name="settingsfunni" class="buttonfunnisetting" @click="funnistuff()">Sound</button>
-
-  <div class="switch">
-  <input class="slider" type="checkbox" name="Sound" id="Sound">
+  <div class="music-player">
+  <button name="Sound" class="Soundbutton" @click="sound()">Sound</button>
   </div>
+  <label class="switch">
+  <input type="checkbox" name="Sound" id="Sound">
+  <span class="slider"></span>
+  </label>
 </div>
 
 <div class="Openingscreen" v-if="settingsmenu != true && gamestarted != true">
