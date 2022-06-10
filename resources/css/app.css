@@ -187,7 +187,6 @@ html {
   left: 23%;
   position: absolute;
   z-index: -1;
-  border-radius: 5000px;
 }
 .storybosspng{
   top: 18.5%;
@@ -208,6 +207,7 @@ html {
 .storymenutextbubble {
   width: 65vw;
   height: 17vh;
+  border-radius: 5000px;
 }
 .mainmenuusernameplay{
   display: flex;
