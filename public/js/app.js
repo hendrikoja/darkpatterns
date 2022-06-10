@@ -13176,8 +13176,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render)
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-/* harmony import */ var _static_textbubble_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../static/textbubble.png */ "./resources/js/static/textbubble.png");
-/* harmony import */ var _static_interactivescreensmall_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../static/interactivescreensmall.png */ "./resources/js/static/interactivescreensmall.png");
+/* harmony import */ var _static_textbubble_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../static/textbubble.png */ "./resources/static/textbubble.png");
+/* harmony import */ var _static_interactivescreensmall_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../static/interactivescreensmall.png */ "./resources/static/interactivescreensmall.png");
 
 
 
@@ -13329,7 +13329,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_css_base_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../css/base.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./resources/css/base.css");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _static_settings_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../static/settings.png */ "./resources/js/static/settings.png");
+/* harmony import */ var _static_settings_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../static/settings.png */ "./resources/static/settings.png");
 // Imports
 
 
@@ -13487,10 +13487,10 @@ module.exports = function (url, options) {
 
 /***/ }),
 
-/***/ "./resources/js/static/interactivescreensmall.png":
-/*!********************************************************!*\
-  !*** ./resources/js/static/interactivescreensmall.png ***!
-  \********************************************************/
+/***/ "./resources/static/interactivescreensmall.png":
+/*!*****************************************************!*\
+  !*** ./resources/static/interactivescreensmall.png ***!
+  \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -13501,10 +13501,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/static/settings.png":
-/*!******************************************!*\
-  !*** ./resources/js/static/settings.png ***!
-  \******************************************/
+/***/ "./resources/static/settings.png":
+/*!***************************************!*\
+  !*** ./resources/static/settings.png ***!
+  \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -13515,10 +13515,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/static/textbubble.png":
-/*!********************************************!*\
-  !*** ./resources/js/static/textbubble.png ***!
-  \********************************************/
+/***/ "./resources/static/textbubble.png":
+/*!*****************************************!*\
+  !*** ./resources/static/textbubble.png ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);

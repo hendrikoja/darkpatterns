@@ -59,8 +59,8 @@ export default{
   <button name="avaleht" class="button1" @click="funnistuff()">{{count}}</button>
   <input class="kasutaja" v-model="kasutajanimi" placeholder="Kasutajanimi" maxlength="14">
   <button class="enterkasutaja" @click="kasutajabaasi()">Alusta mängu</button>
-  <img src="../static/textbubble.png" class="mainmenutextbubble">
-  <img src="../static/interactivescreensmall.png" class="mainmenuusernameplay">
+  <img src="../../static/textbubble.png" class="mainmenutextbubble">
+  <img src="../../static/interactivescreensmall.png" class="mainmenuusernameplay">
 </div>
 
 <div class="story" v-if="story == true">
@@ -155,7 +155,7 @@ html {
 }
 
 .settings{
-  background-image: url("../static/settings.png");
+  background-image: url("../../static/settings.png");
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-size: contain;
