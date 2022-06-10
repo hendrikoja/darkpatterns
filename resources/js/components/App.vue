@@ -61,10 +61,48 @@ export default{
   <button class="enterkasutaja" @click="kasutajabaasi()">Alusta mängu</button>
 </div>
 
+<<<<<<< Updated upstream
 <div class="story" v-if="story == true">
   <div class="localisation">
   <p>Nüüd see on gaming, POG</p>
   <button class="edasi" @click="next()">Järgmine küsimus or smth</button>
+=======
+<div class="story" v-if="gamecounter == 1 && story == true">
+  <div class="localisation">
+  <button class="edasi" @click="nextstory()">To Work</button>
+  </div>
+  <div class="bossitekst">
+    <p class="line-1 anim-typewriter">Good morning worker! Your first task is to provide the appropriate cookie settings for our website. ()</p>
+  </div>
+  <div class="bossitekst2">
+    <p class="line-1 anim-typewriter2">Make the most beneficial decision for us.</p>
+  </div>
+  <div class="bossitekst3">
+    <p class="line-1 anim-typewriter3">Ok.</p>
+  </div>
+  <div class="storybubbles" >
+    <img src="../../static/textbubble.png" class="storymenutextbubble">
+    <img src="../../static/textbubble.png" class="storymenutextbubble">
+    <img src="../../static/textbubble.png" class="storymenutextbubble">
+  </div>
+  <div class="storybosspics">
+    <img src="../../static/boss2.png" class="storybosspng">
+    <img src="../../static/boss2.png" class="storybosspng2">
+  </div>
+</div>
+
+<div class="question" v-if="gamecounter == 2 && question == true">
+  <img src="../../static/interactivescreenbig.png" class="bigscreen">
+  <img src="../../static/interactivescreenbig.png" class="smallscreen">
+  <img src="../../static/interactivescreenbig.png" class="smallscreen2">
+  <button name="Answer" class="answerbutton" @click="nextquestion()">Finish Work</button>
+</div>
+
+<div class="story" v-if="gamecounter == 3 && story == true">
+  <div class="localisation">
+  <p>Nüüd see on gaming, POG Make the most beneficial decision for us. </p>
+  <button class="edasi" @click="nextstory()">Järgmine küsimus or smth</button>
+>>>>>>> Stashed changes
   </div>
 </div>
 
