@@ -13147,18 +13147,21 @@ __webpack_require__.r(__webpack_exports__);
     settingsfunc: function settingsfunc() {
       this.settingsmenu = !this.settingsmenu;
 
-      if (this.gamecounter == 1) {
+      if (this.gamecounter % 2 == 0) {
+        this.question = !this.question;
+      } else {
         this.story = !this.story;
       }
-
-      if (this.gamecounter == 2) {
-        this.question = !this.question;
-      }
     },
-    next: function next() {
+    nextstory: function nextstory() {
       this.gamecounter++;
       this.story = false;
       this.question = true;
+    },
+    nextquestion: function nextquestion() {
+      this.gamecounter++;
+      this.story = true;
+      this.question = false;
     }
   }
 });
@@ -13232,7 +13235,7 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVN
 
 var _hoisted_10 = {
   key: 3,
-  "class": "question 1"
+  "class": "question"
 };
 
 var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
@@ -13256,9 +13259,24 @@ var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_14 = [_hoisted_11, _hoisted_12, _hoisted_13];
+var _hoisted_14 = {
+  key: 4,
+  "class": "story"
+};
+var _hoisted_15 = {
+  "class": "localisation"
+};
 
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", null, null, -1
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Nüüd see on gaming, POG", -1
+/* HOISTED */
+);
+
+var _hoisted_17 = {
+  key: 5,
+  "class": "question"
+};
+
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", null, null, -1
 /* HOISTED */
 );
 
@@ -13296,12 +13314,45 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[4] || (_cache[4] = function ($event) {
       return $options.kasutajabaasi();
     })
-  }, "Play"), _hoisted_4, _hoisted_5])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.story == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, "Play"), _hoisted_4, _hoisted_5])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 1 && $data.story == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "edasi",
     onClick: _cache[5] || (_cache[5] = function ($event) {
-      return $options.next();
+      return $options.nextstory();
     })
-  }, "To Work")]), _hoisted_8])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 2 && $data.question == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_10, _hoisted_14)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_15], 64
+  }, "To Work")]), _hoisted_8])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 2 && $data.question == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_10, [_hoisted_11, _hoisted_12, _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    name: "Answer",
+    "class": "answerbutton",
+    onClick: _cache[6] || (_cache[6] = function ($event) {
+      return $options.nextquestion();
+    })
+  }, "Finish Work")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 3 && $data.story == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    "class": "edasi",
+    onClick: _cache[7] || (_cache[7] = function ($event) {
+      return $options.nextstory();
+    })
+  }, "Järgmine küsimus or smth")])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 4 && $data.question == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    name: "esimene valik",
+    "class": "button1game",
+    onClick: _cache[8] || (_cache[8] = function ($event) {
+      return $options.funnistuff();
+    })
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.count), 1
+  /* TEXT */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    name: "teine valik",
+    "class": "button2game",
+    onClick: _cache[9] || (_cache[9] = function ($event) {
+      return $options.funnistuff();
+    })
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.count), 1
+  /* TEXT */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    name: "Answer",
+    "class": "answerbutton",
+    onClick: _cache[10] || (_cache[10] = function ($event) {
+      return $options.nextquestion();
+    })
+  }, "Advance story or smth")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_18], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -13374,7 +13425,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_static_settings_png__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#app {\r\n  margin: 0;\r\n  padding: 2rem;\r\n  font-weight: normal;\r\n}\r\n\r\nhtml {\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  background-size: cover;\r\n  overflow: hidden;\r\n}\r\n\r\n.button1 {\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 85);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:95%;\r\n  left: 90%;\r\n  position: absolute;\r\n}\r\n\r\n.kasutaja {\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 85);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:63%;\r\n  left: 47%;\r\n  position: absolute;\r\n}\r\n\r\n.enterkasutaja {\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 85);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:72%;\r\n  left: 47.25%;\r\n  position: absolute;\r\n}\r\n\r\n.settings{\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-position: 0% 0%;\r\n  background-repeat: no-repeat;\r\n  background-size: contain;\r\n  background-color: transparent;\r\n  border-color: rgba(0, 0, 0, 0);\r\n  display: flex;\r\n  width: 3vw;\r\n  height: 3vw;\r\n  cursor: pointer;\r\n  top: 0%;\r\n  left: 0%;\r\n  position: absolute;\r\n}\r\n\r\n.buttonfunnisetting {\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 85);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:10%;\r\n  left: 5%;\r\n  position: absolute;\r\n}\r\n\r\n.slider{\r\n  position: absolute;\r\n  cursor: pointer;\r\n  top: 12%;\r\n  left: 25%;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: #ccc;\r\n  -webkit-transition: .4s;\r\n  transition: .4s;\r\n}\r\n\r\n.edasi{\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 85);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 20vw;\r\n  height: 6vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  position: absolute;\r\n  top: 72%;\r\n  left: 67.5%;\r\n}\r\n\r\n.button1game {\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 50%;\r\n  position: absolute;\r\n}\r\n\r\n.button2game {\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 60%;\r\n  position: absolute;\r\n}\r\n\r\n.mainmenutextbubble {\r\n  display: flex;\r\n  width: 70vw;\r\n  height: 40vh;\r\n  top: 15%;\r\n  left: 18%;\r\n  position: absolute;\r\n  z-index: -1;\r\n  border-radius: 5000px;\r\n}\r\n.storybubbles {\r\n  display: block;\r\n  top: 18%;\r\n  left: 23%;\r\n  position: absolute;\r\n  z-index: -1;\r\n}\r\n.storybosspng{\r\n  top: 18.5%;\r\n  left: 9.5%;\r\n  position: absolute;\r\n  z-index: -1;\r\n  width: 13vw;\r\n  height: 15vh;\r\n}\r\n.storybosspng2{\r\n  width: 13vw;\r\n  height: 15vh;\r\n  top: 54.35%;\r\n  left: 9.5%;\r\n  position: absolute;\r\n  z-index: -1;\r\n}\r\n.storymenutextbubble {\r\n  width: 65vw;\r\n  height: 17vh;\r\n  border-radius: 5000px;\r\n}\r\n.mainmenuusernameplay{\r\n  display: flex;\r\n  width: 15vw;\r\n  height: 20vh;\r\n  left: 45%;\r\n  top: 60%;\r\n  position: absolute;\r\n  z-index: -1;\r\n}\r\n.smallscreen {\r\n  position: absolute;\r\n  width: 25vw;\r\n  height: 30vh;\r\n  top: 15%;\r\n  left: 70%;\r\n}\r\n.smallscreen2 {\r\n  position: absolute;\r\n  width: 25vw;\r\n  height: 30vh;\r\n  top: 55%;\r\n  left: 70%;\r\n}\r\n.bigscreen {\r\n  position:absolute;\r\n  width: 60vw;\r\n  height: 92.5vh;\r\n  top: 4%;\r\n  left: 3%;\r\n  border-radius: 100px;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#app {\r\n  margin: 0;\r\n  padding: 2rem;\r\n  font-weight: normal;\r\n}\r\n\r\nhtml {\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  background-size: cover;\r\n  overflow: hidden;\r\n}\r\n\r\n.button1 {\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 85);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:95%;\r\n  left: 90%;\r\n  position: absolute;\r\n}\r\n\r\n.Soundbutton {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 76);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:10%;\r\n  left: 5%;\r\n  position: absolute;\r\n}\r\n\r\n.switch {\r\n  position: absolute;\r\n  display: inline-block;\r\n  width: 80px;\r\n  height: 34px;\r\n  left: 18%;\r\n  top: 10%;\r\n}\r\n\r\n.switch input {\r\n  opacity: 0;\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n\r\n.kasutaja {\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 85);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:63%;\r\n  left: 47%;\r\n  position: absolute;\r\n}\r\n\r\n.enterkasutaja {\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 85);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:72%;\r\n  left: 47.25%;\r\n  position: absolute;\r\n}\r\n\r\n.settings{\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-position: 0% 0%;\r\n  background-repeat: no-repeat;\r\n  background-size: contain;\r\n  background-color: transparent;\r\n  border-color: rgba(0, 0, 0, 0);\r\n  display: flex;\r\n  width: 3vw;\r\n  height: 3vw;\r\n  cursor: pointer;\r\n  top: 0%;\r\n  left: 0%;\r\n  position: absolute;\r\n}\r\n\r\n.buttonfunnisetting {\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 85);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:10%;\r\n  left: 5%;\r\n  position: absolute;\r\n}\r\n\r\n.slider{\r\n  position: absolute;\r\n  cursor: pointer;\r\n  top: 12%;\r\n  left: 25%;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: #ccc;\r\n  -webkit-transition: .4s;\r\n  transition: .4s;\r\n}\r\n\r\n.slider:before {\r\n  position: absolute;\r\n  content: \"\";\r\n  height: 26px;\r\n  width: 26px;\r\n  left: 4px;\r\n  bottom: 4px;\r\n  background-color: white;\r\n  -webkit-transition: .4s;\r\n  transition: .4s;\r\n}\r\n\r\ninput:checked + .slider {\r\n  background-color: #2196F3;\r\n}\r\n\r\ninput:focus + .slider {\r\n  box-shadow: 0 0 1px #2196F3;\r\n}\r\n\r\ninput:checked + .slider:before {\r\n  -webkit-transform: translateX(26px);\r\n  -ms-transform: translateX(26px);\r\n  transform: translateX(26px);\r\n}\r\n\r\n/* Rounded sliders */\r\n.slider.round {\r\n  border-radius: 34px;\r\n}\r\n\r\n.slider.round:before {\r\n  border-radius: 50%;\r\n}\r\n\r\n.edasi{\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 85);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 20vw;\r\n  height: 6vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  position: absolute;\r\n  top: 72%;\r\n  left: 67.5%;\r\n}\r\n\r\n.button1game {\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 50%;\r\n  position: absolute;\r\n}\r\n\r\n.button2game {\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 60%;\r\n  position: absolute;\r\n}\r\n\r\n.mainmenutextbubble {\r\n  display: flex;\r\n  width: 70vw;\r\n  height: 40vh;\r\n  top: 15%;\r\n  left: 18%;\r\n  position: absolute;\r\n  z-index: -1;\r\n  border-radius: 5000px;\r\n}\r\n.storybubbles {\r\n  display: block;\r\n  top: 18%;\r\n  left: 23%;\r\n  position: absolute;\r\n  z-index: -1;\r\n}\r\n.storybosspng{\r\n  top: 18.5%;\r\n  left: 9.5%;\r\n  position: absolute;\r\n  z-index: -1;\r\n  width: 13vw;\r\n  height: 15vh;\r\n}\r\n.storybosspng2{\r\n  width: 13vw;\r\n  height: 15vh;\r\n  top: 54.35%;\r\n  left: 9.5%;\r\n  position: absolute;\r\n  z-index: -1;\r\n}\r\n.storymenutextbubble {\r\n  width: 65vw;\r\n  height: 17vh;\r\n  border-radius: 5000px;\r\n}\r\n.mainmenuusernameplay{\r\n  display: flex;\r\n  width: 15vw;\r\n  height: 20vh;\r\n  left: 45%;\r\n  top: 60%;\r\n  position: absolute;\r\n  z-index: -1;\r\n}\r\n.smallscreen {\r\n  position: absolute;\r\n  width: 25vw;\r\n  height: 30vh;\r\n  top: 15%;\r\n  left: 70%;\r\n}\r\n.smallscreen2 {\r\n  position: absolute;\r\n  width: 25vw;\r\n  height: 30vh;\r\n  top: 55%;\r\n  left: 70%;\r\n}\r\n.bigscreen {\r\n  position:absolute;\r\n  width: 60vw;\r\n  height: 92.5vh;\r\n  top: 4%;\r\n  left: 3%;\r\n  border-radius: 100px;\r\n}\r\n\r\n.answerbutton {\r\n  display: flex;\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 85);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top: 90%;\r\n  left: 85%;\r\n  position: absolute;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

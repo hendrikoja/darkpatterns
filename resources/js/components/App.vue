@@ -28,17 +28,22 @@ export default{
     },
     settingsfunc(){
       this.settingsmenu = !this.settingsmenu;
-      if (this.gamecounter == 1){
-      this.story = !this.story;
-      }
-      if (this.gamecounter == 2){
+      if (this.gamecounter % 2 == 0){
       this.question = !this.question;
       }
+      else{
+      this.story = !this.story;
+      }
     },
-    next(){
+    nextstory(){
       this.gamecounter++;
       this.story = false;
       this.question = true;
+    },
+    nextquestion(){
+      this.gamecounter++;
+      this.story = true;
+      this.question = false;
     }
   }
 }
@@ -63,9 +68,9 @@ export default{
   <img src="../../static/interactivescreensmall.png" class="mainmenuusernameplay">
 </div>
 
-<div class="story" v-if="story == true">
+<div class="story" v-if="gamecounter == 1 && story == true">
   <div class="localisation">
-  <button class="edasi" @click="next()">To Work</button>
+  <button class="edasi" @click="nextstory()">To Work</button>
   </div>
   <div class="storybubbles">
     <img src="../../static/textbubble.png" class="storymenutextbubble">
@@ -78,10 +83,24 @@ export default{
   </div>
 </div>
 
-<div class="question 1" v-if="gamecounter == 2 && question == true">
+<div class="question" v-if="gamecounter == 2 && question == true">
   <img src="../../static/interactivescreenbig.png" class="bigscreen">
   <img src="../../static/interactivescreenbig.png" class="smallscreen">
   <img src="../../static/interactivescreenbig.png" class="smallscreen2">
+  <button name="Answer" class="answerbutton" @click="nextquestion()">Finish Work</button>
+</div>
+
+<div class="story" v-if="gamecounter == 3 && story == true">
+  <div class="localisation">
+  <p>Nüüd see on gaming, POG</p>
+  <button class="edasi" @click="nextstory()">Järgmine küsimus or smth</button>
+  </div>
+</div>
+
+<div class="question" v-if="gamecounter == 4 && question == true">
+  <button name="esimene valik" class="button1game" @click="funnistuff()">{{count}}</button>
+  <button name="teine valik" class="button2game" @click="funnistuff()">{{count}}</button>
+  <button name="Answer" class="answerbutton" @click="nextquestion()">Advance story or smth</button>
 </div>
   <main>
   </main>
