@@ -45,6 +45,7 @@ export default{
       this.gamecounter++;
       this.story = true;
       this.question = false;
+      console.log(this.gamecounter)
     },
     console(){
       console.log(this.file)
@@ -60,6 +61,9 @@ export default{
 </script>
 
 <template>
+
+<Story v-if="gamecounter == 1" @lolevent="nextstory()"/>
+
 <button class="settings" @click="settingsfunc"></button>
 <div class="settingsmenu" v-if="settingsmenu">
   <div class="music-player">
@@ -77,12 +81,6 @@ export default{
   <button class="enterkasutaja" @click="kasutajabaasi()">Alusta mängu</button>
 </div>
 
-<div class="story" v-if="gamecounter == 1 && story == true">
-  <div class="localisation">
-  <p>Nüüd see on gaming, POG</p>
-  <button class="edasi" @click="nextstory()">Järgmine küsimus or smth</button>
-  </div>
-</div>
 
 <div class="question" v-if="gamecounter == 2 && question == true">
   <button name="esimene valik" class="button1game" @click="funnistuff()">{{count}}</button>
@@ -90,12 +88,6 @@ export default{
   <button name="Answer" class="answerbutton" @click="nextquestion()">Advance story or smth</button>
 </div>
 
-<div class="story" v-if="gamecounter == 3 && story == true">
-  <div class="localisation">
-  <p>Nüüd see on gaming, POG</p>
-  <button class="edasi" @click="nextstory()">Järgmine küsimus or smth</button>
-  </div>
-</div>
 
 <div class="question" v-if="gamecounter == 4 && question == true">
   <button name="esimene valik" class="button1game" @click="funnistuff()">{{count}}</button>
