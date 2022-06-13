@@ -1,4 +1,4 @@
-<script>
+<script> // IGNOREEEEERI BRUUUUUUUH IT DOES NOTHING
 export default{
   methods: {
     funnistuff(){

@@ -5,6 +5,7 @@ import Questions from './Questions.vue'
 //import json from './Data.json'
 import Openingscreen from './Openingscreen.vue'
 import Settings from './Settings.vue'
+import Draggable from './Draggable.vue'
 </script>
 
 
@@ -12,9 +13,8 @@ import Settings from './Settings.vue'
 export default{
   data(){
     return {
-      cum: false,
       count: 0,
-      kasutajanimi: "",
+      username: "",
       settingsmenu: false,
       story: false,
       gamestarted: false,
@@ -27,7 +27,7 @@ export default{
     funnistuff(){
       this.count++;
     },
-    kasutajabaasi(){
+    userdatabase(){
       this.story = !this.story;
       this.gamestarted = !this.gamestarted;
       this.gamecounter++;
@@ -55,17 +55,17 @@ export default{
     }
   }
 }
-
-
 </script>
 
 <template>
 
+<main>
+
 <button class="settings" @click="settingsfunc()"></button>
 
-<Openingscreen v-if="gamestarted == false && settingsmenu == false" @openingevent="kasutajabaasi()"/>
+<Openingscreen v-if="gamestarted == false && settingsmenu == false" @openingevent="userdatabase()"/>
 
-<Settings v-if="settingsmenu == true"  />
+<Settings v-if="settingsmenu == true" />
 
 <Story v-if="gamecounter == 1 && settingsmenu == false" @storyevent="nextstory()"/>
 
@@ -73,11 +73,10 @@ export default{
 
 <Story v-if="gamecounter == 3 && settingsmenu == false" @storyevent="nextstory()"/>
 
-<Questions v-if="gamecounter == 4 && settingsmenu == false" @questionevent="nextquestion()" />
+<Draggable v-if="gamecounter == 4 && settingsmenu == false" @questionevent="nextquestion()" />
 
-  <main>
-    
-  </main>
+</main>
+
 </template>
 
 

@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +17,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/addtest', function () {
+    return view('useradd');
+});
+
+//Tagasta kõik küsimused vastustega JSON vormis
+Route::get('/questions', [QuestionController::class, "index"]);
+
+//Edetabeli tagastamine JSON vormis
+Route::get('/leaderboard', [UserController::class, "getLeaderboard"]);
+
+//Kasutajate lisamise route
+Route::post("/addtest/add", [UserController::class, "store"]);
+
+

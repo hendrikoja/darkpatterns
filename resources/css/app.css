@@ -12,10 +12,10 @@ html {
 
 .button1 {
   display: flex;
-  background-color: #a14337;
+  background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 255, 85);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -24,17 +24,17 @@ html {
   height: 5vh;
   font-size: 1.5vw;
   cursor: pointer;
-  top:50%;
-  left: 50%;
+  top:95%;
+  left: 90%;
   position: absolute;
 }
 
-.kasutaja {
+.user {
   display: flex;
-  background-color: #a14337;
+  background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 255, 85);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -43,17 +43,17 @@ html {
   height: 5vh;
   font-size: 1.5vw;
   cursor: pointer;
-  top:40%;
-  left: 40%;
+  top:63%;
+  left: 47%;
   position: absolute;
 }
 
-.enterkasutaja {
+.enteruser {
   display: flex;
-  background-color: #a14337;
+  background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 255, 76);
+  color: rgb(0, 255, 85);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -62,8 +62,8 @@ html {
   height: 4vh;
   font-size: 1.5vw;
   cursor: pointer;
-  top:40%;
-  left: 52%;
+  top:72%;
+  left: 47.25%;
   position: absolute;
 }
 
@@ -117,7 +117,6 @@ html {
     height: 0;
 }
 
-
 .slider{
   position: absolute;
   cursor: pointer;
@@ -145,55 +144,49 @@ html {
 input:checked + .slider {
     background-color: #2196F3;
   }
-  
+
   input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;
   }
-  
+
   input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
   }
-  
   /* Rounded sliders */
   .slider.round {
     border-radius: 34px;
   }
-  
   .slider.round:before {
     border-radius: 50%;
   }
 
-.localisation{
-  position: absolute;
-  top: 72%;
-  left: 50%;
-}
-
-.edasi{
+.next{
   display: flex;
-  background-color: #a14337;
+  background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 255, 85);
   text-align: center;
   text-decoration: none;
   display: inline-block;
   padding: 0.2rem;
-  width: 10vw;
-  height: 10vh;
+  width: 20vw;
+  height: 6vh;
   font-size: 1.5vw;
   cursor: pointer;
   position: absolute;
+  top: 72%;
+  left: 67.5%;
 }
 
 .button1game {
   display: flex;
-  background-color: #2bdd58;
+  background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(15, 214, 148);
+  color: rgb(0, 0, 0);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -203,13 +196,13 @@ input:checked + .slider {
   font-size: 1.5vw;
   cursor: pointer;
   top:50%;
-  left: 30%;
+  left: 50%;
   position: absolute;
 }
 
 .button2game {
   display: flex;
-  background-color: #fa0cee;
+  background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
   color: rgb(0, 0, 0);
@@ -227,21 +220,211 @@ input:checked + .slider {
 }
 
 .answerbutton {
-    display: flex;
-    background-color: #a14337;
-    border-color: yellow;
-    border-radius: 9px;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0.2rem;
-    width: 10vw;
-    height: 5vh;
-    font-size: 1.5vw;
-    cursor: pointer;
-    top:70%;
-    left: 50%;
-    position: absolute;
+  display: flex;
+  background-color: rgba(4, 22, 99, 0.87);
+  border-color: yellow;
+  border-radius: 9px;
+  color: rgb(0, 255, 85);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2rem;
+  width: 10vw;
+  height: 5vh;
+  font-size: 1.5vw;
+  cursor: pointer;
+  top: 90%;
+  left: 85%;
+  position: absolute;
 }
 
+.mainmenutextbubble {
+  display: flex;
+  width: 70vw;
+  height: 40vh;
+  top: 15%;
+  left: 18%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 5000px;
+}
+.storybubbles {
+  display: block;
+  top: 18%;
+  left: 23%;
+  position: absolute;
+  z-index: -1;
+}
+.storybosspng{
+  top: 18.5%;
+  left: 9.5%;
+  position: absolute;
+  z-index: -1;
+  width: 13vw;
+  height: 15vh;
+}
+.storybosspng2{
+  width: 13vw;
+  height: 15vh;
+  top: 54.35%;
+  left: 9.5%;
+  position: absolute;
+  z-index: -1;
+}
+.storymenutextbubble {
+  width: 65vw;
+  height: 17vh;
+  border-radius: 5000px;
+}
+.mainmenuusernameplay{
+  display: flex;
+  width: 15vw;
+  height: 20vh;
+  left: 45%;
+  top: 60%;
+  position: absolute;
+  z-index: -1;
+}
+.smallscreen {
+  position: absolute;
+  width: 25vw;
+  height: 30vh;
+  top: 15%;
+  left: 70%;
+}
+.smallscreen2 {
+  position: absolute;
+  width: 25vw;
+  height: 30vh;
+  top: 55%;
+  left: 70%;
+}
+.bigscreen {
+  position:absolute;
+  width: 60vw;
+  height: 92.5vh;
+  top: 4%;
+  left: 3%;
+  border-radius: 100px;
+}
+
+.bossitekst {
+  width: 1200px;
+  height: 200px;
+  position:absolute;
+  text-align: left;
+  top: 15.5%;
+  left: 25%;
+  color:rgb(0, 0, 0);
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.bossitekst2 {
+  width: 1200px;
+  height: 30px;
+  position:absolute;
+  text-align: left;
+  top: 42.5%;
+  left: 10%;
+  color:rgb(0, 0, 0);
+  font-size: 37px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.bossitekst3 {
+  width: 1500px;
+  height: 30px;
+  position:absolute;
+  text-align: right;
+  top: 62.5%;
+  right: -20%;
+  color:rgb(0, 0, 0);
+  font-size: 37px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+html{
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 1500px;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 5.2s steps(100) 1s 1 normal both,
+             blinkTextCursor 500ms steps(100) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 40em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+.anim-typewriter2{
+  animation: typewriter2 3s steps(100) 1s 1 normal both,
+             blinkTextCursor2 500ms steps(100) infinite normal;
+  animation-delay: 7s;}
+@keyframes typewriter2{
+  from{width: 0;}
+  to{width: 20em;}
+}
+@keyframes blinkTextCursor2{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+.anim-typewriter3{
+  animation: typewriter3 1s steps(30) 1s 1 normal both,
+             blinkTextCursor3 500ms steps(30) infinite normal;
+  animation-delay: 11s;
+}
+@keyframes typewriter3{
+  from{width: 0;}
+  to{width: 5em;}
+}
+@keyframes blinkTextCursor3{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+.drop-zone {
+  background-color: rgb(168, 53, 53);
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.drag-el {
+  background-color: rgb(155, 62, 62);
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.menu {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  width: auto;
+}
+.interactivegame {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: auto;
+}

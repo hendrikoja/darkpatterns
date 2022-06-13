@@ -16,8 +16,9 @@ export default{
 
 <template>
 <div class="question">
-  <button name="esimene valik" class="button1game" @click="countup()">{{count}}</button>
-  <button name="teine valik" class="button2game" @click="countup()">{{count}}</button>
+  <img src="../../static/interactivescreenbig.png" class="bigscreen">
+  <img src="../../static/interactivescreenbig.png" class="smallscreen">
+  <img src="../../static/interactivescreenbig.png" class="smallscreen2">
   <button name="Answer" class="answerbutton" @click="$emit('questionevent')">Advance story or smth</button>
 </div> 
 </template>
