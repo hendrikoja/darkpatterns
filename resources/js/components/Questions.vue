@@ -17,8 +17,8 @@ export default{
 <template>
 <div class="question">
   <img src="../../static/interactivescreenbig.png" class="bigscreen">
-  <img src="../../static/interactivescreenbig.png" class="smallscreen">
-  <img src="../../static/interactivescreenbig.png" class="smallscreen2">
+  <img src="../../static/fakedarkpattern.png" class="smallscreen">
+  <img src="../../static/cookieyum.png" class="smallscreen2">
   <button name="Answer" class="answerbutton" @click="$emit('questionevent')">Advance story or smth</button>
 </div> 
 </template>
