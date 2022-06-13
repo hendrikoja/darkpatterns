@@ -1,40 +1,4 @@
 <template>
-<div
-  class="drop-zone"
-  @drop="onDrop($event, 1)"
-  @dragover.prevent
-  @dragenter.prevent
->
-  <div
-    class="drag-el"
-    v-for="item in getList(1)"
-    :key="item.title"
-    draggable="true"
-    @dragstart="startDrag($event, item)"
-  >
-    {{ item.title }}
-  </div>
-</div>
-<div
-  class="drop-zone"
-  @drop="onDrop($event, 2)"
-  @dragover.prevent
-  @dragenter.prevent
->
-  <div
-    class="drag-el"
-    v-for="item in getList(2)"
-    :key="item.title"
-    draggable="true"
-    @dragstart="startDrag($event, item)"
-  >
-    {{ item.title }}
-  </div>
-</div>
- 
- 
-   
-
 <button class="settings" @click="settingsfunc"></button>
 <div class="settingsmenu" v-if="settingsmenu">
   <button name="Sound" class="Soundbutton" @click="funnistuff()">Sound</button>
@@ -51,7 +15,6 @@
   <button class="enterkasutaja" @click="kasutajabaasi()">Play</button>
   <img src="../../static/textbubble.png" class="mainmenutextbubble">
   <img src="../../static/interactivescreensmall.png" class="mainmenuusernameplay">
- 
 </div>
 
 <div class="story" v-if="gamecounter == 1 && story == true">
@@ -84,8 +47,38 @@
 </div>
 
 <div class="question" v-if="gamecounter == 4 && question == true">
-  <button name="esimene valik" class="button1game" @click="funnistuff()">{{count}}</button>
-  <button name="teine valik" class="button2game" @click="funnistuff()">{{count}}</button>
+  <div
+  class="drop-zone"
+  @drop="onDrop($event, 1)"
+  @dragover.prevent
+  @dragenter.prevent
+>
+  <div
+    class="drag-el"
+    v-for="item in getList(1)"
+    :key="item.title"
+    draggable="true"
+    @dragstart="startDrag($event, item)"
+  >
+    {{ item.title }}
+  </div>
+</div>
+<div
+  class="drop-zone"
+  @drop="onDrop($event, 2)"
+  @dragover.prevent
+  @dragenter.prevent
+>
+  <div
+    class="drag-el"
+    v-for="item in getList(2)"
+    :key="item.title"
+    draggable="true"
+    @dragstart="startDrag($event, item)"
+  >
+    {{ item.title }}
+  </div>
+</div>
   <button name="Answer" class="answerbutton" @click="nextquestion()">Advance story or smth</button>
 </div>
   <main>
