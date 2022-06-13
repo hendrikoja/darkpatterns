@@ -8,7 +8,7 @@
   <input type="checkbox" name="Sound" id="Sound">
   <span class="slider"></span>
   </label>
-</div>
+        </div>
 
 <div class="Openingscreen" v-if="settingsmenu != true && gamestarted != true">
   <button name="avaleht" class="button1" @click="funnistuff()">{{count}}</button>
@@ -191,3 +191,4 @@ export default{
     padding: 5px;
   }
 </style>
+

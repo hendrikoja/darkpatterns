@@ -5,9 +5,25 @@
 }
 
 html {
-  background-color: rgba(4, 22, 99, 0.87);
-  background-size: cover;
+  background: repeating-radial-gradient(
+    circle at 0 0, 
+    rgb(112, 112, 112),
+    rgb(37, 37, 37) 50px);
+  background-size: 200% 200%;
+  animation: gradient 180s infinite;
   overflow: hidden;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 .button1 {
@@ -15,7 +31,7 @@ html {
   background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 255, 85);
+  color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -48,6 +64,25 @@ html {
   position: absolute;
 }
 
+.coolgradientbutton {
+  display: flex;
+  background-color: #a14337;
+  border-color: yellow;
+  border-radius: 9px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2rem;
+  width: 10vw;
+  height: 4vh;
+  font-size: 1.5vw;
+  cursor: pointer;
+  top:20%;
+  left: 5%;
+  position: absolute;
+}
+
 .switch {
   position: absolute;
   display: inline-block;
@@ -66,10 +101,10 @@ html {
 
 .kasutaja {
   display: flex;
-  background-color: rgba(4, 22, 99, 0.87);
+  background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 255, 85);
+  color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -85,10 +120,10 @@ html {
 
 .enterkasutaja {
   display: flex;
-  background-color: rgba(4, 22, 99, 0.87);
+  background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 255, 85);
+  color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -120,10 +155,10 @@ html {
 
 .buttonfunnisetting {
   display: flex;
-  background-color: rgba(4, 22, 99, 0.87);
+  background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 255, 85);
+  color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -186,10 +221,10 @@ input:checked + .slider:before {
 
 .edasi{
   display: flex;
-  background-color: rgba(4, 22, 99, 0.87);
+  background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 255, 85);
+  color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -205,7 +240,7 @@ input:checked + .slider:before {
 
 .button1game {
   display: flex;
-  background-color: rgba(4, 22, 99, 0.87);
+  background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
   color: rgb(0, 0, 0);
@@ -224,7 +259,7 @@ input:checked + .slider:before {
 
 .button2game {
   display: flex;
-  background-color: rgba(4, 22, 99, 0.87);
+  background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
   color: rgb(0, 0, 0);
@@ -313,10 +348,10 @@ input:checked + .slider:before {
 
 .answerbutton {
   display: flex;
-  background-color: rgba(4, 22, 99, 0.87);
+  background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 255, 85);
+  color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
   display: inline-block;
