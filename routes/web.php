@@ -23,7 +23,7 @@ Route::get('/addtest', function () {
 });
 
 //Tagasta kõik küsimused vastustega JSON vormis
-Route::get('/users', [QuestionController::class, "index"]);
+Route::get('/questions', [QuestionController::class, "index"]);
 
 //Edetabeli tagastamine JSON vormis
 Route::get('/leaderboard', [UserController::class, "getLeaderboard"]);
