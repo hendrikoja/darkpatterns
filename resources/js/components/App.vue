@@ -22,15 +22,24 @@
   <div class="localisation">
   <button class="edasi" @click="nextstory()">To Work</button>
   </div>
-  <div class="storybubbles">
-    <img src="../../static/textbubble.png" class="storymenutextbubble">
-    <img src="../../static/textbubble.png" class="storymenutextbubble">
-    <img src="../../static/textbubble.png" class="storymenutextbubble">
-  </div>
-  <div class="storybosspics">
-    <img src="../../static/boss2.png" class="storybosspng">
-    <img src="../../static/boss2.png" class="storybosspng2">
-  </div>
+    <div class="bossitekst">
+      <p class="line-1 anim-typewriter">Good morning worker! Your first task is to provide the appropriate cookie settings for our website. ()</p>
+    </div>
+    <div class="bossitekst2">
+      <p class="line-1 anim-typewriter2">Make the most beneficial decision for us.</p>
+    </div>
+    <div class="bossitekst3">
+      <p class="line-1 anim-typewriter3">Ok.</p>
+    </div>
+    <div class="storybubbles">
+      <img src="../../static/textbubble.png" class="storymenutextbubble">
+      <img src="../../static/textbubble.png" class="storymenutextbubble">
+      <img src="../../static/textbubble.png" class="storymenutextbubble">
+    </div>
+    <div class="storybosspics">
+      <img src="../../static/boss2.png" class="storybosspng">
+      <img src="../../static/boss2.png" class="storybosspng2">
+    </div>
 </div>
 
 <div class="question" v-if="gamecounter == 2 && question == true">

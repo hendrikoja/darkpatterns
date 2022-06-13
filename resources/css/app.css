@@ -329,3 +329,101 @@ input:checked + .slider:before {
   left: 85%;
   position: absolute;
 }
+
+.bossitekst {
+  width: 1200px;
+  height: 200px;
+  position:absolute;
+  text-align: left;
+  top: 15.5%;
+  left: 25%;
+  color:rgb(0, 0, 0);
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.bossitekst2 {
+  width: 1200px;
+  height: 30px;
+  position:absolute;
+  text-align: left;
+  top: 42.5%;
+  left: 10%;
+  color:rgb(0, 0, 0);
+  font-size: 37px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.bossitekst3 {
+  width: 1500px;
+  height: 30px;
+  position:absolute;
+  text-align: right;
+  top: 62.5%;
+  right: -20%;
+  color:rgb(0, 0, 0);
+  font-size: 37px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+html{
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 1500px;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 5.2s steps(100) 1s 1 normal both,
+             blinkTextCursor 500ms steps(100) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 40em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+.anim-typewriter2{
+  animation: typewriter2 3s steps(100) 1s 1 normal both,
+             blinkTextCursor2 500ms steps(100) infinite normal;
+  animation-delay: 7s;}
+@keyframes typewriter2{
+  from{width: 0;}
+  to{width: 20em;}
+}
+@keyframes blinkTextCursor2{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+.anim-typewriter3{
+  animation: typewriter3 1s steps(30) 1s 1 normal both,
+             blinkTextCursor3 500ms steps(30) infinite normal;
+  animation-delay: 11s;
+}
+@keyframes typewriter3{
+  from{width: 0;}
+  to{width: 5em;}
+}
+@keyframes blinkTextCursor3{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
