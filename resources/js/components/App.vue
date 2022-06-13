@@ -1,57 +1,40 @@
-<script setup>
-
-</script>
-
-
-<script>
-export default{
-  data(){
-    return {
-      cum: false,
-      count: 0,
-      kasutajanimi: "",
-      settingsmenu: false,
-      story: false,
-      gamestarted: false,
-      gamecounter: 0,
-      question: false,
-    }
-  },
-  methods: {
-    funnistuff(){
-      this.count++;
-    },
-    kasutajabaasi(){
-      this.story = !this.story;
-      this.gamestarted = !this.gamestarted;
-      this.gamecounter++;
-    },
-    settingsfunc(){
-      this.settingsmenu = !this.settingsmenu;
-      if (this.gamecounter % 2 == 0){
-      this.question = !this.question;
-      }
-      else{
-      this.story = !this.story;
-      }
-    },
-    nextstory(){
-      this.gamecounter++;
-      this.story = false;
-      this.question = true;
-    },
-    nextquestion(){
-      this.gamecounter++;
-      this.story = true;
-      this.question = false;
-    }
-  }
-}
-
-
-</script>
-
 <template>
+<div
+  class="drop-zone"
+  @drop="onDrop($event, 1)"
+  @dragover.prevent
+  @dragenter.prevent
+>
+  <div
+    class="drag-el"
+    v-for="item in getList(1)"
+    :key="item.title"
+    draggable="true"
+    @dragstart="startDrag($event, item)"
+  >
+    {{ item.title }}
+  </div>
+</div>
+<div
+  class="drop-zone"
+  @drop="onDrop($event, 2)"
+  @dragover.prevent
+  @dragenter.prevent
+>
+  <div
+    class="drag-el"
+    v-for="item in getList(2)"
+    :key="item.title"
+    draggable="true"
+    @dragstart="startDrag($event, item)"
+  >
+    {{ item.title }}
+  </div>
+</div>
+ 
+ 
+   
+
 <button class="settings" @click="settingsfunc"></button>
 <div class="settingsmenu" v-if="settingsmenu">
   <button name="Sound" class="Soundbutton" @click="funnistuff()">Sound</button>
@@ -68,6 +51,7 @@ export default{
   <button class="enterkasutaja" @click="kasutajabaasi()">Play</button>
   <img src="../../static/textbubble.png" class="mainmenutextbubble">
   <img src="../../static/interactivescreensmall.png" class="mainmenuusernameplay">
+ 
 </div>
 
 <div class="story" v-if="gamecounter == 1 && story == true">
@@ -108,10 +92,100 @@ export default{
   </main>
 </template>
 
+<script>
+import { ref } from 'vue'
+
+export default{
+  setup() {
+    const items = ref([
+      { id: 0, title: 'Oh', list: 1 },
+      { id: 1, title: 'the', list: 1 },
+      { id: 2, title: 'misery', list: 2 },
+    ])
+
+    const getList = (list) => {
+      return items.value.filter((item) => item.list == list)
+    }
+
+    const startDrag = (event, item) => {
+      console.log(item)
+      event.dataTransfer.dropEffect = 'move'
+      event.dataTransfer.effectAllowed = 'move'
+      event.dataTransfer.setData('itemID', item.id)
+    }
+
+    const onDrop = (event, list) => {
+      const itemID = event.dataTransfer.getData('itemID')
+      const item = items.value.find((item) => item.id == itemID)
+      item.list = list
+    }
+
+    return {
+      getList,
+      onDrop,
+      startDrag,
+    }
+  },
+  data(){
+    return {
+      cum: false,
+      count: 0,
+      kasutajanimi: "",
+      settingsmenu: false,
+      story: false,
+      gamestarted: false,
+      gamecounter: 0,
+      question: false,
+    }
+  },
+  methods: {
+    funnistuff(){
+      this.count++;
+    },
+    kasutajabaasi(){
+      this.story = !this.story;
+      this.gamestarted = !this.gamestarted;
+      this.gamecounter++;
+    },
+    settingsfunc(){
+      this.settingsmenu = !this.settingsmenu;
+      if (this.gamecounter % 2 == 0){
+      this.question = !this.question;
+      }
+      else{
+      this.story = !this.story;
+      }
+    },
+    nextstory(){
+      this.gamecounter++;
+      this.story = false;
+      this.question = true;
+    },
+    nextquestion(){
+      this.gamecounter++;
+      this.story = true;
+      this.question = false;
+    }
+  },
+}
+
+
+</script>
 
 <style>
 @import '../../css/base.css';
 @import '../../css/app.css';
+</style>
+<style scoped>
+.drop-zone {
+    background-color: rgb(168, 53, 53);
+    margin-bottom: 10px;
+    padding: 10px;
+  }
 
-/* .switch vaja lisada, praegu lihtsalt checkbox, send help!!!!! */
+  .drag-el {
+    background-color: rgb(155, 62, 62);
+    margin-bottom: 10px;
+    padding: 5px;
+  }
 </style>
