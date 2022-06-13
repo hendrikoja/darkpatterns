@@ -427,3 +427,26 @@ html{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
 }
+
+.drop-zone {
+  background-color: rgb(168, 53, 53);
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.drag-el {
+  background-color: rgb(155, 62, 62);
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.menu {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  width: auto;
+}
+.interactivegame {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: auto;
+}

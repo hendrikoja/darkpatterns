@@ -57,36 +57,40 @@
 </div>
 
 <div class="question" v-if="gamecounter == 4 && question == true">
+<div class="menu">
   <div
-  class="drop-zone"
-  @drop="onDrop($event, 1)"
-  @dragover.prevent
-  @dragenter.prevent
->
-  <div
-    class="drag-el"
-    v-for="item in getList(1)"
-    :key="item.title"
-    draggable="true"
-    @dragstart="startDrag($event, item)"
+    class="drop-zone"
+    @drop="onDrop($event, 1)"
+    @dragover.prevent
+    @dragenter.prevent
   >
-    {{ item.title }}
+    <div
+      class="drag-el"
+      v-for="item in getList(1)"
+      :key="item.title"
+      draggable="true"
+      @dragstart="startDrag($event, item)"
+    >
+      <img :src = "item.image">
+    </div>
   </div>
 </div>
-<div
-  class="drop-zone"
-  @drop="onDrop($event, 2)"
-  @dragover.prevent
-  @dragenter.prevent
->
+<div class="interactivegame">
   <div
-    class="drag-el"
-    v-for="item in getList(2)"
-    :key="item.title"
-    draggable="true"
-    @dragstart="startDrag($event, item)"
+    class="drop-zone"
+    @drop="onDrop($event, 2)"
+    @dragover.prevent
+    @dragenter.prevent
   >
-    {{ item.title }}
+    <div
+      class="drag-el"
+      v-for="item in getList(2)"
+      :key="item.title"
+      draggable="true"
+      @dragstart="startDrag($event, item)"
+    >
+      <img :src = "item.image">
+    </div>
   </div>
 </div>
   <button name="Answer" class="answerbutton" @click="nextquestion()">Advance story or smth</button>
@@ -97,12 +101,17 @@
 <script>
 import { ref } from 'vue'
 
+function drop(e) {
+    if(e.preventDefault) { e.preventDefault(); }
+    return false;
+}
+
 export default{
   setup() {
     const items = ref([
-      { id: 0, title: 'Oh', list: 1 },
-      { id: 1, title: 'the', list: 1 },
-      { id: 2, title: 'misery', list: 2 },
+      { id: 0, title: 'oh', list: 1, image: "../images/boss2.png" },
+      { id: 1, title: 'the', list: 1, image: "../images/boss2.png" },
+      { id: 2, title: 'misery', list: 2, image: "../images/boss2.png" },
     ])
 
     const getList = (list) => {
@@ -127,6 +136,7 @@ export default{
       onDrop,
       startDrag,
     }
+
   },
   data(){
     return {
@@ -171,23 +181,10 @@ export default{
   },
 }
 
-
+document.body.addEventListener('drop',drop,true);
 </script>
 
 <style>
 @import '../../css/base.css';
 @import '../../css/app.css';
-</style>
-<style scoped>
-.drop-zone {
-    background-color: rgb(168, 53, 53);
-    margin-bottom: 10px;
-    padding: 10px;
-  }
-
-  .drag-el {
-    background-color: rgb(155, 62, 62);
-    margin-bottom: 10px;
-    padding: 5px;
-  }
 </style>
