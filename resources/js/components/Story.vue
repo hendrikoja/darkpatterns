@@ -1,28 +1,8 @@
-<script>
-export default{
-  props: {
-      cum: Boolean,
-      count: Number,
-      kasutajanimi: String,
-      settingsmenu: Boolean,
-      story: Boolean,
-      gamestarted: Boolean,
-      gamecounter: Number,
-      question: Boolean,
-  },
-  methods: {
-    submit(){
-        this.$emit('nextstory')
-    }
-  }
-}
-</script>
-
 <template>
 <div class="story">
   <div class="localisation">
-  <p>Nüüd see on gaming, POG</p>
-  <button class="edasi" @click="$emit('lolevent')">Järgmine küsimus or smth</button>
+  <p>Nüüd see on gaming, POG, mul pole aimugi kuidas selle tööle sain, ära küsi</p>
+  <button class="edasi" @click="$emit('storyevent')">Järgmine küsimus or smth</button>
   </div>
 </div> 
 </template>
