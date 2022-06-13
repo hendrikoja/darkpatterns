@@ -13147,9 +13147,14 @@ var __default__ = {
       this.count++;
     },
     userdatabase: function userdatabase() {
-      this.story = !this.story;
-      this.gamestarted = !this.gamestarted;
-      this.gamecounter++;
+      if (!this.username) {
+        console.log("Kasutjanimi sisestamata!");
+        return;
+      } else {
+        this.story = !this.story;
+        this.gamestarted = !this.gamestarted;
+        this.gamecounter++;
+      }
     },
     settingsfunc: function settingsfunc() {
       this.settingsmenu = !this.settingsmenu;

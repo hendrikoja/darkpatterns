@@ -30,9 +30,14 @@
         this.count++;
       },
       userdatabase() {
-        this.story = !this.story;
-        this.gamestarted = !this.gamestarted;
-        this.gamecounter++;
+        if (!this.username) {
+          console.log("Kasutjanimi sisestamata!");
+          return;
+        } else {
+          this.story = !this.story;
+          this.gamestarted = !this.gamestarted;
+          this.gamecounter++;
+        }
       },
       settingsfunc() {
         this.settingsmenu = !this.settingsmenu;
