@@ -1,4 +1,5 @@
 <template>
+<main>
 <button class="settings" @click="settingsfunc"></button>
 <div class="settingsmenu" v-if="settingsmenu">
   <button name="Sound" class="Soundbutton" @click="funnistuff()">Sound</button>
@@ -81,8 +82,7 @@
 </div>
   <button name="Answer" class="answerbutton" @click="nextquestion()">Advance story or smth</button>
 </div>
-  <main>
-  </main>
+</main>
 </template>
 
 <script>
