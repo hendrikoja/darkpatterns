@@ -334,6 +334,7 @@ input:checked + .slider:before {
 
 .bossitekst {
   width: 1200px;
+<<<<<<< Updated upstream
   height: 30px;
   position:absolute;
   text-align: left;
@@ -341,6 +342,15 @@ input:checked + .slider:before {
   left: 25%;
   color:rgb(0, 0, 0);
   font-size: 37px;
+=======
+  height: 200px;
+  position:absolute;
+  text-align: left;
+  top: 15.5%;
+  left: 25%;
+  color:rgb(0, 0, 0);
+  font-size: 30px;
+>>>>>>> Stashed changes
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -350,7 +360,11 @@ input:checked + .slider:before {
   position:absolute;
   text-align: left;
   top: 42.5%;
+<<<<<<< Updated upstream
   left: 13%;
+=======
+  left: 10%;
+>>>>>>> Stashed changes
   color:rgb(0, 0, 0);
   font-size: 37px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -362,7 +376,11 @@ input:checked + .slider:before {
   position:absolute;
   text-align: right;
   top: 62.5%;
+<<<<<<< Updated upstream
   right: -10%;
+=======
+  right: -20%;
+>>>>>>> Stashed changes
   color:rgb(0, 0, 0);
   font-size: 37px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -391,7 +409,11 @@ html{
 
 /* Animation */
 .anim-typewriter{
+<<<<<<< Updated upstream
   animation: typewriter 6.9s steps(100) 1s 1 normal both,
+=======
+  animation: typewriter 5.2s steps(100) 1s 1 normal both,
+>>>>>>> Stashed changes
              blinkTextCursor 500ms steps(100) infinite normal;
 }
 @keyframes typewriter{
@@ -404,9 +426,15 @@ html{
 }
 
 .anim-typewriter2{
+<<<<<<< Updated upstream
   animation: typewriter2 5s steps(100) 1s 1 normal both,
              blinkTextCursor2 500ms steps(100) infinite normal;
   animation-delay: 9s;
+=======
+  animation: typewriter2 3s steps(100) 1s 1 normal both,
+             blinkTextCursor2 500ms steps(100) infinite normal;
+  animation-delay: 7s;
+>>>>>>> Stashed changes
 }
 @keyframes typewriter2{
   from{width: 0;}
@@ -418,9 +446,15 @@ html{
 }
 
 .anim-typewriter3{
+<<<<<<< Updated upstream
   animation: typewriter3 2s steps(30) 1s 1 normal both,
              blinkTextCursor3 500ms steps(30) infinite normal;
   animation-delay: 15s;
+=======
+  animation: typewriter3 1s steps(30) 1s 1 normal both,
+             blinkTextCursor3 500ms steps(30) infinite normal;
+  animation-delay: 11s;
+>>>>>>> Stashed changes
 }
 @keyframes typewriter3{
   from{width: 0;}
@@ -430,4 +464,8 @@ html{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
 }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+
 >>>>>>> Stashed changes

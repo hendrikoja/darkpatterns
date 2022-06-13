@@ -72,7 +72,11 @@ export default{
   <button class="edasi" @click="nextstory()">To Work</button>
   </div>
   <div class="bossitekst">
+<<<<<<< Updated upstream
     <p class="line-1 anim-typewriter">Good morning worker! Your first task is to provide the appropriate cookie settings for our website. ()</p>
+=======
+    <p class="line-1 anim-typewriter ">Good morning worker! Your first task is to provide the appropriate cookie settings for our website. ()</p>
+>>>>>>> Stashed changes
   </div>
   <div class="bossitekst2">
     <p class="line-1 anim-typewriter2">Make the most beneficial decision for us.</p>
@@ -80,7 +84,11 @@ export default{
   <div class="bossitekst3">
     <p class="line-1 anim-typewriter3">Ok.</p>
   </div>
+<<<<<<< Updated upstream
   <div class="storybubbles" >
+=======
+  <div class="storybubbles">
+>>>>>>> Stashed changes
     <img src="../../static/textbubble.png" class="storymenutextbubble">
     <img src="../../static/textbubble.png" class="storymenutextbubble">
     <img src="../../static/textbubble.png" class="storymenutextbubble">
