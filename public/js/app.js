@@ -13297,8 +13297,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 // IGNOREEEEERI BRUUUUUUUH IT DOES NOTHING
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      count: 0,
+      username: "",
+      settingsmenu: false,
+      story: false,
+      gamestarted: false,
+      gamecounter: 0,
+      question: false,
+      file: "../../assets/Testmusic.mp3"
+    };
+  },
   methods: {
-    funnistuff: function funnistuff() {
+    countup: function countup() {
       this.count++;
     },
     kasutajabaasi: function kasutajabaasi() {
@@ -13345,6 +13357,11 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 });
+var test = {
+  car: function car() {
+    this.count++;
+  }
+};
 
 /***/ }),
 
@@ -13358,7 +13375,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _MethodsVue_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MethodsVue.vue */ "./resources/js/components/MethodsVue.vue");
+var MethodsVue = __webpack_require__(/*! ./MethodsVue.vue */ "./resources/js/components/MethodsVue.vue");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({}); // Script on vaja muuta, temp. lahendus praegu
 

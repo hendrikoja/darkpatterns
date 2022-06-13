@@ -1,5 +1,5 @@
 <script>
-import MethodsVue from './MethodsVue.vue'
+let MethodsVue = require('./MethodsVue.vue')
 export default{
 
 }

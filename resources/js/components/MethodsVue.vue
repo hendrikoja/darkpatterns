@@ -1,7 +1,19 @@
 <script> // IGNOREEEEERI BRUUUUUUUH IT DOES NOTHING
 export default{
+  data(){
+    return {
+      count: 0,
+      username: "",
+      settingsmenu: false,
+      story: false,
+      gamestarted: false,
+      gamecounter: 0,
+      question: false,
+      file: "../../assets/Testmusic.mp3"
+    }
+  },
   methods: {
-    funnistuff(){
+    countup(){
       this.count++;
     },
     kasutajabaasi(){
@@ -37,5 +49,10 @@ export default{
       audio.play();
     }
   },
+}
+var test = {
+  car(){
+    this.count++;
+  }
 }
 </script>
