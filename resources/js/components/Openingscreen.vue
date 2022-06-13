@@ -1,15 +1,7 @@
 <script>
+import MethodsVue from './MethodsVue.vue'
 export default{
-    data(){
-        return {
-            count: 0
-        }
-    },
-    methods: {
-        countup(){
-            this.count++
-        }
-    }
+
 }
 // Script on vaja muuta, temp. lahendus praegu
 </script>
