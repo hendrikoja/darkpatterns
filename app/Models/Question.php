@@ -12,6 +12,10 @@ class Question extends Model
     public function answers()
     {
         return $this->hasMany(AnswerToQuestion::class);
-        
+    }
+
+    public function boss_answers()
+    {
+        return $this->hasMany(BossAnswers::class);
     }
 }

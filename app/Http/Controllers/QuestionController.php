@@ -10,7 +10,7 @@ class QuestionController extends Controller
 {
     public function index()
     {
-        $questions = Question::with("answers") -> get();
+        $questions = Question::with("answers", "boss_answers") -> get();
         return response() -> json($questions);
     }
 }
