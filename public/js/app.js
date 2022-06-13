@@ -13511,8 +13511,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 4,
     onStoryevent: _cache[5] || (_cache[5] = function ($event) {
       return $options.nextstory();
-    })
-  })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 4 && $data.settingsmenu == false ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Draggable"], {
+    }),
+    story_data: $data.questions[0]['question_story']
+  }, null, 8
+  /* PROPS */
+  , ["story_data"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 4 && $data.settingsmenu == false ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Draggable"], {
     key: 5,
     onQuestionevent: _cache[6] || (_cache[6] = function ($event) {
       return $options.nextquestion();

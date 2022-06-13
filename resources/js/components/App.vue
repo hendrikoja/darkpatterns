@@ -135,7 +135,11 @@
 
     <Questions v-if="gamecounter == 2 && settingsmenu == false" @questionevent="nextquestion()"  />
 
-    <Story v-if="gamecounter == 3 && settingsmenu == false" @storyevent="nextstory()"/>
+    <Story
+      v-if="gamecounter == 3 && settingsmenu == false"
+      @storyevent="nextstory()"
+      :story_data="questions[0]['question_story']"
+    />
 
     <Draggable v-if="gamecounter == 4 && settingsmenu == false" @questionevent="nextquestion()" />
 
