@@ -44,8 +44,8 @@
 
 <div class="question" v-if="gamecounter == 2 && question == true">
   <img src="../../static/interactivescreenbig.png" class="bigscreen">
-  <img src="../../static/interactivescreenbig.png" class="smallscreen">
-  <img src="../../static/interactivescreenbig.png" class="smallscreen2">
+  <img src="../../static/fakedarkpattern.png" class="smallscreen">
+  <img src="../../static/cookieyum.png" class="smallscreen2">
   <button name="Answer" class="answerbutton" @click="nextquestion()">Finish Work</button>
 </div>
 

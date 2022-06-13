@@ -326,16 +326,16 @@ input:checked + .slider:before {
 .smallscreen {
   position: absolute;
   width: 25vw;
-  height: 30vh;
-  top: 15%;
+  height: 40vh;
+  top: 10%;
   left: 70%;
 }
 .smallscreen2 {
   position: absolute;
-  width: 25vw;
+  width: 27vw;
   height: 30vh;
   top: 55%;
-  left: 70%;
+  left: 69%;
 }
 .bigscreen {
   position:absolute;
