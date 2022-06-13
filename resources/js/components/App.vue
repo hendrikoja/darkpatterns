@@ -12,9 +12,8 @@ import Settings from './Settings.vue'
 export default{
   data(){
     return {
-      cum: false,
       count: 0,
-      kasutajanimi: "",
+      username: "",
       settingsmenu: false,
       story: false,
       gamestarted: false,
@@ -27,7 +26,7 @@ export default{
     funnistuff(){
       this.count++;
     },
-    kasutajabaasi(){
+    userdatabase(){
       this.story = !this.story;
       this.gamestarted = !this.gamestarted;
       this.gamecounter++;
@@ -63,7 +62,7 @@ export default{
 
 <button class="settings" @click="settingsfunc()"></button>
 
-<Openingscreen v-if="gamestarted == false && settingsmenu == false" @openingevent="kasutajabaasi()"/>
+<Openingscreen v-if="gamestarted == false && settingsmenu == false" @openingevent="userdatabase()"/>
 
 <Settings v-if="settingsmenu == true" />
 

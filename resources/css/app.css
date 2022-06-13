@@ -29,7 +29,7 @@ html {
   position: absolute;
 }
 
-.kasutaja {
+.user {
   display: flex;
   background-color: #a14337;
   border-color: yellow;
@@ -48,7 +48,7 @@ html {
   position: absolute;
 }
 
-.enterkasutaja {
+.enteruser {
   display: flex;
   background-color: #a14337;
   border-color: yellow;
@@ -168,7 +168,7 @@ input:checked + .slider {
   left: 50%;
 }
 
-.edasi{
+.next{
   display: flex;
   background-color: #a14337;
   border-color: yellow;

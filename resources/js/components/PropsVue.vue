@@ -1,9 +1,8 @@
 <script>
 export default{
   props: {
-      cum: Boolean,
       count: Number,
-      kasutajanimi: String,
+      username: String,
       settingsmenu: Boolean,
       story: Boolean,
       gamestarted: Boolean,

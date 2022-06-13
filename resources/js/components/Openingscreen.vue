@@ -16,8 +16,8 @@ export default{
 
 <template>
 <div class="Openingscreen">
-  <button name="avaleht" class="button1" @click="countup()">{{count}}</button>
-  <input class="kasutaja" v-model="kasutajanimi" placeholder="Kasutajanimi" maxlength="14">
-  <button class="enterkasutaja" @click="$emit('openingevent')">Alusta mängu</button>
+  <button name="openscreen" class="button1" @click="countup()">{{count}}</button>
+  <input class="user" v-model="username" placeholder="Username" maxlength="14">
+  <button class="enteruser" @click="$emit('openingevent')">Start game lol</button>
 </div>
 </template>
