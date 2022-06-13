@@ -11,6 +11,9 @@
 
 <script>
   export default{
+    components: {
+      Story
+    },
     data(){
       return {
         count: 0,
@@ -33,12 +36,12 @@
           "answers": [
             {
               "correct": 1,
-              "image_loc": "src/img1.png",
+              "image_loc": "../images/fakedarkpattern.png",
               "description": "GOOD ANSWER BUDDY!"
             },
             {
               "correct": 0,
-              "image_loc": "src/img2.png",
+              "image_loc": "../images/cookieyum.png",
               "description": "WORKER! BAD ANSWER!"
             }
           ],
@@ -123,7 +126,11 @@
     <Settings v-if="settingsmenu == true" />
 
 
-    <Story v-if="gamecounter == 1 && settingsmenu == false" @storyevent="nextstory()"/>
+    <Story
+      v-if="gamecounter == 1 && settingsmenu == false"
+      @storyevent="nextstory()"
+      :story_data="questions[0]['question_story']"
+    />
 
 
     <Questions v-if="gamecounter == 2 && settingsmenu == false" @questionevent="nextquestion()"  />
