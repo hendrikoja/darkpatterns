@@ -22,7 +22,49 @@
 
         gamecounter: 0,
         question: false,
-        file: "../../assets/Testmusic.mp3"
+        file: "../../assets/Testmusic.mp3",
+
+        //Temp küsimused, hiljem ABst
+        questions: [
+        {
+          "description": "Worker! You gotta do this",
+          "points": 200,
+          "category_id": 1,
+          "answers": [
+            {
+              "correct": 1,
+              "image_loc": "src/img1.png",
+              "description": "GOOD ANSWER BUDDY!"
+            },
+            {
+              "correct": 0,
+              "image_loc": "src/img2.png",
+              "description": "WORKER! BAD ANSWER!"
+            }
+          ],
+          "boss_answers": [
+            {
+              "correct": 1,
+              "description": "VERY GOOD, WORKER! YOU MADE THE CORRECT CHOICE VERY POGGERS YOU'RE AMAZING AHHHH LETS GO"
+            },
+            {
+              "correct": 0,
+              "description": "NOO WORKER YOU F'D UP HARDD BRO"
+            }
+          ],
+          "question_story": [
+            {
+              "description": "Good morning worker! Your first task is to provide the appropriate cookie settings for our website."
+            },
+            {
+              "description": "Make the most beneficial decision for us."
+            },
+            {
+              "description": "Ok"
+            }
+          ]
+        }
+      ]
       }
     },
     methods: {
