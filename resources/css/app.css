@@ -301,10 +301,20 @@ input:checked + .slider {
 .storybosspng2{
   width: 13vw;
   height: 15vh;
-  top: 54.35%;
+  top: 36.35%;
   left: 9.5%;
   position: absolute;
   z-index: -1;
+}
+
+.storyworkerpng{
+  width: 11vw;
+  height: 15vh;
+  top: 54.35%;
+  right: 0.5%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
 }
 .storymenutextbubble {
   width: 65vw;
@@ -372,8 +382,8 @@ input:checked + .slider {
   height: 30px;
   position:absolute;
   text-align: right;
-  top: 62.5%;
-  right: -20%;
+  top: 61%;
+  right: -22%;
   color:rgb(0, 0, 0);
   font-size: 37px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
