@@ -13133,6 +13133,7 @@ var __default__ = {
     return {
       count: 0,
       username: "",
+      //Vaate väärtused
       settingsmenu: false,
       story: false,
       gamestarted: false,
@@ -13180,6 +13181,9 @@ var __default__ = {
     sound: function sound() {
       /*var audio = new Audio(require("../../assets/Testmusic.mp3"));*/
       audio.play();
+    },
+    usernameChange: function usernameChange(data) {
+      this.username = data;
     }
   }
 };
@@ -13298,12 +13302,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      count: 0
+      count: 0,
+      username: ""
     };
   },
   methods: {
     countup: function countup() {
       this.count++;
+    },
+    emitUsernameChange: function emitUsernameChange() {
+      this.$emit("usernameChange", this.username);
     }
   }
 }); // Script on vaja muuta, temp. lahendus praegu
@@ -13420,27 +13428,30 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 0,
     onOpeningevent: _cache[1] || (_cache[1] = function ($event) {
       return $options.userdatabase();
+    }),
+    onUsernameChange: _cache[2] || (_cache[2] = function ($event) {
+      return $options.usernameChange($event);
     })
   })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.settingsmenu == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Settings"], {
     key: 1
   })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 1 && $data.settingsmenu == false ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Story"], {
     key: 2,
-    onStoryevent: _cache[2] || (_cache[2] = function ($event) {
+    onStoryevent: _cache[3] || (_cache[3] = function ($event) {
       return $options.nextstory();
     })
   })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 2 && $data.settingsmenu == false ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Questions"], {
     key: 3,
-    onQuestionevent: _cache[3] || (_cache[3] = function ($event) {
+    onQuestionevent: _cache[4] || (_cache[4] = function ($event) {
       return $options.nextquestion();
     })
   })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 3 && $data.settingsmenu == false ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Story"], {
     key: 4,
-    onStoryevent: _cache[4] || (_cache[4] = function ($event) {
+    onStoryevent: _cache[5] || (_cache[5] = function ($event) {
       return $options.nextstory();
     })
   })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 4 && $data.settingsmenu == false ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Draggable"], {
     key: 5,
-    onQuestionevent: _cache[5] || (_cache[5] = function ($event) {
+    onQuestionevent: _cache[6] || (_cache[6] = function ($event) {
       return $options.nextquestion();
     })
   })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
@@ -13582,15 +13593,18 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "class": "user",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
-      return _ctx.username = $event;
+      return $data.username = $event;
     }),
     placeholder: "Username",
-    maxlength: "14"
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.username]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    maxlength: "14",
+    onChange: _cache[2] || (_cache[2] = function ($event) {
+      return $options.emitUsernameChange();
+    })
+  }, null, 544
+  /* HYDRATE_EVENTS, NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.username]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "enteruser",
-    onClick: _cache[2] || (_cache[2] = function ($event) {
+    onClick: _cache[3] || (_cache[3] = function ($event) {
       return _ctx.$emit('openingevent');
     })
   }, "Start game lol"), _hoisted_2, _hoisted_3]);
