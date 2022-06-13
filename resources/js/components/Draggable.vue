@@ -75,5 +75,5 @@ document.body.addEventListener('drop',drop,true);
     </div>
   </div>
 </div>
-  <button name="Answer" class="answerbutton" @click="nextquestion()">Advance story or smth</button>
+  <button name="Answer" class="answerbutton" @click='$emit("questionevent")'>Advance story or smth</button>
 </template>
