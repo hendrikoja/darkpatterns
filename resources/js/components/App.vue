@@ -5,6 +5,7 @@ import Questions from './Questions.vue'
 //import json from './Data.json'
 import Openingscreen from './Openingscreen.vue'
 import Settings from './Settings.vue'
+import Draggable from './Draggable.vue'
 </script>
 
 
@@ -54,11 +55,11 @@ export default{
     }
   }
 }
-
-
 </script>
 
 <template>
+
+<main>
 
 <button class="settings" @click="settingsfunc()"></button>
 
@@ -72,11 +73,10 @@ export default{
 
 <Story v-if="gamecounter == 3 && settingsmenu == false" @storyevent="nextstory()"/>
 
-<Questions v-if="gamecounter == 4 && settingsmenu == false" @questionevent="nextquestion()" />
+<Draggable v-if="gamecounter == 4 && settingsmenu == false" @questionevent="nextquestion()" />
 
-  <main>
-    
-  </main>
+</main>
+
 </template>
 
 
