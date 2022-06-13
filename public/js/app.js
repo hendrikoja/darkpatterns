@@ -13129,33 +13129,52 @@ var __default__ = {
   },
   data: function data() {
     return {
-      cum: false,
+      username: "test",
+      //funny click button haha
       count: 0,
-      kasutajanimi: "",
+      //View toggles
       settingsmenu: false,
       story: false,
+      question: false,
+      //Game flow things
       gamestarted: false,
       gamecounter: 0,
-      question: false
+      //placeholder questions, later from database
+      //gotta add actual images owo
+      //boss answers missing rn, gotta work on that in the database stuff :weary:
+      questions: [{
+        "description": "Worker! You gotta do this",
+        "points": 200,
+        "category_id": 1,
+        "answers": [{
+          "correct": 1,
+          "image_loc": "src/img1.png",
+          "description": "GOOD ANSWER BUDDY!"
+        }, {
+          "correct": 0,
+          "image_loc": "src/img2.png",
+          "description": "WORKER! BAD ANSWER!"
+        }]
+      }]
     };
   },
   methods: {
     funnistuff: function funnistuff() {
       this.count++;
     },
-    kasutajabaasi: function kasutajabaasi() {
-      this.story = !this.story;
-      this.gamestarted = !this.gamestarted;
-      this.gamecounter++;
-    },
-    settingsfunc: function settingsfunc() {
-      this.settingsmenu = !this.settingsmenu;
-
-      if (this.gamecounter % 2 == 0) {
-        this.question = !this.question;
+    startGame: function startGame() {
+      //TODO: kui kasutaja pole nime sisestanud, siis ära lase tal edasi minna
+      //TODO: kasutaja andmebaasi lisamine
+      if (!this.username) {
+        return;
       } else {
         this.story = !this.story;
+        this.gamestarted = !this.gamestarted;
+        this.gamecounter++;
       }
+    },
+    toggleSettings: function toggleSettings() {
+      this.settingsmenu = !this.settingsmenu;
     },
     nextstory: function nextstory() {
       this.gamecounter++;
@@ -13201,14 +13220,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
-    cum: Boolean,
-    count: Number,
-    kasutajanimi: String,
-    settingsmenu: Boolean,
-    story: Boolean,
-    gamestarted: Boolean,
-    gamecounter: Number,
-    question: Boolean
+    username: String
   },
   methods: {
     submit: function submit() {
@@ -13266,15 +13278,18 @@ var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [$data.gamecounter == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Story"], {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [$data.story && !$data.settingsmenu ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Story"], {
     key: 0,
     onNextstory: _cache[0] || (_cache[0] = function ($event) {
       return $options.nextstory();
-    })
-  })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    }),
+    username: $data.username
+  }, null, 8
+  /* PROPS */
+  , ["username"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "settings",
     onClick: _cache[1] || (_cache[1] = function () {
-      return $options.settingsfunc && $options.settingsfunc.apply($options, arguments);
+      return $options.toggleSettings && $options.toggleSettings.apply($options, arguments);
     })
   }), $data.settingsmenu ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     name: "Sound",
@@ -13293,18 +13308,18 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "class": "kasutaja",
     "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
-      return $data.kasutajanimi = $event;
+      return $data.username = $event;
     }),
-    placeholder: "Kasutajanimi",
+    placeholder: "username",
     maxlength: "14"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.kasutajanimi]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.username]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "enterkasutaja",
     onClick: _cache[5] || (_cache[5] = function ($event) {
-      return $options.kasutajabaasi();
+      return $options.startGame();
     })
-  }, "Alusta mängu")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 2 && $data.question == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, "Alusta mängu")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 2 && $data.question == true && !$data.settingsmenu ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     name: "esimene valik",
     "class": "button1game",
     onClick: _cache[6] || (_cache[6] = function ($event) {
@@ -13326,7 +13341,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[8] || (_cache[8] = function ($event) {
       return $options.nextquestion();
     })
-  }, "Advance story or smth")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 4 && $data.question == true ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, "Advance story or smth")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 4 && $data.question == true && !$data.settingsmenu ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     name: "esimene valik",
     "class": "button1game",
     onClick: _cache[9] || (_cache[9] = function ($event) {
@@ -13373,13 +13388,13 @@ var _hoisted_1 = {
 var _hoisted_2 = {
   "class": "localisation"
 };
-
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Nüüd see on gaming, POG", -1
-/* HOISTED */
-);
-
+var _hoisted_3 = ["innerHTML"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+    innerHTML: $props.username
+  }, null, 8
+  /* PROPS */
+  , _hoisted_3), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "edasi",
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $options.submit();
