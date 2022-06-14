@@ -51,7 +51,20 @@
             <input type="checkbox" name="q_correct2" id="q_correct2">
             <hr>
             <h3>Story osa</h3>
+            <label for="q_intro1">Loo sissejuhatus (Boss) 1:</label>
+            <br>
+            <textarea id="q_intro1" name="q_intro1"></textarea>
+            <br>
+            <label for="q_intro2">Loo sissejuhatus (Boss) 2:</label>
+            <br>
+            <textarea id="q_intro2" name="q_intro2"></textarea>
+            <br>
+            <label for="q_intro3">Loo sissejuhatus (Kasutaja) 1:</label>
+            <br>
+            <textarea id="q_intro3" name="q_intro3"></textarea>
+            <br>
             <hr>
+            
 
             <input type="submit" value="Send!!!">
         <form>
