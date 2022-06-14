@@ -3,8 +3,10 @@
 </script>
 
 <template>
-<div class="EndScreen">
-    <p>You got to the end, good job gamer, XD</p>
-    <button class="??" @click="$emit('endevent')">Leaderboard</button> <!--Disainimeeskonna probleem :sunglasses:-->
-</div>
+<div class="💄">
+    <div class="😂">Congratulations!</div>
+    <div class="🥺">You got to the end. Good job worker!</div>
+    <img src="../../static/interactivescreenbig.png">
+    <button class="🔘" @click="$emit('endevent')">Leaderboard</button> <!--Disainimeeskonna probleem :sunglasses:-->
+    </div>
 </template>

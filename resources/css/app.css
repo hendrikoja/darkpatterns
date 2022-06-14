@@ -489,6 +489,45 @@ html{
   border-radius: 100px;
 }
 
+
+.💄 {
+  position: relative;
+  text-align: center;
+  border-radius: 100px;
+  color:rgb(0, 0, 0);
+  font-size: 5vh;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.🥺 {
+  border-color:rgb(0, 255, 76);
+  border-width: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.😂 {
+  border-color:rgb(0, 255, 76);
+  border-width: 10px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.🔘 {
+  border-color:rgb(0, 255, 76);
+  border-width: 10px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10vh;
+}
+
+
 canvas
 {
   position:fixed;
