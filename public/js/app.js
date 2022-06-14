@@ -13134,9 +13134,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Openingscreen_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Openingscreen.vue */ "./resources/js/components/Openingscreen.vue");
 /* harmony import */ var _Settings_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Settings.vue */ "./resources/js/components/Settings.vue");
 /* harmony import */ var _Draggable_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Draggable.vue */ "./resources/js/components/Draggable.vue");
+/* harmony import */ var _background_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./background.js */ "./resources/js/components/background.js");
+/* harmony import */ var _background_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_background_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _EndScreen_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./EndScreen.vue */ "./resources/js/components/EndScreen.vue");
+/* harmony import */ var _Leaderboard_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Leaderboard.vue */ "./resources/js/components/Leaderboard.vue");
 var __default__ = {
   components: {
-    Story: _Story_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    Story: _Story_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    PropsVue: _PropsVue_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Questions: _Questions_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Openingscreen: _Openingscreen_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    Settings: _Settings_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    Draggable: _Draggable_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    EndScreen: _EndScreen_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    Leaderboard: _Leaderboard_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
   },
   mixins: [__webpack_require__(/*! ./MethodsVue.vue */ "./resources/js/components/MethodsVue.vue")],
   data: function data() {
@@ -13194,7 +13205,9 @@ var __default__ = {
 };
 
 
- //import json from './Data.json'
+
+
+
 
 
 
@@ -13210,7 +13223,10 @@ var __default__ = {
       Questions: _Questions_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
       Openingscreen: _Openingscreen_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
       Settings: _Settings_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-      Draggable: _Draggable_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+      Draggable: _Draggable_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+      background: (_background_js__WEBPACK_IMPORTED_MODULE_8___default()),
+      EndScreen: _EndScreen_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+      Leaderboard: _Leaderboard_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
@@ -13347,6 +13363,9 @@ module.exports = {
     },
     usernameChange: function usernameChange(data) {
       this.username = data;
+    },
+    next: function next() {
+      this.gamecounter++;
     }
   }
 };
@@ -13548,6 +13567,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onQuestionevent: _cache[5] || (_cache[5] = function ($event) {
       return _ctx.nextquestion();
     })
+  })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 2 && $data.settingsmenu == false ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["EndScreen"], {
+    key: 4,
+    onEndevent: _cache[6] || (_cache[6] = function ($event) {
+      return _ctx.next();
+    })
+  })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.gamecounter == 3 && $data.settingsmenu == false ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Leaderboard"], {
+    key: 5
   })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
 }
 
@@ -13638,6 +13664,66 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, "Answer")], 64
   /* STABLE_FRAGMENT */
   );
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/EndScreen.vue?vue&type=template&id=1d08a3cc":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/EndScreen.vue?vue&type=template&id=1d08a3cc ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "EndScreen"
+};
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "You got to the end, good job gamer, XD", -1
+/* HOISTED */
+);
+
+function render(_ctx, _cache) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    "class": "??",
+    onClick: _cache[0] || (_cache[0] = function ($event) {
+      return _ctx.$emit('endevent');
+    })
+  }, "Leaderboard"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Disainimeeskonna probleem :sunglasses:")]);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Leaderboard.vue?vue&type=template&id=77e85be2":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Leaderboard.vue?vue&type=template&id=77e85be2 ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "Leaderboard"
+};
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Leaderboard or smth, cum", -1
+/* HOISTED */
+);
+
+var _hoisted_3 = [_hoisted_2];
+function render(_ctx, _cache) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_3);
 }
 
 /***/ }),
@@ -13861,6 +13947,509 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/background.js":
+/*!***********************************************!*\
+  !*** ./resources/js/components/background.js ***!
+  \***********************************************/
+/***/ (() => {
+
+/* -------------- POINT.JS ------------*/
+var Point = function Point(x, y) {
+  this.x = x;
+  this.y = y;
+};
+
+Point.prototype = {
+  x: 0,
+  y: 0,
+  subtract: function subtract(p) {
+    return new Point(this.x - p.x, this.y - p.y);
+  },
+  add: function add(p) {
+    return new Point(this.x + p.x, this.y + p.y);
+  },
+  clone: function clone() {
+    return new Point(this.x, this.y);
+  },
+  getNormal: function getNormal() {
+    return new Point(-this.y, this.x);
+  },
+  angle: function angle() {
+    return Math.atan2(this.y, this.x);
+  },
+  fromPolar: function fromPolar(angle, length) {
+    var l = length || 1;
+    return new Point(l * Math.cos(angle), l * Math.sin(angle));
+  },
+  lerp: function lerp(a, b, pi) {
+    this.x = pi * b.x + (1 - pi) * a.x;
+    this.y = pi * b.y + (1 - pi) * a.y;
+    return this;
+  },
+  scaleBy: function scaleBy(amt) {
+    this.x *= amt;
+    this.y *= amt;
+    return this;
+  },
+  length: function length() {
+    return Math.sqrt(this.x * this.x + this.y * this.y);
+  },
+  dot: function dot(b) {
+    return this.x * b.x + this.y * b.y;
+  },
+  normalize: function normalize(len) {
+    var mag = len || 1;
+    var curLen = this.length();
+    this.x /= curLen / mag;
+    this.y /= curLen / mag;
+    return this;
+  },
+  mean: function mean(pointList) {
+    var x = 0;
+    var y = 0;
+
+    for (var i = 0; i < pointList.length; i++) {
+      x += pointList[i].x;
+      y += pointList[i].y;
+    }
+
+    x /= pointList.length;
+    y /= pointList.length;
+    return new Point(x, y);
+  }
+};
+/*------------UTIL.JS------------*/
+
+var Util = {
+  STANDARD: 0,
+  REQUIRES_POSITIVE_T: 1,
+  REQUIRES_POSITIVE_U: 2,
+  REQUIRES_POSITIVE_BOTH: 3,
+  scalePoints: function scalePoints(pts, amount, origin) {
+    var outPoints = [];
+
+    if (origin == null) {
+      origin = new Point().mean(pts);
+    }
+
+    for (var i = 0; i < pts.length; i++) {
+      var pIn = pts[i];
+      var pOut = pts[i].subtract(origin).scaleBy(amount).add(origin);
+      outPoints.push(pOut);
+    }
+
+    return outPoints;
+  },
+  reflect: function reflect(ray, normal) {
+    var v = ray.clone();
+    var l = normal.clone();
+    v.normalize();
+    l.normalize();
+    var reflection = l.scaleBy(2 * v.dot(l) / l.dot(l)).subtract(v);
+    return reflection;
+  },
+  intersectPolygon: function intersectPolygon(a_p1, a_r1, polygon, mode) {
+    //let's look for the one with the lowest positive t-value...
+    // x("checking...",a_p1,a_r1,polygon);
+    if (mode == undefined) mode == 1;
+    var points = polygon.points;
+    var collisionCandidates = [];
+    var sideLength = points[0].subtract(points[1]).length();
+
+    for (var i = 0; i < points.length; i++) {
+      var p2 = points[i];
+      var pNext = points[(i + 1) % points.length];
+      var r2 = points[i].subtract(pNext);
+      r2.normalize();
+      var colSet = Util.intersect(a_p1, a_r1, points[i], r2);
+      colSet.a = p2;
+      colSet.b = pNext;
+
+      if (Math.abs(colSet.tValue) > 1e-5) {
+        if (mode == 1 && colSet.tValue > 0) collisionCandidates.push(colSet);
+        if (mode == 2 && colSet.uValue > 0) collisionCandidates.push(colSet);
+
+        if (mode == 0) {
+          colSet.tValue = Math.abs(colSet.tValue);
+          collisionCandidates.push(colSet);
+        }
+
+        if (mode == 3 && colSet.tValue > 0 && colSet.uValue > 0 && colSet.uValue < sideLength) {
+          collisionCandidates.push(colSet);
+        }
+      }
+    }
+
+    if (collisionCandidates.length == 0) {
+      return null;
+    }
+
+    collisionCandidates.sort(function (a, b) {
+      return a.tValue - b.tValue;
+    });
+    var best = collisionCandidates[0]; // console.log(best);
+
+    var pt = new Point(best.xIntercept, best.yIntercept);
+    pt.tValue = best.tValue;
+    pt.uValue = best.uValue;
+    console.log("adding an a and b - ", best.a, best.b);
+    pt.a = best.a;
+    pt.b = best.b;
+    return pt;
+  },
+  intersect: function intersect(a_p1, a_r1, a_p2, a_r2) {
+    a_r1.normalize(1);
+    a_r2.normalize(1);
+    var returner = new Object();
+
+    try {
+      var ta = a_r1.y / a_r1.x;
+      var tb = a_p1.y - ta * a_p1.x;
+      var tc = a_r2.y / a_r2.x;
+      var td = a_p2.y - tc * a_p2.x;
+      /*trace("Intermediaries:\n-----------");
+      we have y = ax+b
+      and y=cx+d.
+      if c
+      
+      */
+
+      /*trace("a:"+ta);
+      trace("b:"+tb);
+      trace("c:"+tc);
+      trace("d:"+td);
+      */
+
+      returner.xIntercept = (td - tb) / (ta - tc);
+      returner.yIntercept = ta * returner.xIntercept + tb;
+
+      if (Math.abs(ta) == Infinity) {
+        //r1 is vertical
+        returner.xIntercept = a_p1.x;
+        returner.yIntercept = tc * returner.xIntercept + td;
+      } else if (Math.abs(tc) == Infinity) {
+        //r2 is vertical
+        returner.xIntercept = a_p2.x;
+        returner.yIntercept = returner.xIntercept * ta + tb;
+      } else if (Math.abs(ta) == 0) {
+        //r1 is horizontal
+        returner.yIntercept = a_p2.y; //
+
+        returner.xIntercept = (returner.yIntercept - td) / tc;
+      }
+
+      var m = returner.xIntercept;
+      var p = a_p1.x;
+      var q = a_r1.x;
+      /*
+       * The approach that seems to work more robustly is 
+       * that we have the x-intercept.  
+       * if we divide the difference between the origin, a_p1.x, by the 
+       * ray's x magnitude, a_p1.x-a_r1.x, 
+       * */
+      // returner.tValue  = (returner.xIntercept - a_p1.x) / (a_r1.x);
+
+      if (returner.xIntercept == a_p1.x) {//we'll use yIntercept.
+        // returner.tValue = (returner.yIntercept - a_p1.y) / (a_r1.y);
+      }
+
+      returner.tValue = (a_p1.x - returner.xIntercept) / a_r1.x;
+      returner.uValue = (a_p2.x - returner.xIntercept) / a_r2.x; // if (returner.xIntercept == a_r2.x) {
+      // we'll use yIntercept.
+      // returner.uValue = (returner.yIntercept - a_r2.y) / (a_r2.y);
+      // }
+
+      returner.mirrorPi = (returner.xIntercept - a_r2.x) / (a_p2.x - a_r2.x);
+    } catch (e) {}
+
+    returner.point = new Point(returner.xIntercept, returner.yIntercept);
+    return returner;
+  },
+  drawSketchStroke: function drawSketchStroke(a, b, g, extension, innerAlpha, jitter) {
+    if (extension == null) extension = 100;
+    if (innerAlpha == null) innerAlpha = 1;
+    if (jitter == null) jitter = 0;
+    var len = a.subtract(b).length();
+    var overshootAmount = (len + extension) / len;
+    var overshoot = Util.scalePoints([a, b], overshootAmount);
+    g.beginPath(); // var grad = g.createLinearGradient(mousePoint.x,mousePoint.y, os.points[i].x,os.points[i].y);
+
+    var grad = g.createLinearGradient(overshoot[0].x, overshoot[0].y, overshoot[1].x, overshoot[1].y);
+    grad.addColorStop(0, "rgba(20,0,0,1)");
+    grad.addColorStop(0.1, "rgba(20,0,0," + innerAlpha + ")");
+    grad.addColorStop(0.9, "rgba(20,0,0," + innerAlpha + ")");
+    grad.addColorStop(1, "rgba(20,0,0,1)");
+    g.strokeStyle = grad; // this.drawRay(os.points[i], ray, g);
+
+    g.moveTo(overshoot[0].x, overshoot[0].y);
+    var segments = 10;
+    var normal = a.subtract(b).normalize().getNormal();
+
+    for (var i = 0; i < segments; i++) {
+      var normalOffset = normal.clone().scaleBy((Math.random() - 0.5) * jitter);
+      var pInternal = new Point().lerp(a, b, i / segments).add(normalOffset);
+      g.lineTo(pInternal.x, pInternal.y);
+    }
+
+    g.lineTo(overshoot[1].x, overshoot[1].y);
+    g.stroke();
+  },
+  drawRay: function drawRay(p, r, g, drawHead) {
+    if (drawHead == null) drawHead = false;
+    g.moveTo(p.x, p.y);
+    var headSize = 10;
+    var tangent = r;
+    tangent.normalize();
+    normal = tangent.getNormal();
+    var head = new Point(p.x + 100 * r.x, p.y + 100 * r.y);
+    g.lineTo(p.x + 1000 * r.x, p.y + 1000 * r.y);
+
+    if (drawHead) {
+      g.moveTo(head.x, head.y);
+      g.lineTo(head.x + headSize * normal.x - headSize * tangent.x, head.y + headSize * normal.y - headSize * tangent.y);
+      g.moveTo(head.x, head.y);
+      g.lineTo(head.x - headSize * normal.x - headSize * tangent.x, head.y - headSize * normal.y - headSize * tangent.y);
+    }
+  }
+};
+/*-------REGULARPOLYGON.JS--------*/
+
+var RegularPolygon = function RegularPolygon(center, radius, sides, angleOffset) {
+  this.init(center, radius, sides, angleOffset);
+};
+
+RegularPolygon.prototype = {
+  points: [],
+  fillColor: 'rgba(0,0,0,1)',
+  init: function init(center, radius, sides, angleOffset) {
+    angleOffset = angleOffset || 0;
+    sides = sides || 3;
+    var theta = 2 * Math.PI / sides;
+    this.points = [];
+
+    for (var i = 0; i < sides; i++) {
+      var pt = new Point(center.x + radius * Math.sin(angleOffset + i * theta), center.y - radius * Math.cos(angleOffset + i * theta));
+      this.points.push(pt);
+    }
+  },
+  isInside: function isInside(p) {
+    //first, we generate a ray that enters from the left and passes through the polygon through the point in question. Then we count the number of intersections 
+    //- if it's odd, it's inside
+    //- if it's even, it's outside.
+    //generate the ray origin
+    var rayOrigin = new Point(p.x - 1000, p.y + 10);
+
+    for (var i = 0; i < this.points.length; i++) {
+      var pI = this.points[(i + this.points.length + 0) % this.points.length];
+      var pN = this.points[(i + this.points.length + 1) % this.points.length];
+      var rN = pI.subtract(pN).normalize();
+      var r2 = rayOrigin.subtract(p);
+      var ii = Util.intersect(rayOrigin, r2, pI, rN);
+
+      if (ii) {
+        g.beginPath();
+        g.fillStyle = "rgba(0,0,0,1)";
+        g.arc(ii.point.x, ii.point.y, 4, 0, 7);
+        g.fill();
+      }
+    }
+  },
+  draw: function draw(g) {
+    g.beginPath();
+    if (this.fillColor) g.fillStyle = this.fillColor;
+    if (this.strokeStyle) g.strokeStyle = this.strokeStyle;
+    if (this.lineWidth) g.lineWidth = this.lineWidth;
+    g.moveTo(this.points[0].x, this.points[0].y);
+
+    for (var i = 0; i < this.points.length; i++) {
+      g.lineTo(this.points[i].x, this.points[i].y);
+    }
+
+    g.lineTo(this.points[0].x, this.points[0].y);
+
+    if (this.fillColor) {
+      // console.log("finishing?");
+      g.fill();
+    }
+
+    if (this.strokeStyle) g.stroke();
+  },
+  drawRounded: function drawRounded(radius, g, offset) {
+    // radius =1;
+    if (this.lineWidth != null) g.lineWidth = this.lineWidth;
+    if (this.fillColor) g.fillStyle = this.fillColor;
+    if (this.strokeStyle) g.strokeStyle = this.strokeStyle;
+    g.beginPath();
+    var polyPoints = []; //we need to be able to shift the points in and out... 
+
+    var pts = this.points;
+    var newPts = [];
+    var p = this.points;
+    g.beginPath(); //----PATH OFFSET
+
+    for (var i = 0; i < this.points.length; i++) {
+      //TODO resolve this to compensate for acute angles! There needs to be a feature of this that includes the sin of the angle, or maybe 1/sin, since offsets have to be pushed out further if we're working on mitre offsets.
+      var pI = p[i];
+      var pL = p[(i + p.length - 1) % p.length];
+      var pN = p[(i + p.length + 1) % p.length];
+      var rL = pL.subtract(pI).normalize(); //.add(pI);
+
+      var rN = pN.subtract(pI).normalize(); //.add(pI);
+
+      var nL = rL.getNormal();
+      var nN = rN.getNormal();
+      var thisAngle = rL.angle() - rN.angle();
+      var concave = thisAngle > 0 || Math.abs(thisAngle) > Math.PI;
+      var thisOffset = offset / Math.sin(thisAngle);
+      var avgN = new Point().lerp(rL, rN, 0.5);
+      avgN.scaleBy(concave ? thisOffset : thisOffset);
+      newPts.push(pI.subtract(avgN)); // lt(pI.subtract(avgN),g);
+    } // lt(newPts[0],g);
+    // g.stroke();
+
+
+    pts = newPts; //CORNER ROUNDING
+
+    for (var i = 0; i < pts.length; i++) // for(var i =0;i<;i++)
+    {
+      var pI = pts[i];
+      var pL = pts[(i + pts.length - 1) % pts.length];
+      var pN = pts[(i + pts.length + 1) % pts.length];
+      var rL = pL.subtract(pI).normalize(); //.add(pI);
+
+      var rN = pN.subtract(pI).normalize(); //.add(pI);
+
+      var thisAngle = rL.angle() - rN.angle();
+      var concave = thisAngle > 0 || Math.abs(thisAngle) > Math.PI;
+      if (thisAngle > Math.PI && thisAngle < Math.PI * 2) concave = false;
+      var sign = concave ? 1 : -1;
+      var theta = thisAngle / 1;
+      var radiusI = Math.max(1, radius + offset * sign);
+      var radInset = radiusI / Math.sin(theta); //next, the relative points:
+
+      g.fillStyle = "rgba(0,0,0,1)"; //so we have the inset, which is where to cast back  from.
+      // g.fillText(radInset.toFixed(2),pI.x,pI.y+20);
+      // g.fillText((thisAngle*57).toFixed(1)+", "+ concave,pI.x,pI.y+30);
+
+      var avgN = new Point().lerp(rL, rN, 0.5);
+      avgN.scaleBy(concave ? radInset : -radInset); // g.beginPath();
+      // mt(pI,g);
+      // lt(pI.add(avgN),g);
+      // g.stroke();
+      // rL.scaleBy(radiusI);
+      // rN.scaleBy(radiusI);
+
+      var nL = rL.getNormal();
+      var nN = rN.getNormal();
+      nL.scaleBy(radiusI / 2 * sign);
+      nN.scaleBy(radiusI / 2 * sign);
+      rL = rL.add(pI);
+      var insetPoint = pI.add(avgN);
+      var oldStroke = g.strokeStyle; // g.strokeStyle = "red";
+
+      g.beginPath(); // g.arc(insetPoint.x,insetPoint.y,4,0,7);
+
+      g.stroke();
+      g.strokeStyle = oldStroke;
+      g.beginPath(); // g.arc(insetPoint.x,insetPoint.y,Math.abs(radiusI)/2,0,7);
+
+      g.stroke();
+      g.beginPath(); // g.arc(insetPoint.x,insetPoint.y,4,0,7);
+
+      g.stroke();
+      rL = insetPoint.add(nL);
+      rN = insetPoint.subtract(nN); // g.beginPath();
+      // g.arc(rL.x,rL.y,2,0,7);
+      // g.stroke();
+      // g.beginPath();
+      // g.arc(rN.x,rN.y,2,0,7);
+      // g.stroke();
+      //then the two corners are actually radiusI*nL+insetPoint and radiusI*nR+insetPoint. 
+      // var insetPoint =  rL.add(rN);
+      //now maybe we can get the circle 
+      // rN = rN.add(pI);
+
+      polyPoints.push(rL);
+      polyPoints.push(rN); //then we need to cast that back to r from the 
+
+      var rI = insetPoint; // .subtract(pI);
+      // rI.normalize();
+      // rI.scaleBy(radius);
+      // rI = rI.add(pI);
+      // g.stroke();
+      // g.lineWidth = 1;
+      // g.fillStyle = "green";
+      // g.beginPath();
+      // g.arc(rN.x,rN.y,5,0,7);
+      // g.fill();
+      // g.fillStyle = "blue";
+      // g.beginPath();
+      // g.arc(rL.x,rL.y,5,0,7);
+      // g.fill();
+      // g.fillStyle = "black";
+      // g.beginPath();
+      // g.arc(insetPoint.x,insetPoint.y,5,0,7);
+      // g.fill();
+
+      var theta1 = Math.atan2(rN.y - insetPoint.y, rN.x - insetPoint.x);
+      var theta2 = Math.atan2(rL.y - insetPoint.y, rL.x - insetPoint.x); //maybe we should try a quadraticcurveto...
+      // g.lineWidth = 1;
+
+      if (false) {} else {
+        g.beginPath();
+        if (concave) g.arc(rI.x, rI.y, radiusI / 2, theta2, theta1);else g.arc(rI.x, rI.y, radiusI / 2, theta1, theta2);
+      }
+
+      g.stroke(); //so that's good. we have the points and we have the radii we'll need to grab the points for:
+    }
+
+    g.lineWidth = this.lineWidth; //---LINE SEGMENTS
+
+    g.beginPath();
+    if (polyPoints.length < 1) return;
+    g.moveTo(polyPoints[0].x, polyPoints[0].y);
+
+    for (var i = 1; i < polyPoints.length - 1; i += 2) {
+      g.moveTo(polyPoints[i].x, polyPoints[i].y);
+      g.lineTo(polyPoints[i + 1].x, polyPoints[i + 1].y);
+    }
+
+    g.moveTo(polyPoints[polyPoints.length - 1].x, polyPoints[polyPoints.length - 1].y);
+    g.lineTo(polyPoints[0].x, polyPoints[0].y);
+
+    if (this.fillColor) {
+      g.fill();
+    }
+
+    if (this.strokeStyle) g.stroke();
+  },
+  end: null
+};
+var c = document.createElement("canvas");
+document.body.appendChild(c);
+var g = c.getContext("2d");
+c.width = window.innerWidth;
+
+function update() {
+  c.height = window.innerHeight;
+  var count = c.width / 17;
+
+  for (var y = 0; y < 43; y++) {
+    for (var i = 0; i < count; i++) {
+      var even = (i + y) % 2 == 0;
+      var rpI = new RegularPolygon(new Point(50 + 18 * i, 30 * y + (even ? 200 : 190) - 200), 20.4, 6, even ? 0 : Math.PI);
+      rpI.fillColor = "rgba(3, 0, 94," + (i / count + 0.1 * (0.5 + 0.45 * Math.sin(y / 323.62 * i / 5 * new Date().getTime() * 0.007))) + ")";
+      rpI.draw(g);
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+update();
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&lang=css":
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&lang=css ***!
@@ -13915,7 +14504,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_static_settings_png__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#app {\r\n  margin: 0;\r\n  padding: 2rem;\r\n  font-weight: normal;\r\n}\r\n\r\nhtml {\r\n  background: repeating-radial-gradient(\r\n    circle at 0 0, \r\n    rgb(112, 112, 112),\r\n    rgb(37, 37, 37) 50px);\r\n  background-size: 200% 200%;\r\n  animation: gradient 180s infinite;\r\n  overflow: hidden;\r\n}\r\n\r\n@keyframes gradient {\r\n  0% {\r\n      background-position: 0% 50%;\r\n  }\r\n  50% {\r\n      background-position: 100% 50%;\r\n  }\r\n  100% {\r\n      background-position: 0% 50%;\r\n  }\r\n}\r\n\r\n.button1 {\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(255, 255, 255);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:95%;\r\n  left: 90%;\r\n  position: absolute;\r\n}\r\n\r\n.coolgradientbutton {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(255, 255, 255);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:20%;\r\n  left: 5%;\r\n  position: absolute;\r\n}\r\n\r\n.user {\r\n  background: linear-gradient(to right, #040404, #0d024e);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(255, 255, 255);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:63%;\r\n  left: 45%;\r\n  position: absolute;\r\n}\r\n\r\n.enteruser {\r\n  background: linear-gradient(to right, #040404, #0d024e);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(255, 255, 255);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:72%;\r\n  left: 45%;\r\n  position: absolute;\r\n}\r\n\r\n.settings{\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-position: 0% 0%;\r\n  background-repeat: no-repeat;\r\n  background-size: contain;\r\n  background-color: transparent;\r\n  border-color: rgba(0, 0, 0, 0);\r\n  display: flex;\r\n  width: 3vw;\r\n  height: 3vw;\r\n  cursor: pointer;\r\n  top: 0%;\r\n  left: 0%;\r\n  position: absolute;\r\n}\r\n\r\n.Soundbutton {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 76);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:10%;\r\n  left: 5%;\r\n  position: absolute;\r\n}\r\n\r\n.switch {\r\n    position: absolute;\r\n    display: inline-block;\r\n    width: 80px;\r\n    height: 34px;\r\n    left: 18%;\r\n    top: 10%;\r\n}\r\n\r\n.switch input {\r\n    opacity: 0;\r\n    width: 0;\r\n    height: 0;\r\n}\r\n\r\n.slider{\r\n  position: absolute;\r\n  cursor: pointer;\r\n  top: 2%;\r\n  left: 25%;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: #ccc;\r\n  -webkit-transition: .4s;\r\n  transition: .4s;\r\n}\r\n\r\n.slider:before {\r\n    position: absolute;\r\n    content: \"\";\r\n    height: 26px;\r\n    width: 26px;\r\n    left: 4px;\r\n    bottom: 4px;\r\n    background-color: white;\r\n    -webkit-transition: .4s;\r\n    transition: .4s;\r\n}\r\n\r\ninput:checked + .slider {\r\n    background-color: #2196F3;\r\n  }\r\n\r\n  input:focus + .slider {\r\n    box-shadow: 0 0 1px #2196F3;\r\n  }\r\n\r\n  input:checked + .slider:before {\r\n    -webkit-transform: translateX(26px);\r\n    -ms-transform: translateX(26px);\r\n    transform: translateX(26px);\r\n  }\r\n  /* Rounded sliders */\r\n  .slider.round {\r\n    border-radius: 34px;\r\n  }\r\n  .slider.round:before {\r\n    border-radius: 50%;\r\n  }\r\n\r\n.next{\r\n  display: flex;\r\n  background: linear-gradient(to right, #040404, #0d024e);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(255, 255, 255);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 20vw;\r\n  height: 6vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  position: absolute;\r\n  top: 72%;\r\n  left: 67.5%;\r\n}\r\n\r\n.button1game {\r\n  display: flex;\r\n  background: linear-gradient(to right, #040404, #0d024e);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 50%;\r\n  position: absolute;\r\n}\r\n\r\n.button2game {\r\n  display: flex;\r\n  background: linear-gradient(to right, #040404, #0d024e);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 60%;\r\n  position: absolute;\r\n}\r\n\r\n.answerbutton {\r\n  background: linear-gradient(to right, #040404, #0d024e);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(255, 255, 255);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top: 60%;\r\n  position: absolute;\r\n}\r\n.center {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n.mainmenutextbubble {\r\n  width: 70vw;\r\n  height: 40vh;\r\n  top: 15%;\r\n  left: 14.8%;\r\n  position: absolute;\r\n  top: 10%;\r\n  z-index: -1;\r\n  border-radius: 5000px;\r\n}\r\n.storybubbles {\r\n  display: block;\r\n  top: 18%;\r\n  left: 18.5%;\r\n  position: absolute;\r\n  z-index: -1;\r\n}\r\n.storybosspng{\r\n  top: 18.5%;\r\n  left: 5%;\r\n  position: absolute;\r\n  z-index: -1;\r\n  width: 13vw;\r\n  height: 15vh;\r\n}\r\n.storybosspng2{\r\n  width: 13vw;\r\n  height: 15vh;\r\n  top: 36.35%;\r\n  left: 5%;\r\n  position: absolute;\r\n  z-index: -1;\r\n}\r\n\r\n.storyworkerpng{\r\n  width: 11vw;\r\n  height: 15vh;\r\n  top: 54.35%;\r\n  right: 5%;\r\n  position: absolute;\r\n  z-index: -1;\r\n  border-radius: 10px;\r\n}\r\n.storymenutextbubble {\r\n  width: 65vw;\r\n  height: 17vh;\r\n  border-radius: 5000px;\r\n}\r\n.mainmenuusernameplay{\r\n  width: 15vw;\r\n  height: 20vh;\r\n  left: 42.5%;\r\n  top: 60%;\r\n  position: absolute;\r\n  z-index: -1;\r\n}\r\n.smallscreen {\r\n  position: absolute;\r\n  width: 25vw;\r\n  height: 40vh;\r\n  top: 10%;\r\n  left: 70%;\r\n}\r\n.smallscreen2 {\r\n  position: absolute;\r\n  width: 25vw;\r\n  height: 30vh;\r\n  top: 55%;\r\n  left: 69%;\r\n}\r\n.bigscreen {\r\n  position:absolute;\r\n  width: 60vw;\r\n  height: 92.5vh;\r\n  top: 4%;\r\n  left: 3%;\r\n  border-radius: 100px;\r\n}\r\n\r\n.bossitekst {\r\n  width: 65vw;\r\n  height: 10vh;\r\n  position:absolute;\r\n  text-align: left;\r\n  border-color:rgb(0, 255, 76);\r\n  border-width: 10px;\r\n  top: 21%;\r\n  left: 18.5%;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 3vh;\r\n  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\r\n  overflow: hidden;\r\n}\r\n\r\n.bossitekst2 {\r\n  width: 65vw;\r\n  height: 10vh;\r\n  border-color:rgb(0, 255, 76);\r\n  border-width: 10px;\r\n  position:absolute;\r\n  text-align: left;\r\n  top: 39%;\r\n  left: 18.5%;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 3vh;\r\n  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\r\n  overflow: hidden;\r\n}\r\n\r\n.bossitekst4 {\r\n  width: 45vw;\r\n  height: 1.5vh;\r\n  position:absolute;\r\n  text-align: left;\r\n  top: 12.5%;\r\n  left: 5.5%;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 8vh;\r\n  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\r\n}\r\n\r\n.bossitekst5 {\r\n  width: 45vw;\r\n  height: 10vh;\r\n  position:absolute;\r\n  text-align: left;\r\n  top: 18.5%;\r\n  left: -8%;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 8vh;\r\n  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\r\n}\r\n\r\n/* Global */\r\nhtml{\r\n  min-height: 100%;\r\n  overflow: hidden;\r\n}\r\n\r\n.line-1{\r\n    position: relative;\r\n    top: 50%;  \r\n    width: 75vw;\r\n    border-right: 2px solid rgba(255,255,255,.75);\r\n    font-size: 100%;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    transform: translateY(-50%);    \r\n}\r\n\r\n/* Animation */\r\n.anim-typewriter{\r\n  animation: typewriter 5.2s steps(100) 1s 1 normal both,\r\n             blinkTextCursor 500ms steps(100) infinite normal;\r\n}\r\n@keyframes typewriter{\r\n  from{width: 0;}\r\n  to{width: 40em;}\r\n}\r\n@keyframes blinkTextCursor{\r\n  from{border-right-color: rgba(255,255,255,.75);}\r\n  to{border-right-color: transparent;}\r\n}\r\n\r\n.anim-typewriter2{\r\n  animation: typewriter2 3s steps(100) 1s 1 normal both,\r\n             blinkTextCursor2 500ms steps(100) infinite normal;\r\n  animation-delay: 7s;}\r\n@keyframes typewriter2{\r\n  from{width: 0;}\r\n  to{width: 20em;}\r\n}\r\n@keyframes blinkTextCursor2{\r\n  from{border-right-color: rgba(255,255,255,.75);}\r\n  to{border-right-color: transparent;}\r\n}\r\n\r\n.anim-typewriter4{\r\n  animation: typewriter4 3.6s steps(150) 1s 1 normal both,\r\n             blinkTextCursor4 500ms steps(100) infinite normal;\r\n}\r\n@keyframes typewriter4{\r\n  from{width: 0;}\r\n  to{width: 29em;}\r\n}\r\n@keyframes blinkTextCursor4{\r\n  from{border-right-color: rgba(255,255,255,.75);}\r\n  to{border-right-color: transparent;}\r\n}\r\n\r\n.anim-typewriter5{\r\n  animation: typewriter5 2.6s steps(100) 1s 1 normal both,\r\n             blinkTextCursor5 500ms steps(100) infinite normal;\r\n             animation-delay: 5s;\r\n}\r\n@keyframes typewriter5{\r\n  from{width: 0;}\r\n  to{width: 20em;}\r\n}\r\n@keyframes blinkTextCursor5{\r\n  from{border-right-color: rgba(255,255,255,.75);}\r\n  to{border-right-color: transparent;}\r\n}\r\n\r\n.drop-zone {\r\n  background-color: rgb(168, 53, 53);\r\n  margin-bottom: 10px;\r\n  padding: 10px;\r\n}\r\n.drag-el {\r\n  background-color: rgb(155, 62, 62);\r\n  margin-bottom: 10px;\r\n  padding: 5px;\r\n}\r\n.menu {\r\n  position: absolute;\r\n  right: 5%;\r\n  top: 5%;\r\n  width: auto;\r\n}\r\n.interactivegame {\r\n  position: absolute;\r\n  left: 5%;\r\n  top: 5%;\r\n  width: auto;\r\n}\r\n.QuestionsChoice1 {\r\n  position: absolute;\r\n  width: 25vw;\r\n  height: 25vh;\r\n  top: 70%;\r\n  left: 20%;\r\n}\r\n.QuestionsChoice2 {\r\n  position: absolute;\r\n  width: 25vw;\r\n  height: 25vh;\r\n  top: 70%;\r\n  right: 20%;\r\n}\r\n.QuestionsTextbubble {\r\n  position:absolute;\r\n  width: 94vw;\r\n  height: 30vh;\r\n  top: 8%;\r\n  border-radius: 100px;\r\n}\r\n.scale {\r\n  height: 100%;\r\n  width: 100%;\r\n  object-fit: fill;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#app {\r\n  margin: 0;\r\n  padding: 2rem;\r\n  font-weight: normal;\r\n}\r\n\r\nhtml {\r\n  background-size: 200% 200%;\r\n  animation: gradient 180s infinite;\r\n  overflow: hidden;\r\n}\r\n\r\n@keyframes gradient {\r\n  0% {\r\n      background-position: 0% 50%;\r\n  }\r\n  50% {\r\n      background-position: 100% 50%;\r\n  }\r\n  100% {\r\n      background-position: 0% 50%;\r\n  }\r\n}\r\n\r\n.button1 {\r\n  background-color: rgba(4, 22, 99, 0.87);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(255, 255, 255);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:95%;\r\n  left: 90%;\r\n  position: absolute;\r\n}\r\n\r\n.coolgradientbutton {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(255, 255, 255);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:20%;\r\n  left: 5%;\r\n  position: absolute;\r\n}\r\n\r\n.user {\r\n  background: linear-gradient(to right, #040404, #0d024e);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(255, 255, 255);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:63%;\r\n  left: 45%;\r\n  position: absolute;\r\n}\r\n\r\n.enteruser {\r\n  background: linear-gradient(to right, #040404, #0d024e);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(255, 255, 255);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:72%;\r\n  left: 45%;\r\n  position: absolute;\r\n}\r\n\r\n.settings{\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-position: 0% 0%;\r\n  background-repeat: no-repeat;\r\n  background-size: contain;\r\n  background-color: transparent;\r\n  border-color: rgba(0, 0, 0, 0);\r\n  display: flex;\r\n  width: 3vw;\r\n  height: 3vw;\r\n  cursor: pointer;\r\n  top: 0%;\r\n  left: 0%;\r\n  position: absolute;\r\n}\r\n\r\n.Soundbutton {\r\n  display: flex;\r\n  background-color: #a14337;\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 255, 76);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 4vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:10%;\r\n  left: 5%;\r\n  position: absolute;\r\n}\r\n\r\n.switch {\r\n    position: absolute;\r\n    display: inline-block;\r\n    width: 80px;\r\n    height: 34px;\r\n    left: 18%;\r\n    top: 10%;\r\n}\r\n\r\n.switch input {\r\n    opacity: 0;\r\n    width: 0;\r\n    height: 0;\r\n}\r\n\r\n.slider{\r\n  position: absolute;\r\n  cursor: pointer;\r\n  top: 2%;\r\n  left: 25%;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: #ccc;\r\n  -webkit-transition: .4s;\r\n  transition: .4s;\r\n}\r\n\r\n.slider:before {\r\n    position: absolute;\r\n    content: \"\";\r\n    height: 26px;\r\n    width: 26px;\r\n    left: 4px;\r\n    bottom: 4px;\r\n    background-color: white;\r\n    -webkit-transition: .4s;\r\n    transition: .4s;\r\n}\r\n\r\ninput:checked + .slider {\r\n    background-color: #2196F3;\r\n  }\r\n\r\n  input:focus + .slider {\r\n    box-shadow: 0 0 1px #2196F3;\r\n  }\r\n\r\n  input:checked + .slider:before {\r\n    -webkit-transform: translateX(26px);\r\n    -ms-transform: translateX(26px);\r\n    transform: translateX(26px);\r\n  }\r\n  /* Rounded sliders */\r\n  .slider.round {\r\n    border-radius: 34px;\r\n  }\r\n  .slider.round:before {\r\n    border-radius: 50%;\r\n  }\r\n\r\n.next{\r\n  display: flex;\r\n  background: linear-gradient(to right, #040404, #0d024e);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(255, 255, 255);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 20vw;\r\n  height: 6vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  position: absolute;\r\n  top: 72%;\r\n  left: 67.5%;\r\n}\r\n\r\n.button1game {\r\n  display: flex;\r\n  background: linear-gradient(to right, #040404, #0d024e);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 50%;\r\n  position: absolute;\r\n}\r\n\r\n.button2game {\r\n  display: flex;\r\n  background: linear-gradient(to right, #040404, #0d024e);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(0, 0, 0);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top:50%;\r\n  left: 60%;\r\n  position: absolute;\r\n}\r\n\r\n.answerbutton {\r\n  background: linear-gradient(to right, #040404, #0d024e);\r\n  border-color: yellow;\r\n  border-radius: 9px;\r\n  color: rgb(255, 255, 255);\r\n  text-align: center;\r\n  text-decoration: none;\r\n  display: inline-block;\r\n  padding: 0.2rem;\r\n  width: 10vw;\r\n  height: 5vh;\r\n  font-size: 1.5vw;\r\n  cursor: pointer;\r\n  top: 60%;\r\n  position: absolute;\r\n}\r\n.center {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n.mainmenutextbubble {\r\n  width: 70vw;\r\n  height: 40vh;\r\n  top: 15%;\r\n  left: 14.8%;\r\n  position: absolute;\r\n  top: 10%;\r\n  z-index: -1;\r\n  border-radius: 5000px;\r\n}\r\n.storybubbles {\r\n  display: block;\r\n  top: 18%;\r\n  left: 18.5%;\r\n  position: absolute;\r\n  z-index: -1;\r\n}\r\n.storybosspng{\r\n  top: 18.5%;\r\n  left: 5%;\r\n  position: absolute;\r\n  z-index: -1;\r\n  width: 13vw;\r\n  height: 15vh;\r\n}\r\n.storybosspng2{\r\n  width: 13vw;\r\n  height: 15vh;\r\n  top: 36.35%;\r\n  left: 5%;\r\n  position: absolute;\r\n  z-index: -1;\r\n}\r\n\r\n.storyworkerpng{\r\n  width: 11vw;\r\n  height: 15vh;\r\n  top: 54.35%;\r\n  right: 5%;\r\n  position: absolute;\r\n  z-index: -1;\r\n  border-radius: 10px;\r\n}\r\n.storymenutextbubble {\r\n  width: 65vw;\r\n  height: 17vh;\r\n  border-radius: 5000px;\r\n}\r\n.mainmenuusernameplay{\r\n  width: 15vw;\r\n  height: 20vh;\r\n  left: 42.5%;\r\n  top: 60%;\r\n  position: absolute;\r\n  z-index: -1;\r\n}\r\n.smallscreen {\r\n  position: absolute;\r\n  width: 25vw;\r\n  height: 40vh;\r\n  top: 10%;\r\n  left: 70%;\r\n}\r\n.smallscreen2 {\r\n  position: absolute;\r\n  width: 25vw;\r\n  height: 30vh;\r\n  top: 55%;\r\n  left: 69%;\r\n}\r\n.bigscreen {\r\n  position:absolute;\r\n  width: 60vw;\r\n  height: 92.5vh;\r\n  top: 4%;\r\n  left: 3%;\r\n  border-radius: 100px;\r\n}\r\n\r\n.bossitekst {\r\n  width: 65vw;\r\n  height: 10vh;\r\n  position:absolute;\r\n  text-align: left;\r\n  border-color:rgb(0, 255, 76);\r\n  border-width: 10px;\r\n  top: 21%;\r\n  left: 18.5%;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 3vh;\r\n  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\r\n  overflow: hidden;\r\n}\r\n\r\n.bossitekst2 {\r\n  width: 65vw;\r\n  height: 10vh;\r\n  border-color:rgb(0, 255, 76);\r\n  border-width: 10px;\r\n  position:absolute;\r\n  text-align: left;\r\n  top: 39%;\r\n  left: 18.5%;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 3vh;\r\n  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\r\n  overflow: hidden;\r\n}\r\n\r\n.bossitekst4 {\r\n  width: 45vw;\r\n  height: 1.5vh;\r\n  position:absolute;\r\n  text-align: left;\r\n  top: 12.5%;\r\n  left: 5.5%;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 8vh;\r\n  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\r\n}\r\n\r\n.bossitekst5 {\r\n  width: 45vw;\r\n  height: 10vh;\r\n  position:absolute;\r\n  text-align: left;\r\n  top: 18.5%;\r\n  left: -8%;\r\n  color:rgb(0, 0, 0);\r\n  font-size: 8vh;\r\n  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\r\n}\r\n\r\n/* Global */\r\nhtml{\r\n  min-height: 100%;\r\n  overflow: hidden;\r\n}\r\n\r\n.line-1{\r\n    position: relative;\r\n    top: 50%;  \r\n    width: 75vw;\r\n    border-right: 2px solid rgba(255,255,255,.75);\r\n    font-size: 100%;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    transform: translateY(-50%);    \r\n}\r\n\r\n/* Animation */\r\n.anim-typewriter{\r\n  animation: typewriter 5.2s steps(100) 1s 1 normal both,\r\n             blinkTextCursor 500ms steps(100) infinite normal;\r\n}\r\n@keyframes typewriter{\r\n  from{width: 0;}\r\n  to{width: 40em;}\r\n}\r\n@keyframes blinkTextCursor{\r\n  from{border-right-color: rgba(255,255,255,.75);}\r\n  to{border-right-color: transparent;}\r\n}\r\n\r\n.anim-typewriter2{\r\n  animation: typewriter2 3s steps(100) 1s 1 normal both,\r\n             blinkTextCursor2 500ms steps(100) infinite normal;\r\n  animation-delay: 7s;}\r\n@keyframes typewriter2{\r\n  from{width: 0;}\r\n  to{width: 20em;}\r\n}\r\n@keyframes blinkTextCursor2{\r\n  from{border-right-color: rgba(255,255,255,.75);}\r\n  to{border-right-color: transparent;}\r\n}\r\n\r\n.anim-typewriter4{\r\n  animation: typewriter4 3.6s steps(150) 1s 1 normal both,\r\n             blinkTextCursor4 500ms steps(100) infinite normal;\r\n}\r\n@keyframes typewriter4{\r\n  from{width: 0;}\r\n  to{width: 29em;}\r\n}\r\n@keyframes blinkTextCursor4{\r\n  from{border-right-color: rgba(255,255,255,.75);}\r\n  to{border-right-color: transparent;}\r\n}\r\n\r\n.anim-typewriter5{\r\n  animation: typewriter5 2.6s steps(100) 1s 1 normal both,\r\n             blinkTextCursor5 500ms steps(100) infinite normal;\r\n             animation-delay: 5s;\r\n}\r\n@keyframes typewriter5{\r\n  from{width: 0;}\r\n  to{width: 20em;}\r\n}\r\n@keyframes blinkTextCursor5{\r\n  from{border-right-color: rgba(255,255,255,.75);}\r\n  to{border-right-color: transparent;}\r\n}\r\n\r\n.drop-zone {\r\n  background-color: rgb(168, 53, 53);\r\n  margin-bottom: 10px;\r\n  padding: 10px;\r\n}\r\n.drag-el {\r\n  background-color: rgb(155, 62, 62);\r\n  margin-bottom: 10px;\r\n  padding: 5px;\r\n}\r\n.menu {\r\n  position: absolute;\r\n  right: 5%;\r\n  top: 5%;\r\n  width: auto;\r\n}\r\n.interactivegame {\r\n  position: absolute;\r\n  left: 5%;\r\n  top: 5%;\r\n  width: auto;\r\n}\r\n.QuestionsChoice1 {\r\n  position: absolute;\r\n  width: 25vw;\r\n  height: 25vh;\r\n  top: 70%;\r\n  left: 20%;\r\n}\r\n.QuestionsChoice2 {\r\n  position: absolute;\r\n  width: 25vw;\r\n  height: 25vh;\r\n  top: 70%;\r\n  right: 20%;\r\n}\r\n.QuestionsTextbubble {\r\n  position:absolute;\r\n  width: 94vw;\r\n  height: 30vh;\r\n  top: 8%;\r\n  border-radius: 100px;\r\n}\r\n\r\ncanvas\r\n{\r\n  position:fixed;\r\n  top:0px;\r\n  left:0px;\r\n  z-index: -2;\r\n}\r\n\r\n.scale {\r\n  height: 100%;\r\n  width: 100%;\r\n  object-fit: fill;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -14559,6 +15148,58 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/EndScreen.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/EndScreen.vue ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _EndScreen_vue_vue_type_template_id_1d08a3cc__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EndScreen.vue?vue&type=template&id=1d08a3cc */ "./resources/js/components/EndScreen.vue?vue&type=template&id=1d08a3cc");
+/* harmony import */ var E_Andrus_Peegel_darkpatterns_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+const script = {}
+
+;
+const __exports__ = /*#__PURE__*/(0,E_Andrus_Peegel_darkpatterns_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_EndScreen_vue_vue_type_template_id_1d08a3cc__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/EndScreen.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/Leaderboard.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/Leaderboard.vue ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Leaderboard_vue_vue_type_template_id_77e85be2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Leaderboard.vue?vue&type=template&id=77e85be2 */ "./resources/js/components/Leaderboard.vue?vue&type=template&id=77e85be2");
+/* harmony import */ var E_Andrus_Peegel_darkpatterns_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+const script = {}
+
+;
+const __exports__ = /*#__PURE__*/(0,E_Andrus_Peegel_darkpatterns_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_Leaderboard_vue_vue_type_template_id_77e85be2__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/Leaderboard.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
 /***/ "./resources/js/components/MethodsVue.vue":
 /*!************************************************!*\
   !*** ./resources/js/components/MethodsVue.vue ***!
@@ -14886,6 +15527,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Draggable_vue_vue_type_template_id_7c391932__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Draggable_vue_vue_type_template_id_7c391932__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Draggable.vue?vue&type=template&id=7c391932 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Draggable.vue?vue&type=template&id=7c391932");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/EndScreen.vue?vue&type=template&id=1d08a3cc":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/EndScreen.vue?vue&type=template&id=1d08a3cc ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_EndScreen_vue_vue_type_template_id_1d08a3cc__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_EndScreen_vue_vue_type_template_id_1d08a3cc__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./EndScreen.vue?vue&type=template&id=1d08a3cc */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/EndScreen.vue?vue&type=template&id=1d08a3cc");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Leaderboard.vue?vue&type=template&id=77e85be2":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/Leaderboard.vue?vue&type=template&id=77e85be2 ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Leaderboard_vue_vue_type_template_id_77e85be2__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Leaderboard_vue_vue_type_template_id_77e85be2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Leaderboard.vue?vue&type=template&id=77e85be2 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Leaderboard.vue?vue&type=template&id=77e85be2");
 
 
 /***/ }),
