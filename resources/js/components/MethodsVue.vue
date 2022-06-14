@@ -5,13 +5,13 @@ module.exports = {
         this.count++;
       },
       userdatabase() {
-        if (!this.username) {
+        /*if (!this.username) {
           console.log("No username has been entered");
           return;
-        } else {
+        } else {*/
           this.story = !this.story;
           this.gamestarted = !this.gamestarted;
-        }
+        /*}*/
       },
       settingsfunc() {
         this.settingsmenu = !this.settingsmenu;
