@@ -1,85 +1,46 @@
+<!-- REDO, REDO IT ALL WTF LOL -->
 <html>
     <head>
-        <title>Add users test</title>
+        <title>Add questions</title>
+        <link rel="stylesheet" href="/css/questionadd.css">
     </head>
     <body>
-        <form action="/addtest/add" method="post" enctype=”multipart/form-data”>
         @csrf
         @method("POST")
             <h3>Küsimus</h3>
-            <label for="q_desc">Küsimuse sisu:</label>
-            <br>
-            <textarea id="q_desc" name="q_desc"></textarea>
+            <div class="adderContainer">
+                <div class="addBox">
+                    <form action="/addtest/add" method="post" enctype=”multipart/form-data”>
+                        <label for="q_desc">Küsimuse sisu:</label>
+                        <br>
+                        <textarea id="q_desc" name="q_desc"></textarea>
 
-            <br>
+                        <br>
 
-            <label for="q_points">Küsimuse punktid:</label>
-            <br>
-            <input type="number" id="q_points" name="q_points">
+                        <label for="q_points">Küsimuse punktid:</label>
+                        <br>
+                        <input type="number" id="q_points" name="q_points">
 
-            <br>
+                        <br>
 
-            <label for="q_category">Küsimuse kategooria (1 - tavaline, 2 - draggable(???)):</label>
-            <br>
-            <input type="number" id="q_category" name="q_category" max=2 min=1>
-
+                        <label for="q_category">Küsimuse kategooria (1 - tavaline, 2 - draggable(???)):</label>
+                        <br>
+                        <input type="number" id="q_category" name="q_category" max=2 min=1>
+                        <br>
+                        <input type="submit" value="Send!!!">
+                    </form>
+                </div>
+                <div class="addBox">
+                    <form action="/addtest/add" method="post" enctype=”multipart/form-data”>
+                        <label for="q_desc">Küsimuse vastus:</label>
+                        <br>
+                        <textarea id="q_desc" name="q_desc"></textarea>
+                        <br>
+                        <input type="submit" value="Send!!!">
+                    </form>
+                </div>
+            </div>
             <hr>
-            <h3>Küsimuse vastused</h3>
-            <label for="q_a1">Esimese vastuse sisu (kui vajalik):</label>
-            <br>
-            <textarea id="q_a1" name="q_a1"></textarea>
-            <br>
-            <label for="q_img1">Esimese vastuse pilt:</label>
-            <br>
-            <input type="file" name=q_img1 id="q_img1">
-            <br>
-            <label for="q_correct1">Kas on õige?:</label>
-            <br>
-            <input type="checkbox" name="q_correct1" id="q_correct1">
-            <hr>
-
-            <label for="q_a2">Teise vastuse sisu (kui vajalik):</label>
-            <br>
-            <textarea id="q_a2" name="q_a2"></textarea>
-            <br>
-            <label for="q_img2">Teise vastuse pilt:</label>
-            <br>
-            <input type="file" name=q_img2 id="q_img2">
-            <br>
-            <label for="q_correct2">Kas on õige?:</label>
-            <br>
-            <input type="checkbox" name="q_correct2" id="q_correct2">
-            <hr>
-            <h3>Story osa</h3>
-            <label for="q_intro1">Loo sissejuhatus (Boss) 1:</label>
-            <br>
-            <textarea id="q_intro1" name="q_intro1"></textarea>
-            <br>
-            <label for="q_intro2">Loo sissejuhatus (Boss) 2:</label>
-            <br>
-            <textarea id="q_intro2" name="q_intro2"></textarea>
-            <br>
-            <label for="q_intro3">Loo sissejuhatus (Kasutaja) 1:</label>
-            <br>
-            <textarea id="q_intro3" name="q_intro3"></textarea>
-            <br>
-            <hr>
-            <h3>Tagasiside osa</h3>
-            <label for="q_outro1">Loo outro (Boss) 1:</label>
-            <br>
-            <textarea id="q_outro1" name="q_outro1"></textarea>
-            <br>
-            <label for="q_outro2">Loo outro (Boss) 2:</label>
-            <br>
-            <textarea id="q_outro2" name="q_outro2"></textarea>
-            <br>
-            <label for="q_outro3">Loo outro (Kasutaja) 1:</label>
-            <br>
-            <textarea id="q_outro3" name="q_outro3"></textarea>
-            <br>
-            <hr>
-
-            <input type="submit" value="Send!!!">
         <form>
     </body>
 </html>
