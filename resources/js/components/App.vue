@@ -67,6 +67,14 @@
             {
               "description": "Ok"
             }
+          ],
+          "choosedarkpattern1": [
+            {
+              "de_scription": "One of the following images is a dark pattern while the other one is not."
+            },
+            {
+              "de_scription": "Choose the dark pattern....be careful!"
+            }
           ]
         }
       ]

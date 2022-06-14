@@ -27,7 +27,6 @@ html {
 }
 
 .button1 {
-  display: flex;
   background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
@@ -65,7 +64,6 @@ html {
 }
 
 .user {
-  display: flex;
   background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
@@ -79,12 +77,11 @@ html {
   font-size: 1.5vw;
   cursor: pointer;
   top:63%;
-  left: 47%;
+  left: 45%;
   position: absolute;
 }
 
 .enteruser {
-  display: flex;
   background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
@@ -98,7 +95,7 @@ html {
   font-size: 1.5vw;
   cursor: pointer;
   top:72%;
-  left: 47.25%;
+  left: 45%;
   position: absolute;
 }
 
@@ -272,27 +269,30 @@ input:checked + .slider {
   left: 85%;
   position: absolute;
 }
-
-.mainmenutextbubble {
+.center {
   display: flex;
+  justify-content: center;
+}
+.mainmenutextbubble {
   width: 70vw;
   height: 40vh;
   top: 15%;
-  left: 18%;
+  left: 14.8%;
   position: absolute;
+  top: 10%;
   z-index: -1;
   border-radius: 5000px;
 }
 .storybubbles {
   display: block;
   top: 18%;
-  left: 23%;
+  left: 18.5%;
   position: absolute;
   z-index: -1;
 }
 .storybosspng{
   top: 18.5%;
-  left: 9.5%;
+  left: 5%;
   position: absolute;
   z-index: -1;
   width: 13vw;
@@ -302,7 +302,7 @@ input:checked + .slider {
   width: 13vw;
   height: 15vh;
   top: 36.35%;
-  left: 9.5%;
+  left: 5%;
   position: absolute;
   z-index: -1;
 }
@@ -311,7 +311,7 @@ input:checked + .slider {
   width: 11vw;
   height: 15vh;
   top: 54.35%;
-  right: 0.5%;
+  right: 5%;
   position: absolute;
   z-index: -1;
   border-radius: 10px;
@@ -322,10 +322,9 @@ input:checked + .slider {
   border-radius: 5000px;
 }
 .mainmenuusernameplay{
-  display: flex;
   width: 15vw;
   height: 20vh;
-  left: 45%;
+  left: 42.5%;
   top: 60%;
   position: absolute;
   z-index: -1;
@@ -359,7 +358,7 @@ input:checked + .slider {
   position:absolute;
   text-align: left;
   top: 15.5%;
-  left: 25%;
+  left: 20.5%;
   color:rgb(0, 0, 0);
   font-size: 30px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -371,7 +370,7 @@ input:checked + .slider {
   position:absolute;
   text-align: left;
   top: 42.5%;
-  left: 10%;
+  left: 5.5%;
   color:rgb(0, 0, 0);
   font-size: 37px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -383,9 +382,33 @@ input:checked + .slider {
   position:absolute;
   text-align: right;
   top: 61%;
-  right: -22%;
+  right: -20%;
   color:rgb(0, 0, 0);
   font-size: 37px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.bossitekst4 {
+  width: 1200px;
+  height: 30px;
+  position:absolute;
+  text-align: left;
+  top: 12.5%;
+  left: 5.5%;
+  color:rgb(0, 0, 0);
+  font-size: 45px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.bossitekst5 {
+  width: 1200px;
+  height: 200px;
+  position:absolute;
+  text-align: left;
+  top: 18.5%;
+  left: -8%;
+  color:rgb(0, 0, 0);
+  font-size: 45px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -447,6 +470,33 @@ html{
   to{width: 5em;}
 }
 @keyframes blinkTextCursor3{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+.anim-typewriter4{
+  animation: typewriter4 3.6s steps(150) 1s 1 normal both,
+             blinkTextCursor4 500ms steps(100) infinite normal;
+}
+@keyframes typewriter4{
+  from{width: 0;}
+  to{width: 29em;}
+}
+@keyframes blinkTextCursor4{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+.anim-typewriter5{
+  animation: typewriter5 2.6s steps(100) 1s 1 normal both,
+             blinkTextCursor5 500ms steps(100) infinite normal;
+             animation-delay: 5s;
+}
+@keyframes typewriter5{
+  from{width: 0;}
+  to{width: 20em;}
+}
+@keyframes blinkTextCursor5{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
 }
