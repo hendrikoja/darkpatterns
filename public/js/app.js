@@ -13425,13 +13425,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './ReturnData.json'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {
-      Dataitems: Object(function webpackMissingModule() { var e = new Error("Cannot find module './ReturnData.json'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
-    };
+    return {};
   },
   mixins: [__webpack_require__(/*! ./MethodsVue.vue */ "./resources/js/components/MethodsVue.vue")]
 }); // Script on vaja muuta, temp. lahendus praegu

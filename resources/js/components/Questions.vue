@@ -1,9 +1,7 @@
 <script>
-import ReturnData from './ReturnData.json'
 export default{
     data(){
         return {
-            Dataitems: ReturnData
         }
     },
     mixins: [
