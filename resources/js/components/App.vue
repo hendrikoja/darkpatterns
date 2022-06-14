@@ -76,7 +76,7 @@
       },
       userdatabase() {
         if (!this.username) {
-          console.log("Kasutjanimi sisestamata!");
+          console.log("No username has been entered");
           return;
         } else {
           this.story = !this.story;
