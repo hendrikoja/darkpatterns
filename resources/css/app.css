@@ -5,9 +5,25 @@
 }
 
 html {
-  background-color: rgba(4, 22, 99, 0.87);
-  background-size: cover;
+  background: repeating-radial-gradient(
+    circle at 0 0, 
+    rgb(112, 112, 112),
+    rgb(37, 37, 37) 50px);
+  background-size: 200% 200%;
+  animation: gradient 180s infinite;
   overflow: hidden;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 .button1 {
@@ -15,7 +31,7 @@ html {
   background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 255, 85);
+  color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -29,12 +45,31 @@ html {
   position: absolute;
 }
 
-.user {
+.coolgradientbutton {
   display: flex;
-  background-color: rgba(4, 22, 99, 0.87);
+  background-color: #a14337;
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 255, 85);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2rem;
+  width: 10vw;
+  height: 4vh;
+  font-size: 1.5vw;
+  cursor: pointer;
+  top:20%;
+  left: 5%;
+  position: absolute;
+}
+
+.user {
+  display: flex;
+  background: linear-gradient(to right, #040404, #0d024e);
+  border-color: yellow;
+  border-radius: 9px;
+  color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -50,10 +85,10 @@ html {
 
 .enteruser {
   display: flex;
-  background-color: rgba(4, 22, 99, 0.87);
+  background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 255, 85);
+  color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -164,10 +199,10 @@ input:checked + .slider {
 
 .next{
   display: flex;
-  background-color: rgba(4, 22, 99, 0.87);
+  background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 255, 85);
+  color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -183,7 +218,7 @@ input:checked + .slider {
 
 .button1game {
   display: flex;
-  background-color: rgba(4, 22, 99, 0.87);
+  background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
   color: rgb(0, 0, 0);
@@ -202,7 +237,7 @@ input:checked + .slider {
 
 .button2game {
   display: flex;
-  background-color: rgba(4, 22, 99, 0.87);
+  background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
   color: rgb(0, 0, 0);
@@ -221,10 +256,10 @@ input:checked + .slider {
 
 .answerbutton {
   display: flex;
-  background-color: rgba(4, 22, 99, 0.87);
+  background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
-  color: rgb(0, 255, 85);
+  color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -266,10 +301,20 @@ input:checked + .slider {
 .storybosspng2{
   width: 13vw;
   height: 15vh;
-  top: 54.35%;
+  top: 36.35%;
   left: 9.5%;
   position: absolute;
   z-index: -1;
+}
+
+.storyworkerpng{
+  width: 11vw;
+  height: 15vh;
+  top: 54.35%;
+  right: 0.5%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
 }
 .storymenutextbubble {
   width: 65vw;
@@ -288,8 +333,8 @@ input:checked + .slider {
 .smallscreen {
   position: absolute;
   width: 25vw;
-  height: 30vh;
-  top: 15%;
+  height: 40vh;
+  top: 10%;
   left: 70%;
 }
 .smallscreen2 {
@@ -297,7 +342,7 @@ input:checked + .slider {
   width: 25vw;
   height: 30vh;
   top: 55%;
-  left: 70%;
+  left: 69%;
 }
 .bigscreen {
   position:absolute;
@@ -337,8 +382,8 @@ input:checked + .slider {
   height: 30px;
   position:absolute;
   text-align: right;
-  top: 62.5%;
-  right: -20%;
+  top: 61%;
+  right: -22%;
   color:rgb(0, 0, 0);
   font-size: 37px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -427,4 +472,27 @@ html{
   left: 5%;
   top: 5%;
   width: auto;
+}
+
+.QuestionsChoice1 {
+  position: absolute;
+  width: 25vw;
+  height: 25vh;
+  top: 70%;
+  left: 20%;
+}
+.QuestionsChoice2 {
+  position: absolute;
+  width: 25vw;
+  height: 25vh;
+  top: 70%;
+  right: 20%;
+}
+.QuestionsTextbubble {
+  position:absolute;
+  width: 94vw;
+  height: 30vh;
+  top: 8%;
+  left: 3%;
+  border-radius: 100px;
 }
