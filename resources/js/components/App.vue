@@ -64,9 +64,6 @@
             },
             {
               "description": "Make the most beneficial decision for us."
-            },
-            {
-              "description": "Ok"
             }
           ],
           "choosedarkpattern1": [
