@@ -19,8 +19,7 @@ export default{
 <template>
 <div class="story">
   <div class="localisation">
-  <p>Nüüd see on gaming, POG, mul pole aimugi kuidas selle tööle sain, ära küsi</p>
-  <button class="next" @click="$emit('storyevent')">Next question or smth</button>
+  <button class="next" @click="$emit('storyevent')">Answer</button>
   </div>
       <div class="bossitekst">
       <p class="line-1 anim-typewriter">{{this.story_data[0]["description"]}}</p>
