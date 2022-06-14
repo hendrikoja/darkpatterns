@@ -15208,7 +15208,6 @@ var __default__ = {
       count: 0,
       username: "",
       //Vaate väärtused
-      ready: false,
       settingsmenu: false,
       story: false,
       gamestarted: false,
@@ -15216,7 +15215,9 @@ var __default__ = {
       question: false,
       file: "../../assets/Testmusic.mp3",
       //Temp küsimused, hiljem ABst
-      questions: null
+      questions: null,
+      //Kas küsimused on ABst käes
+      ready: false
     };
   },
   mounted: function mounted() {
