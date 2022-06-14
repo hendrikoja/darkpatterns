@@ -15,15 +15,11 @@ export default{
 </script>
 
 <template>
-<div class="question center">
-  <img src="../../static/textbubble.png" class="QuestionsTextbubble">
-  <div class="QuestionsChoice1">
-  <img src="../../static/fakedarkpattern.png" class="scale">
-  </div>
-  <div class="QuestionsChoice2">
-  <img src="../../static/cookieyum.png" class="scale">
-  </div>
-  <div class="bossitekst4">
+<div class="question">
+    <img src="../../static/textbubble.png" class="QuestionsTextbubble">
+    <img src="../../static/fakedarkpattern.png" class="QuestionsChoice1">
+    <img src="../../static/cookieyum.png" class="QuestionsChoice2">
+    <div class="bossitekst4">
       <p class="line-1 anim-typewriter4">One of the following images is a dark pattern while the other one is not.</p>
     </div>
     <div class="bossitekst5">
