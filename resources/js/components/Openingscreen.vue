@@ -20,10 +20,12 @@ export default{
 
 <template>
 <div class="Openingscreen">
-  <button name="openscreen" class="button1" @click="countup()">{{count}}</button>
-  <input class="user" v-model="username" placeholder="Username" maxlength="14" @change="emitUsernameChange()">
-  <button class="enteruser" @click="$emit('openingevent')">Start game</button>
-  <img src="../../static/textbubble.png" class="mainmenutextbubble">
-  <img src="../../static/interactivescreensmall.png" class="mainmenuusernameplay">
+  <div class="center">
+    <button name="openscreen" class="button1" @click="countup()">{{count}}</button>
+    <input class="user" v-model="username" placeholder="Username" maxlength="14" @change="emitUsernameChange()">
+    <button class="enteruser" @click="$emit('openingevent')">Start game lol</button>
+    <img src="../../static/textbubble.png" class="mainmenutextbubble">
+    <img src="../../static/interactivescreensmall.png" class="mainmenuusernameplay">
+  </div>
 </div>
 </template>
