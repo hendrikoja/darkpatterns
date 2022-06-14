@@ -22,6 +22,10 @@ Route::get('/addtest', function () {
     return view('useradd');
 });
 
+Route::get('/questionadd', function () {
+    return view('questionadd');
+});
+
 //Tagasta kõik küsimused vastustega JSON vormis
 Route::get('/questions', [QuestionController::class, "index"]);
 
