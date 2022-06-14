@@ -5,11 +5,9 @@ export default{
             count: 0
         }
     },
-    methods: {
-        countup(){
-            this.count++
-        }
-    }
+    mixins: [
+        require('./MethodsVue.vue')
+    ]
 }
 // Script on vaja muuta, temp. lahendus praegu
 </script>
@@ -18,7 +16,7 @@ export default{
 
 <div class="settingsmenu">
   <div class="music-player">
-  <button name="Sound" class="Soundbutton" @click="countup()">Sound</button>
+  <button name="Sound" class="Soundbutton" @click="funnistuff()">Sound</button>
   </div>
   <label class="switch">
   <input type="checkbox" name="Sound" id="Sound">

@@ -31,10 +31,6 @@ module.exports = {
      console() {
       console.log(this.file)
     },
-    sound() {
-       /*var audio = new Audio(require("../../assets/Testmusic.mp3"));*/
-       audio.play();
-    },
      usernameChange(data) {
       this.username = data;   
      }
