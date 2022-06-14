@@ -2,17 +2,25 @@
   import Story from './Story.vue'
   import PropsVue from './PropsVue.vue'
   import Questions from './Questions.vue'
-  //import json from './Data.json'
   import Openingscreen from './Openingscreen.vue'
   import Settings from './Settings.vue'
   import Draggable from './Draggable.vue'
+  import EndScreen from './EndScreen.vue'
+  import Leaderboard from './Leaderboard.vue'
 </script>
 
 
 <script>
   export default{
     components: {
-      Story
+      Story,
+      PropsVue,
+      Questions,
+      Openingscreen,
+      Settings,
+      Draggable,
+      EndScreen,
+      Leaderboard
     },
     mixins: [
       require('./MethodsVue.vue')
@@ -25,7 +33,6 @@
         settingsmenu: false,
         story: false,
         gamestarted: false,
-
         gamecounter: 0,
         question: false,
         file: "../../assets/Testmusic.mp3",
@@ -121,6 +128,10 @@
     <!-- Mängu loop lõpeb -->
 
     <Draggable v-if="gamecounter == 1 && settingsmenu == false" @questionevent="nextquestion()" />
+
+    <EndScreen v-if="gamecounter == 2 && settingsmenu == false" @Endevent="next()" />
+
+    <Leaderboard v-if="gamecounter == 3 && settingsmenu == false" />
 
   </main>
 

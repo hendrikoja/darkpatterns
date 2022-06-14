@@ -35,6 +35,9 @@ module.exports = {
       },
       usernameChange(data) {
         this.username = data;   
+      },
+      next() {
+        this.gamecounter++;
       }
   },
 }
