@@ -15182,27 +15182,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Story_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Story.vue */ "./resources/js/components/Story.vue");
-/* harmony import */ var _PropsVue_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PropsVue.vue */ "./resources/js/components/PropsVue.vue");
-/* harmony import */ var _Questions_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Questions.vue */ "./resources/js/components/Questions.vue");
-/* harmony import */ var _Openingscreen_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Openingscreen.vue */ "./resources/js/components/Openingscreen.vue");
-/* harmony import */ var _Settings_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Settings.vue */ "./resources/js/components/Settings.vue");
-/* harmony import */ var _Draggable_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Draggable.vue */ "./resources/js/components/Draggable.vue");
-/* harmony import */ var _background_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./background.js */ "./resources/js/components/background.js");
-/* harmony import */ var _background_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_background_js__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _EndScreen_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./EndScreen.vue */ "./resources/js/components/EndScreen.vue");
-/* harmony import */ var _Leaderboard_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Leaderboard.vue */ "./resources/js/components/Leaderboard.vue");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _Questions_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Questions.vue */ "./resources/js/components/Questions.vue");
+/* harmony import */ var _Openingscreen_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Openingscreen.vue */ "./resources/js/components/Openingscreen.vue");
+/* harmony import */ var _Settings_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Settings.vue */ "./resources/js/components/Settings.vue");
+/* harmony import */ var _Draggable_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Draggable.vue */ "./resources/js/components/Draggable.vue");
+/* harmony import */ var _background_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./background.js */ "./resources/js/components/background.js");
+/* harmony import */ var _background_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_background_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _EndScreen_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EndScreen.vue */ "./resources/js/components/EndScreen.vue");
+/* harmony import */ var _Leaderboard_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Leaderboard.vue */ "./resources/js/components/Leaderboard.vue");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_7__);
 var __default__ = {
   components: {
     Story: _Story_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    PropsVue: _PropsVue_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    Questions: _Questions_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    Openingscreen: _Openingscreen_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-    Settings: _Settings_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-    Draggable: _Draggable_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-    EndScreen: _EndScreen_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
-    Leaderboard: _Leaderboard_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
+    Questions: _Questions_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Openingscreen: _Openingscreen_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Settings: _Settings_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    Draggable: _Draggable_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    EndScreen: _EndScreen_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    Leaderboard: _Leaderboard_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
   },
   mixins: [__webpack_require__(/*! ./MethodsVue.vue */ "./resources/js/components/MethodsVue.vue")],
   data: function data() {
@@ -15226,7 +15224,7 @@ var __default__ = {
 
     //Läbi Laraveli küsimuste võtmine andmebaasist.
     //Enne, kui mängu mängida saab, peame ära ootama küsimused.
-    axios__WEBPACK_IMPORTED_MODULE_8___default().get("/questions").then(function (response) {
+    axios__WEBPACK_IMPORTED_MODULE_7___default().get("/questions").then(function (response) {
       _this.questions = response["data"];
       _this.ready = true;
       console.log(_this.questions);
@@ -15249,7 +15247,6 @@ var __default__ = {
 
 
 
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/Object.assign(__default__, {
   name: 'App',
   setup: function setup(__props, _ref) {
@@ -15257,15 +15254,14 @@ var __default__ = {
     expose();
     var __returned__ = {
       Story: _Story_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-      PropsVue: _PropsVue_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-      Questions: _Questions_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-      Openingscreen: _Openingscreen_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-      Settings: _Settings_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-      Draggable: _Draggable_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-      background: (_background_js__WEBPACK_IMPORTED_MODULE_9___default()),
-      EndScreen: _EndScreen_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
-      Leaderboard: _Leaderboard_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
-      axios: (axios__WEBPACK_IMPORTED_MODULE_8___default())
+      Questions: _Questions_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+      Openingscreen: _Openingscreen_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+      Settings: _Settings_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+      Draggable: _Draggable_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+      background: (_background_js__WEBPACK_IMPORTED_MODULE_8___default()),
+      EndScreen: _EndScreen_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+      Leaderboard: _Leaderboard_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+      axios: (axios__WEBPACK_IMPORTED_MODULE_7___default())
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
@@ -15443,45 +15439,6 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 }); // Script on vaja muuta, temp. lahendus praegu
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/PropsVue.vue?vue&type=script&lang=js":
-/*!**************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/PropsVue.vue?vue&type=script&lang=js ***!
-  \**************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: {
-    count: Number,
-    username: String,
-    settingsmenu: Boolean,
-    story: Boolean,
-    gamestarted: Boolean,
-    gamecounter: Number,
-    question: Boolean
-  }
-  /*  data(){
-      return {
-        cum: false,
-        count: 0,
-        kasutajanimi: "",
-        settingsmenu: false,
-        story: false,
-        gamestarted: false,
-        gamecounter: 0,
-        question: false,
-        file: "../../assets/Testmusic.mp3"
-      }
-    }*/
-
-});
 
 /***/ }),
 
@@ -17495,32 +17452,6 @@ if (false) {}
 
 /***/ }),
 
-/***/ "./resources/js/components/PropsVue.vue":
-/*!**********************************************!*\
-  !*** ./resources/js/components/PropsVue.vue ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _PropsVue_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PropsVue.vue?vue&type=script&lang=js */ "./resources/js/components/PropsVue.vue?vue&type=script&lang=js");
-/* harmony import */ var C_Users_Student_Documents_dark_patterns_darkpatterns_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
-
-
-
-;
-const __exports__ = /*#__PURE__*/(0,C_Users_Student_Documents_dark_patterns_darkpatterns_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(_PropsVue_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"], [['__file',"resources/js/components/PropsVue.vue"]])
-/* hot reload */
-if (false) {}
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
-
-/***/ }),
-
 /***/ "./resources/js/components/Questions.vue":
 /*!***********************************************!*\
   !*** ./resources/js/components/Questions.vue ***!
@@ -17669,22 +17600,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Openingscreen_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Openingscreen_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Openingscreen.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Openingscreen.vue?vue&type=script&lang=js");
- 
-
-/***/ }),
-
-/***/ "./resources/js/components/PropsVue.vue?vue&type=script&lang=js":
-/*!**********************************************************************!*\
-  !*** ./resources/js/components/PropsVue.vue?vue&type=script&lang=js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PropsVue_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PropsVue_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./PropsVue.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/PropsVue.vue?vue&type=script&lang=js");
  
 
 /***/ }),

@@ -1,6 +1,5 @@
 <script setup>
   import Story from './Story.vue'
-  import PropsVue from './PropsVue.vue'
   import Questions from './Questions.vue'
   import Openingscreen from './Openingscreen.vue'
   import Settings from './Settings.vue'
@@ -16,7 +15,6 @@
   export default{
     components: {
       Story,
-      PropsVue,
       Questions,
       Openingscreen,
       Settings,
