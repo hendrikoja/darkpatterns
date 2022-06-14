@@ -6,6 +6,7 @@
   import Openingscreen from './Openingscreen.vue'
   import Settings from './Settings.vue'
   import Draggable from './Draggable.vue'
+  import background from './background.js'
 </script>
 
 
@@ -87,6 +88,7 @@
 <template>
 
   <main>
+    
 
     <button class="settings" @click="settingsfunc()"></button>
 
