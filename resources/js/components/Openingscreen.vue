@@ -1,5 +1,4 @@
 <script>
-let MethodsVue = require('./MethodsVue.vue')
 export default{
     data(){
         return {

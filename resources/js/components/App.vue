@@ -25,7 +25,6 @@
         settingsmenu: false,
         story: false,
         gamestarted: false,
-
         gamecounter: 0,
         question: false,
         file: "../../assets/Testmusic.mp3",

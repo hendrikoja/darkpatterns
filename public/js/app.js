@@ -13356,8 +13356,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var MethodsVue = __webpack_require__(/*! ./MethodsVue.vue */ "./resources/js/components/MethodsVue.vue");
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -13427,17 +13425,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+Object(function webpackMissingModule() { var e = new Error("Cannot find module './ReturnData.json'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      count: 0
+      Dataitems: Object(function webpackMissingModule() { var e = new Error("Cannot find module './ReturnData.json'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
     };
   },
-  methods: {
-    countup: function countup() {
-      this.count++;
-    }
-  }
+  mixins: [__webpack_require__(/*! ./MethodsVue.vue */ "./resources/js/components/MethodsVue.vue")]
 }); // Script on vaja muuta, temp. lahendus praegu
 
 /***/ }),
@@ -13758,7 +13754,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return _ctx.$emit('questionevent');
     })
-  }, "Answer")]);
+  }, "Answer"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    name: "openscreen",
+    "class": "button1",
+    onClick: _cache[1] || (_cache[1] = function ($event) {
+      return _ctx.funnistuff();
+    })
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.count), 1
+  /* TEXT */
+  )]);
 }
 
 /***/ }),
