@@ -39,7 +39,6 @@ export default{
       <img src="../../static/boss2.png" class="storybosspng">
       <img src="../../static/boss2.png" class="storybosspng2">
        <img src="../../static/epicworkerdoingtheworkingfortheboss.png" class="storyworkerpng">
-      
     </div>
 </div> 
 </template>

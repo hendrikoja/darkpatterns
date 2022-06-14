@@ -252,7 +252,6 @@ input:checked + .slider {
 }
 
 .answerbutton {
-  display: flex;
   background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
@@ -265,8 +264,7 @@ input:checked + .slider {
   height: 5vh;
   font-size: 1.5vw;
   cursor: pointer;
-  top: 90%;
-  left: 85%;
+  top: 60%;
   position: absolute;
 }
 .center {
@@ -523,7 +521,6 @@ html{
   top: 5%;
   width: auto;
 }
-
 .QuestionsChoice1 {
   position: absolute;
   width: 25vw;
@@ -543,6 +540,10 @@ html{
   width: 94vw;
   height: 30vh;
   top: 8%;
-  left: 3%;
   border-radius: 100px;
+}
+.scale {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
 }
