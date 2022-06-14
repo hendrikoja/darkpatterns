@@ -11,14 +11,12 @@ module.exports = {
         } else {
           this.story = !this.story;
           this.gamestarted = !this.gamestarted;
-          this.gamecounter++;
         }
       },
       settingsfunc() {
         this.settingsmenu = !this.settingsmenu;
       },
       nextstory() {
-        this.gamecounter++;
         this.story = false;
         this.question = true;
       },

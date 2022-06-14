@@ -73,6 +73,13 @@
       ]
       }
     },
+    computed: {
+      question_amount: {
+        get() {
+          return this.questions.length;
+        }
+      }
+    }
   }
 </script>
 
@@ -89,23 +96,23 @@
 
     <Settings v-if="settingsmenu == true" />
 
+    <!-- Mängu main loop siin -->
+    <div v-if="gamecounter < question_amount">
+      <Story
+          v-if="story && settingsmenu == false"
+          @storyevent="nextstory()"
+          :story_data="questions[gamecounter]['question_story']"
+      />
 
-    <Story
-      v-if="gamecounter == 1 && settingsmenu == false"
-      @storyevent="nextstory()"
-      :story_data="questions[0]['question_story']"
-    />
+      <Questions
+        v-if="settingsmenu == false && question && questions[gamecounter].category_id == 1"
+        @questionevent="nextquestion()"
+      />
 
+    </div>
+    <!-- Mängu loop lõpeb -->
 
-    <Questions v-if="gamecounter == 2 && settingsmenu == false" @questionevent="nextquestion()"  />
-
-    <Story
-      v-if="gamecounter == 3 && settingsmenu == false"
-      @storyevent="nextstory()"
-      :story_data="questions[0]['question_story']"
-    />
-
-    <Draggable v-if="gamecounter == 4 && settingsmenu == false" @questionevent="nextquestion()" />
+    <Draggable v-if="gamecounter == 1 && settingsmenu == false" @questionevent="nextquestion()" />
 
   </main>
 
