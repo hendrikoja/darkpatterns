@@ -390,13 +390,13 @@ input:checked + .slider {
 
 .bossitekst4 {
   width: 1200px;
-  height: 200px;
+  height: 30px;
   position:absolute;
   text-align: left;
-  top: 15.5%;
-  left: 20.5%;
+  top: 12.5%;
+  left: 5.5%;
   color:rgb(0, 0, 0);
-  font-size: 30px;
+  font-size: 45px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -406,9 +406,9 @@ input:checked + .slider {
   position:absolute;
   text-align: left;
   top: 18.5%;
-  left: 20.5%;
+  left: -8%;
   color:rgb(0, 0, 0);
-  font-size: 30px;
+  font-size: 45px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -475,12 +475,12 @@ html{
 }
 
 .anim-typewriter4{
-  animation: typewriter4 5.2s steps(100) 1s 1 normal both,
+  animation: typewriter4 3.6s steps(150) 1s 1 normal both,
              blinkTextCursor4 500ms steps(100) infinite normal;
 }
 @keyframes typewriter4{
   from{width: 0;}
-  to{width: 40em;}
+  to{width: 29em;}
 }
 @keyframes blinkTextCursor4{
   from{border-right-color: rgba(255,255,255,.75);}
@@ -488,12 +488,13 @@ html{
 }
 
 .anim-typewriter5{
-  animation: typewriter5 5.2s steps(100) 1s 1 normal both,
+  animation: typewriter5 2.6s steps(100) 1s 1 normal both,
              blinkTextCursor5 500ms steps(100) infinite normal;
+             animation-delay: 5s;
 }
 @keyframes typewriter5{
   from{width: 0;}
-  to{width: 40em;}
+  to{width: 20em;}
 }
 @keyframes blinkTextCursor5{
   from{border-right-color: rgba(255,255,255,.75);}
