@@ -27,7 +27,6 @@ html {
 }
 
 .button1 {
-  display: flex;
   background-color: rgba(4, 22, 99, 0.87);
   border-color: yellow;
   border-radius: 9px;
@@ -65,7 +64,6 @@ html {
 }
 
 .user {
-  display: flex;
   background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
@@ -79,12 +77,10 @@ html {
   font-size: 1.5vw;
   cursor: pointer;
   top:63%;
-  left: 47%;
   position: absolute;
 }
 
 .enteruser {
-  display: flex;
   background: linear-gradient(to right, #040404, #0d024e);
   border-color: yellow;
   border-radius: 9px;
@@ -98,7 +94,6 @@ html {
   font-size: 1.5vw;
   cursor: pointer;
   top:72%;
-  left: 47.25%;
   position: absolute;
 }
 
@@ -272,14 +267,15 @@ input:checked + .slider {
   left: 85%;
   position: absolute;
 }
-
-.mainmenutextbubble {
+.center {
   display: flex;
+  justify-content: center;
+}
+.mainmenutextbubble {
   width: 70vw;
   height: 40vh;
-  top: 15%;
-  left: 18%;
   position: absolute;
+  top: 10%;
   z-index: -1;
   border-radius: 5000px;
 }
@@ -322,10 +318,8 @@ input:checked + .slider {
   border-radius: 5000px;
 }
 .mainmenuusernameplay{
-  display: flex;
   width: 15vw;
   height: 20vh;
-  left: 45%;
   top: 60%;
   position: absolute;
   z-index: -1;
