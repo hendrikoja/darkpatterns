@@ -9,8 +9,12 @@ module.exports = {
           console.log("No username has been entered");
           return;
         } else {*/
-          this.story = !this.story;
-          this.gamestarted = !this.gamestarted;
+          if (this.ready) {
+            this.story = !this.story;
+            this.gamestarted = !this.gamestarted;
+          } else {
+            return;
+          }
         /*}*/
       },
       settingsfunc() {

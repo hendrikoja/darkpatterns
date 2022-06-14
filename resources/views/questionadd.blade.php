@@ -64,7 +64,20 @@
             <textarea id="q_intro3" name="q_intro3"></textarea>
             <br>
             <hr>
-            
+            <h3>Tagasiside osa</h3>
+            <label for="q_outro1">Loo outro (Boss) 1:</label>
+            <br>
+            <textarea id="q_outro1" name="q_outro1"></textarea>
+            <br>
+            <label for="q_outro2">Loo outro (Boss) 2:</label>
+            <br>
+            <textarea id="q_outro2" name="q_outro2"></textarea>
+            <br>
+            <label for="q_outro3">Loo outro (Kasutaja) 1:</label>
+            <br>
+            <textarea id="q_outro3" name="q_outro3"></textarea>
+            <br>
+            <hr>
 
             <input type="submit" value="Send!!!">
         <form>

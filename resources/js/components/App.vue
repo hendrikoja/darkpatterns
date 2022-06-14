@@ -8,8 +8,9 @@
   import background from './background.js'
   import EndScreen from './EndScreen.vue'
   import Leaderboard from './Leaderboard.vue'
-</script>
 
+  import axios from 'axios';
+</script>
 
 <script>
   export default{
@@ -31,6 +32,7 @@
         count: 0,
         username: "",
         //Vaate väärtused
+        ready: false,
         settingsmenu: false,
         story: false,
         gamestarted: false,
@@ -39,57 +41,27 @@
         file: "../../assets/Testmusic.mp3",
 
         //Temp küsimused, hiljem ABst
-        questions: [
-        {
-          "description": "Worker! You gotta do this",
-          "points": 200,
-          "category_id": 1,
-          "answers": [
-            {
-              "correct": 1,
-              "image_loc": "../images/fakedarkpattern.png",
-              "description": "GOOD ANSWER BUDDY!"
-            },
-            {
-              "correct": 0,
-              "image_loc": "../images/cookieyum.png",
-              "description": "WORKER! BAD ANSWER!"
-            }
-          ],
-          "boss_answers": [
-            {
-              "correct": 1,
-              "description": "VERY GOOD, WORKER! YOU MADE THE CORRECT CHOICE VERY POGGERS YOU'RE AMAZING AHHHH LETS GO"
-            },
-            {
-              "correct": 0,
-              "description": "NOO WORKER YOU F'D UP HARDD BRO"
-            }
-          ],
-          "question_story": [
-            {
-              "description": "Good morning worker! Your first task is to provide the appropriate cookie settings for our website."
-            },
-            {
-              "description": "Make the most beneficial decision for us."
-            }
-          ],
-          "choosedarkpattern1": [
-            {
-              "de_scription": "One of the following images is a dark pattern while the other one is not."
-            },
-            {
-              "de_scription": "Choose the dark pattern....be careful!"
-            }
-          ]
-        }
-      ]
+        questions: null
       }
+    },
+    mounted() {
+
+      //Läbi Laraveli küsimuste võtmine andmebaasist.
+      //Enne, kui mängu mängida saab, peame ära ootama küsimused.
+      axios
+      .get("/questions")
+      .then(
+        response =>{
+          (this.questions = response["data"]);
+          this.ready = true;
+          console.log(this.questions);
+        });
+      
     },
     computed: {
       question_amount: {
         get() {
-          return this.questions.length;
+          return this.questions ? this.questions.length : 0;
         }
       }
     }
