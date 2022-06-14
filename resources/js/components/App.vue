@@ -2,18 +2,26 @@
   import Story from './Story.vue'
   import PropsVue from './PropsVue.vue'
   import Questions from './Questions.vue'
-  //import json from './Data.json'
   import Openingscreen from './Openingscreen.vue'
   import Settings from './Settings.vue'
   import Draggable from './Draggable.vue'
   import background from './background.js'
+  import EndScreen from './EndScreen.vue'
+  import Leaderboard from './Leaderboard.vue'
 </script>
 
 
 <script>
   export default{
     components: {
-      Story
+      Story,
+      PropsVue,
+      Questions,
+      Openingscreen,
+      Settings,
+      Draggable,
+      EndScreen,
+      Leaderboard
     },
     mixins: [
       require('./MethodsVue.vue')
@@ -26,7 +34,6 @@
         settingsmenu: false,
         story: false,
         gamestarted: false,
-
         gamecounter: 0,
         question: false,
         file: "../../assets/Testmusic.mp3",
@@ -82,6 +89,13 @@
       ]
       }
     },
+    computed: {
+      question_amount: {
+        get() {
+          return this.questions.length;
+        }
+      }
+    }
   }
 </script>
 
@@ -99,23 +113,27 @@
 
     <Settings v-if="settingsmenu == true" />
 
+    <!-- Mängu main loop siin -->
+    <div v-if="gamecounter < question_amount">
+      <Story
+          v-if="story && settingsmenu == false"
+          @storyevent="nextstory()"
+          :story_data="questions[gamecounter]['question_story']"
+      />
 
-    <Story
-      v-if="gamecounter == 1 && settingsmenu == false"
-      @storyevent="nextstory()"
-      :story_data="questions[0]['question_story']"
-    />
+      <Questions
+        v-if="settingsmenu == false && question && questions[gamecounter].category_id == 1"
+        @questionevent="nextquestion()"
+      />
 
+    </div>
+    <!-- Mängu loop lõpeb -->
 
-    <Questions v-if="gamecounter == 2 && settingsmenu == false" @questionevent="nextquestion()"  />
+    <Draggable v-if="gamecounter == 1 && settingsmenu == false" @questionevent="nextquestion()" />
 
-    <Story
-      v-if="gamecounter == 3 && settingsmenu == false"
-      @storyevent="nextstory()"
-      :story_data="questions[0]['question_story']"
-    />
+    <EndScreen v-if="gamecounter == 2 && settingsmenu == false" @Endevent="next()" />
 
-    <Draggable v-if="gamecounter == 4 && settingsmenu == false" @questionevent="nextquestion()" />
+    <Leaderboard v-if="gamecounter == 3 && settingsmenu == false" />
 
   </main>
 
