@@ -27,18 +27,13 @@ export default{
     <div class="bossitekst2">
       <p class="line-1 anim-typewriter2">{{this.story_data[1]["description"]}}</p>
     </div>
-    <div class="bossitekst3">
-      <p class="line-1 anim-typewriter3">{{this.story_data[2]["description"]}}</p>
-    </div>
     <div class="storybubbles">
-      <img src="../../static/textbubble.png" class="storymenutextbubble">
       <img src="../../static/textbubble.png" class="storymenutextbubble">
       <img src="../../static/textbubble.png" class="storymenutextbubble">
     </div>
     <div class="storybosspics">
       <img src="../../static/boss2.png" class="storybosspng">
       <img src="../../static/boss2.png" class="storybosspng2">
-       <img src="../../static/epicworkerdoingtheworkingfortheboss.png" class="storyworkerpng">
     </div>
 </div> 
 </template>
