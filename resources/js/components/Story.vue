@@ -27,9 +27,10 @@ export default{
   </div>
   <div class="storyContainer">
     <Storybubble
-      v-for="k in this.story_data"
+      v-for="(k, v) in this.story_data"
       :key=k
-      :prompt="k['description']" />
+      :prompt="k['description']"
+      :order_number = v />
   </div>
 </div> 
 </template>
