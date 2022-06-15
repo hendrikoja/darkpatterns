@@ -94,7 +94,7 @@
       />
 
       <Draggable 
-        v-if="settingsmenu == false && ready && questions[gamecounter].category_id == 2"
+        v-if="settingsmenu == false && question && ready && questions[gamecounter].category_id == 2"
         @questionevent="nextquestion()"
        />
 
@@ -104,9 +104,9 @@
 
 
 
-    <EndScreen v-if="gamecounter == 2 && settingsmenu == false" @Endevent="next()" />
+    <EndScreen v-if="gamecounter == 3 && settingsmenu == false" @Endevent="next()" />
 
-    <Leaderboard v-if="gamecounter == 3 && settingsmenu == false" />
+    <Leaderboard v-if="gamecounter == 4 && settingsmenu == false" />
 
   </main>
 
