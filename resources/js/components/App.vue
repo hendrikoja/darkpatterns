@@ -91,6 +91,7 @@
       <Questions
         v-if="settingsmenu == false && question && questions[gamecounter].category_id == 1"
         @questionevent="nextquestion()"
+        :question_data="questions[gamecounter]"
       />
 
     </div>
