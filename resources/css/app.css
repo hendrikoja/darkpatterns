@@ -493,24 +493,29 @@ html{
 .💄 {
   position: relative;
   text-align: center;
-  border-radius: 100px;
   color:rgb(0, 0, 0);
   font-size: 5vh;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.🥺 {
-  border-color:rgb(0, 255, 76);
-  border-width: 10px;
+.👨‍💼 {
   position: absolute;
-  top: 50%;
+  width: 75vh;
+  height: 37vh;
+  top:27%;
+  left:30%;
+}
+
+
+.🥺 {
+  position: absolute;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+
 .😂 {
-  border-color:rgb(0, 255, 76);
-  border-width: 10px;
   position: absolute;
   top: 10%;
   left: 50%;
@@ -518,13 +523,12 @@ html{
 }
 
 .🔘 {
-  border-color:rgb(0, 255, 76);
-  border-width: 10px;
   position: absolute;
-  top: 80%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 10vh;
+  font-size: 5vh;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 
