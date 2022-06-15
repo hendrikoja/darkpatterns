@@ -93,10 +93,16 @@
         :question_data="questions[gamecounter]"
       />
 
+      <Draggable 
+        v-if="settingsmenu == false && ready && questions[gamecounter].category_id == 2"
+        @questionevent="nextquestion()"
+       />
+
     </div>
     <!-- Mängu loop lõpeb -->
 
-    <Draggable v-if="gamecounter == 1 && settingsmenu == false" @questionevent="nextquestion()" />
+
+
 
     <EndScreen v-if="gamecounter == 2 && settingsmenu == false" @Endevent="next()" />
 
