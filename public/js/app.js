@@ -15186,12 +15186,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Openingscreen_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Openingscreen.vue */ "./resources/js/components/Openingscreen.vue");
 /* harmony import */ var _Settings_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Settings.vue */ "./resources/js/components/Settings.vue");
 /* harmony import */ var _Draggable_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Draggable.vue */ "./resources/js/components/Draggable.vue");
-/* harmony import */ var _background_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./background.js */ "./resources/js/components/background.js");
-/* harmony import */ var _background_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_background_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _background_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./background.js */ "./resources/js/components/background.js");
+/* harmony import */ var _background_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_background_js__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _EndScreen_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EndScreen.vue */ "./resources/js/components/EndScreen.vue");
 /* harmony import */ var _Leaderboard_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Leaderboard.vue */ "./resources/js/components/Leaderboard.vue");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_7__);
 var __default__ = {
   components: {
     Story: _Story_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -15219,24 +15219,21 @@ var __default__ = {
       ready: false
     };
   },
-  mounted: function mounted() {//Läbi Laraveli küsimuste võtmine andmebaasist.
-    //Enne, kui mängu mängida saab, peame ära ootama küsimused.
+  mounted: function mounted() {
+    var _this = this;
 
-    /*axios
-    .get("/questions")
-    .then(
-      response =>{
-        (this.questions = response["data"]);
-        this.ready = true;
-        console.log(this.questions);
-      });
-    */
+    //Läbi Laraveli küsimuste võtmine andmebaasist.
+    //Enne, kui mängu mängida saab, peame ära ootama küsimused.
+    axios__WEBPACK_IMPORTED_MODULE_7___default().get("/questions").then(function (response) {
+      _this.questions = response["data"];
+      _this.ready = true;
+      console.log(_this.questions);
+    });
   },
   computed: {
     question_amount: {
       get: function get() {
-        //return this.questions ? this.questions.length : 0;
-        return this.questions.length;
+        return this.questions ? this.questions.length : 0;
       }
     }
   }
@@ -15261,10 +15258,10 @@ var __default__ = {
       Openingscreen: _Openingscreen_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
       Settings: _Settings_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
       Draggable: _Draggable_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-      background: (_background_js__WEBPACK_IMPORTED_MODULE_7___default()),
+      background: (_background_js__WEBPACK_IMPORTED_MODULE_8___default()),
       EndScreen: _EndScreen_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
       Leaderboard: _Leaderboard_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
-      axios: (axios__WEBPACK_IMPORTED_MODULE_8___default())
+      axios: (axios__WEBPACK_IMPORTED_MODULE_7___default())
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
