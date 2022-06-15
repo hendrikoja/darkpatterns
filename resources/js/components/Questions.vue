@@ -25,11 +25,10 @@ export default{
       :prompt="this.question_data['description']"
     />
     <div class="QuestionsChoice1">
-      <img class="scale"
-      :src='this.question_data["answers"][0]["image_loc"]' />
+      <img src="../../static/acceptcookies1.png" class="scale">
     </div>
     <div class="QuestionsChoice2">
-      <img src="../../static/cookieyum.png" class="scale">
+      <img src="../../static/acceptcookies2.png" class="scale">
     </div>
   <button name="Answer" class="answerbutton" @click="$emit('questionevent')">Answer</button>
 </div> 
