@@ -275,7 +275,11 @@ input:checked + .slider {
   position: absolute;
   top: 10%;
   z-index: -1;
-  border-radius: 5000px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
 }
 .storybubbles {
   display: flex;
@@ -322,7 +326,12 @@ input:checked + .slider {
   left: 42.5%;
   top: 60%;
   position: absolute;
+  background-color: white;
+  border-radius: 25px;
   z-index: -1;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
 }
 .smallscreen {
   position: absolute;
@@ -625,4 +634,21 @@ a {
   display:flex;
   flex-direction: column;
   gap: 1vh;
+}
+
+.startScreenIntroText {
+  padding-right: 1vh;
+  padding-left: 1vh;
+  text-align: justify;
+  line-height: 3vh;
+  color:rgb(0, 0, 0);
+  font-size: 2vh;
+  overflow: hidden;
+}
+
+.gameTitle {
+  text-align:center;
+  padding-top: 1vh;
+  font-size: 4vh;
+  font-weight: bold;
 }
