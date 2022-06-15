@@ -1,3 +1,6 @@
+<script setup>
+  import Questionbubble from './UI/Questionbubble.vue'
+</script>
 <script>
 export default{
     data(){
@@ -18,16 +21,15 @@ export default{
 
 <template>
 <div class="question center">
-    <img src="../../static/textbubble.png" class="QuestionsTextbubble">
+    <Questionbubble
+      :prompt="this.question_data['description']"
+    />
     <div class="QuestionsChoice1">
       <img class="scale"
       :src='this.question_data["answers"][0]["image_loc"]' />
     </div>
     <div class="QuestionsChoice2">
       <img src="../../static/cookieyum.png" class="scale">
-    </div>
-    <div class="bossitekst4">
-      <p class="line-1 anim-typewriter4">{{this.question_data["description"]}}</p>
     </div>
   <button name="Answer" class="answerbutton" @click="$emit('questionevent')">Answer</button>
 </div> 
