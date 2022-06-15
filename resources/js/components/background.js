@@ -10,7 +10,7 @@
 
 /* -------------- POINT.JS ------------*/
 var Point = function(x,y) {
-	this.x = x;
+	this.x = x -50 ;
 	this.y = y;
 };
 
@@ -252,10 +252,10 @@ var Util = {
 		},
 		drawSketchStroke:function(a,b,g,extension,innerAlpha,jitter) {
 		
-		if(extension==null) extension = 100;
-		if(innerAlpha==null) innerAlpha = 1;
-		if(jitter==null) jitter = 0;
-		var len = a.subtract(b).length();
+		if(extension==null) extension = -10;
+		if(innerAlpha==null) innerAlpha = -10;
+		if(jitter==null) jitter = -1;
+		var len = a.add(b).length();
 		var overshootAmount =  (len+extension)/len;
 		var overshoot = Util.scalePoints([a,b],overshootAmount)
 		
@@ -474,8 +474,8 @@ RegularPolygon.prototype = {
 			var nL = rL.getNormal();
 			var nN = rN.getNormal();
 			
-			nL.scaleBy(radiusI/2*sign);
-			nN.scaleBy(radiusI/2*sign);
+			nL.scaleBy(radiusI/1*sign);
+			nN.scaleBy(radiusI/1*sign);
 			
 			rL = rL.add(pI);
 			var insetPoint =  pI.add(avgN);
