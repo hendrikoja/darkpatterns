@@ -46,7 +46,7 @@
 
       //Läbi Laraveli küsimuste võtmine andmebaasist.
       //Enne, kui mängu mängida saab, peame ära ootama küsimused.
-      axios
+      /*axios
       .get("/questions")
       .then(
         response =>{
@@ -54,12 +54,13 @@
           this.ready = true;
           console.log(this.questions);
         });
-      
+      */
     },
     computed: {
       question_amount: {
         get() {
-          return this.questions ? this.questions.length : 0;
+          //return this.questions ? this.questions.length : 0;
+          return this.questions.length;
         }
       }
     }
