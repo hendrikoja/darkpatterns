@@ -409,44 +409,8 @@ html{
 }
 
 /* Animation */
-.anim-typewriter{
-  animation: typewriter 5.2s steps(100) 1s 1 normal both,
-             blinkTextCursor 500ms steps(100) infinite normal;
-}
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 40em;}
-}
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
-}
 
-.anim-typewriter2{
-  animation: typewriter2 3s steps(100) 1s 1 normal both,
-             blinkTextCursor2 500ms steps(100) infinite normal;
-  animation-delay: 7s;}
-@keyframes typewriter2{
-  from{width: 0;}
-  to{width: 20em;}
-}
-@keyframes blinkTextCursor2{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
-}
 
-.anim-typewriter4{
-  animation: typewriter4 3.6s steps(150) 1s 1 normal both,
-             blinkTextCursor4 500ms steps(100) infinite normal;
-}
-@keyframes typewriter4{
-  from{width: 0;}
-  to{width: 29em;}
-}
-@keyframes blinkTextCursor4{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
-}
 .drop-zone {
   background-color: rgb(168, 53, 53);
   margin-bottom: 10px;
