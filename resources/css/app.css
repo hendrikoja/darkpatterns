@@ -278,16 +278,17 @@ input:checked + .slider {
   border-radius: 5000px;
 }
 .storybubbles {
-  display: block;
+  display: flex;
   top: 18%;
   left: 18.5%;
-  position: absolute;
   z-index: -1;
+  width: 95vw;
+  height: 15vh;
+  gap: 1vw;
 }
 .storybosspng{
   top: 18.5%;
   left: 5%;
-  position: absolute;
   z-index: -1;
   width: 13vw;
   height: 15vh;
@@ -347,15 +348,16 @@ input:checked + .slider {
 }
 
 .bossitekst {
-  width: 65vw;
-  height: 10vh;
-  position:absolute;
+  width: 93vw;
+  height: 15vh;
+  padding: 1vh;
   text-align: left;
-  top: 21%;
-  left: 18.5%;
   color:rgb(0, 0, 0);
+  background-color: white;
+  border-radius: 25px;
   font-size: 3vh;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  -webkit-box-shadow: 9px 9px 15px -1px rgba(0,0,0,0.5); 
+  box-shadow: 9px 9px 15px -1px rgba(0,0,0,0.5);
   overflow: hidden;
 }
 
@@ -654,4 +656,9 @@ a {
 }
 .leaderboard li:nth-child(5) {
 	background: #c24448;
+}
+.storyContainer {
+  display:flex;
+  flex-direction: column;
+  gap: 1vh;
 }
