@@ -107,7 +107,7 @@ html {
   height: 3vw;
   cursor: pointer;
   top: 0%;
-  left: 0%;
+  right: 0%;
   position: absolute;
 }
 
@@ -126,7 +126,7 @@ html {
   font-size: 1.5vw;
   cursor: pointer;
   top:10%;
-  left: 5%;
+  right: 5%;
   position: absolute;
 }
 
@@ -135,7 +135,7 @@ html {
     display: inline-block;
     width: 80px;
     height: 34px;
-    left: 18%;
+    right: 18%;
     top: 10%;
 }
 
@@ -351,8 +351,6 @@ input:checked + .slider {
   height: 10vh;
   position:absolute;
   text-align: left;
-  border-color:rgb(0, 255, 76);
-  border-width: 10px;
   top: 21%;
   left: 18.5%;
   color:rgb(0, 0, 0);
@@ -364,8 +362,6 @@ input:checked + .slider {
 .bossitekst2 {
   width: 65vw;
   height: 10vh;
-  border-color:rgb(0, 255, 76);
-  border-width: 10px;
   position:absolute;
   text-align: left;
   top: 39%;
@@ -377,27 +373,18 @@ input:checked + .slider {
 }
 
 .bossitekst4 {
-  width: 45vw;
-  height: 1.5vh;
+  width: 94vw;
+  height: 30.5vh;
   position:absolute;
   text-align: left;
-  top: 12.5%;
-  left: 5.5%;
+  border-color:rgb(0, 255, 76);
+  border-width: 10px;
+  top: 8%;
+  left: 3%;
   color:rgb(0, 0, 0);
-  font-size: 8vh;
+  font-size: 3vh;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.bossitekst5 {
-  width: 45vw;
-  height: 10vh;
-  position:absolute;
-  text-align: left;
-  top: 18.5%;
-  left: -8%;
-  color:rgb(0, 0, 0);
-  font-size: 8vh;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  overflow: hidden;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
@@ -458,21 +445,6 @@ html{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
 }
-
-.anim-typewriter5{
-  animation: typewriter5 2.6s steps(100) 1s 1 normal both,
-             blinkTextCursor5 500ms steps(100) infinite normal;
-             animation-delay: 5s;
-}
-@keyframes typewriter5{
-  from{width: 0;}
-  to{width: 20em;}
-}
-@keyframes blinkTextCursor5{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
-}
-
 .drop-zone {
   background-color: rgb(168, 53, 53);
   margin-bottom: 10px;
@@ -516,6 +488,45 @@ html{
   top: 8%;
   border-radius: 100px;
 }
+
+
+.💄 {
+  position: relative;
+  text-align: center;
+  border-radius: 100px;
+  color:rgb(0, 0, 0);
+  font-size: 5vh;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.🥺 {
+  border-color:rgb(0, 255, 76);
+  border-width: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.😂 {
+  border-color:rgb(0, 255, 76);
+  border-width: 10px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.🔘 {
+  border-color:rgb(0, 255, 76);
+  border-width: 10px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10vh;
+}
+
 
 canvas
 {
