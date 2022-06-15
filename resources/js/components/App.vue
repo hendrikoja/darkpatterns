@@ -37,7 +37,6 @@
         question: false,
         file: "../../assets/Testmusic.mp3",
 
-        //Temp küsimused, hiljem ABst
         questions: null,
         //Kas küsimused on ABst käes
         ready: false,
