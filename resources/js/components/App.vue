@@ -36,7 +36,7 @@
         gamecounter: 0,
         question: false,
         file: "../../assets/Testmusic.mp3",
-
+        points: 0,
         questions: null,
         //Kas küsimused on ABst käes
         ready: false,
@@ -68,7 +68,8 @@
 <template>
 
   <main>
-    
+
+    <div class="points"><p>{{points}}</p></div>
 
     <button class="settings" @click="settingsfunc()"></button>
 
