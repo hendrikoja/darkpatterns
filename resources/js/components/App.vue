@@ -7,6 +7,7 @@
   import background from './background.js'
   import EndScreen from './EndScreen.vue'
   import Leaderboard from './Leaderboard.vue'
+  import Points from './UI/Points.vue'
 
   import axios from 'axios';
 </script>
@@ -68,8 +69,11 @@
 <template>
 
   <main>
-
-    <div class="points"><p>{{points}}</p></div>
+    <div class="topBar">
+      <Points 
+        :points="this.points"
+      />
+    </div>
 
     <button class="settings" @click="settingsfunc()"></button>
 

@@ -34,11 +34,16 @@ export default{
   .questionContainer {
     display:flex;
     position: absolute;
-    bottom: 30vh;
+    bottom: -50vh;
     justify-content: center;
     align-items: flex-end;
     height: 15vh;
     width: 100vw;
     gap: 3vw;
+  }
+  .questionPage {
+    display:flex;
+    position: absolute;
+    top: 10vh;
   }
 </style>

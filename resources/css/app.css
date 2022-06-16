@@ -689,6 +689,8 @@ a {
   display:flex;
   flex-direction: column;
   gap: 1vh;
+  position: absolute;
+  top: 10vh;
 }
 
 .startScreenIntroText {
@@ -719,14 +721,15 @@ a {
   box-shadow: 9px 9px 15px -1px rgba(0,0,0,0.5);
 }
 
-.points {
-  color:rgb(0, 0, 0);
+.topBar {
   display: flex;
-  cursor: pointer;
-  font-size: 7;
-  top: 90%;
-  left: 5%;
-  position: absolute;
-  border-radius: 2px;
   background-color: white;
+  position: absolute;
+  width: 30vw;
+  height: 7vh;
+  top: -0.5vw;
+  left: -1vh;
+  border-radius: 10px;
+  -webkit-box-shadow: 8px 8px 15px -5px rgba(0,0,0,0.65); 
+  box-shadow: 8px 8px 15px -5px rgba(0,0,0,0.65);
 }
