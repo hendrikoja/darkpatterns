@@ -115,3 +115,28 @@ document.body.addEventListener('drop',drop,true);
 </div>
   <button name="Answer" class="answerbutton" @click='$emit("questionevent")'>Answer</button>
 </template>
+
+<style scoped>
+.answerbutton {
+  background: linear-gradient(to right, #040404, #0d024e);
+  border-color: yellow;
+  border-radius: 9px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2rem;
+  width: 10vw;
+  height: 5vh;
+  font-size: 1.5vw;
+  cursor: pointer;
+  top: 95%;
+  right: 0%;
+  position: absolute;
+}
+.scale2 {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+</style>
