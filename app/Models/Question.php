@@ -23,4 +23,8 @@ class Question extends Model
     {
         return $this->hasMany(BossAnswers::class);
     }
+    public function draggable_answers()
+    {
+        return $this->hasMany(DraggableAnswer::class);
+    }
 }

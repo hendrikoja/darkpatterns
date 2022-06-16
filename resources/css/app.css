@@ -499,6 +499,30 @@ html{
   top: 10%;
 }
 
+
+.QuestionsChoice2 {
+  position: absolute;
+  width: 25vw;
+  height: 25vh;
+  top: 70%;
+  right: 20%;
+  background: #2196F3;
+  border: 2px solid #222;
+}
+
+.QuestionsChoice2:focus {
+  box-shadow: 0 0 2px 2px #000;
+}
+
+.QuestionsTextbubble {
+  position:absolute;
+  width: 94vw;
+  height: 30vh;
+  top: 8%;
+  border-radius: 100px;
+}
+
+
 .💄 {
   position: relative;
   text-align: center;
@@ -693,4 +717,16 @@ a {
   height: 15vh;
   -webkit-box-shadow: 9px 9px 15px -1px rgba(0,0,0,0.5); 
   box-shadow: 9px 9px 15px -1px rgba(0,0,0,0.5);
+}
+
+.points {
+  color:rgb(0, 0, 0);
+  display: flex;
+  cursor: pointer;
+  font-size: 7;
+  top: 90%;
+  left: 5%;
+  position: absolute;
+  border-radius: 2px;
+  background-color: white;
 }
