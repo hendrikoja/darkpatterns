@@ -90,13 +90,13 @@
 
       <Questions
         v-if="settingsmenu == false && question && questions[gamecounter].category_id == 1"
-        @questionevent="nextquestion()"
+        @questionevent="nextquestion"
         :question_data="questions[gamecounter]"
       />
 
       <Draggable 
         v-if="settingsmenu == false && question && ready && questions[gamecounter].category_id == 2"
-        @questionevent="nextquestion()"
+        @questionevent="nextquestion"
        />
 
     </div>

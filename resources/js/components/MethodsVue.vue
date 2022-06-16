@@ -24,10 +24,14 @@ module.exports = {
         this.story = false;
         this.question = true;
       },
-      nextquestion() {
+      nextquestion(correct, points) {
         this.gamecounter++;
         this.story = true;
         this.question = false;
+        console.log(correct, points)
+        if (correct) {
+          this.points += points;
+        }
         console.log(this.gamecounter)
       },
       console() {
