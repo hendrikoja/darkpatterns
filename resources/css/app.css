@@ -429,14 +429,13 @@ html{
 .drop-zone2 {
   background-color: rgba(255,255,255);
   width: 10vw;
-  height: 15vh;
+  height: 10vw;
 }
 .drag-el2 {
   background-color: rgba(255,255,255);
   width: 10vw;
-  height: 15vh;
+  height: 10vw;
 }
-
 .menu {
   position: absolute;
   right: 0%;
@@ -447,6 +446,30 @@ html{
   left: 10%;
   top: 10%;
 }
+
+
+.QuestionsChoice2 {
+  position: absolute;
+  width: 25vw;
+  height: 25vh;
+  top: 70%;
+  right: 20%;
+  background: #2196F3;
+  border: 2px solid #222;
+}
+
+.QuestionsChoice2:focus {
+  box-shadow: 0 0 2px 2px #000;
+}
+
+.QuestionsTextbubble {
+  position:absolute;
+  width: 94vw;
+  height: 30vh;
+  top: 8%;
+  border-radius: 100px;
+}
+
 
 .💄 {
   position: relative;
@@ -522,11 +545,6 @@ canvas
   object-fit: contain;
 }
 
-/*
- * Reference - https://codepen.io/supah/pen/WwrJpw
- */
-
-/* basic */
 *,
 *:before,
 *:after {
@@ -556,7 +574,6 @@ a {
 	z-index: 1;
 }
 
-/* container */
 .container {
 	width: 100vh;
 	height: 100vh;
@@ -565,12 +582,10 @@ a {
   left: 0%;
 }
 
-/* leaderboard */
 .leaderboard {
 	background: linear-gradient(to bottom, #3a404d, #181c26);
 }
 
-/* head */
 .leaderboard .head {
 	padding: 2vh 1.6vh;
 	color: snow;
@@ -582,13 +597,12 @@ a {
 	margin-left: 1vh;
 }
 
-/* body */
 .leaderboard .body {
 	color: rgb(3, 3, 3);
 	font-size: 4vh;
 }
 .leaderboard ol {
-	counter-reset: number; /* 定義和初始化計數器 */
+	counter-reset: number;
 }
 .leaderboard li {
 	padding: 4vh;
@@ -600,8 +614,8 @@ a {
 	background-color: transparent;
 }
 .leaderboard li:before {
-	counter-increment: number; /* 遞增計數器 */
-	content: counter(number) "."; /* 顯示計數器 */
+	counter-increment: number;
+	content: counter(number) ".";
 	margin-right: 4px;
 }
 .leaderboard li:nth-child(1) {
@@ -652,3 +666,4 @@ a {
   -webkit-box-shadow: 9px 9px 15px -1px rgba(0,0,0,0.5); 
   box-shadow: 9px 9px 15px -1px rgba(0,0,0,0.5);
 }
+

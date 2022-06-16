@@ -15,7 +15,6 @@ export default{
     ],
     props:["question_data"],
 }
-// Script on vaja muuta, temp. lahendus praegu
 </script>
 
 <template>

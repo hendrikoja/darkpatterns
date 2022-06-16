@@ -16,7 +16,7 @@ export default{
 
 <template>
     <div class="QuestionsChoice1">
-        <img v-bind:src="answer_data['image_loc']" class="scale" @click="answeredfunc()">
+        <img v-bind:src="answer_data['image_loc']" class="scale">
     </div>
 </template>
 
