@@ -5,15 +5,13 @@
 export default{
     data(){
         return {
-            count: 0
+            count: 0,
+            answered: false
         }
     },
-    methods: {
-        countup(){
-            this.count++
-            console.log(this.count)
-        }
-    },
+    mixins: [
+      require('./MethodsVue.vue')
+    ],
     props:["question_data"],
 }
 // Script on vaja muuta, temp. lahendus praegu
@@ -25,11 +23,11 @@ export default{
       :prompt="this.question_data['description']"
     />
     <div class="QuestionsChoice1">
-      <img src="../../static/acceptcookies1.png" class="scale">
+      <img src="../../static/acceptcookies1.png" class="scale" @click="answeredfunc()">
     </div>
     <div class="QuestionsChoice2">
-      <img src="../../static/acceptcookies2.png" class="scale">
+      <img src="../../static/acceptcookies2.png" class="scale" @click="answeredfunc()">
     </div>
-  <button name="Answer" class="answerbutton" @click="$emit('questionevent')">Answer</button>
+  <button v-if="answered" name="Answer" class="answerbutton" @click="$emit('questionevent')">Answer</button>
 </div> 
 </template>
