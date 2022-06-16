@@ -61,6 +61,14 @@
           this.ready = true;
           console.log(this.questions);
         });
+      axios
+      .get("/leaderboard")
+      .then(
+        response =>{
+          (this.questions = response["data"]);
+          this.ready = true;
+          console.log(this.questions);
+          });
     },
     computed: {
       question_amount: {
@@ -124,7 +132,9 @@
 
     <EndScreen v-if="gamecounter == 3 && settingsmenu == false" @Endevent="next()" />
 
-    <Leaderboard v-if="gamecounter == 4 && settingsmenu == false" />
+    <Leaderboard 
+    v-if="gamecounter == 4 && settingsmenu == false"
+    :leaderboard_data="users[1]" />
 
   </main>
 

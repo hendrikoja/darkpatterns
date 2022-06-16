@@ -1,5 +1,14 @@
 <script>
-
+export default{
+    data(){
+        return {
+        }
+    },
+    mixins: [
+      require('./MethodsVue.vue')
+    ],
+    props:["leaderboard_data"],
+}
 </script>
 
 <template>
@@ -37,6 +46,11 @@
 			</div>
 		</div>
 	</div>
+</div>
+<div class="leaderoardPage">
+    <div class="leaderboardContainer">
+<p>{{this.story_data}}</p>
+    </div>
 </div>
 </template>
 
