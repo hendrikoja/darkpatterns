@@ -7,6 +7,11 @@ function drop(e) {
 }
 
 export default{
+  data(){
+    return{
+      funny: 0,
+    }
+  },
   setup() {
     const items = ref([
       { id: 0, title: 'oh', list: 1, image: "../images/30dayfreetrial.png" },
@@ -22,10 +27,16 @@ export default{
       event.dataTransfer.effectAllowed = 'move'
       event.dataTransfer.setData('itemID', item.id)
     }
-    const onDrop = (event, list) => {
+    const onDrop = (event, list, ele) => {
+      var id = ele
+      const dropzone = document.getElementById(id)
+      var funny = dropzone.dataset.draglimit
+    if(funny != "false"){
+      dropzone.dataset.draglimit = "false"
       const itemID = event.dataTransfer.getData('itemID')
       const item = items.value.find((item) => item.id == itemID)
       item.list = list
+    }
     }
     return {
       getList,
@@ -42,9 +53,11 @@ document.body.addEventListener('drop',drop,true);
 <div class="menu">
   <div
     class="drop-zone"
-    @drop="onDrop($event, 1)"
+    @drop="onDrop($event, 1, 'dropzone1')"
     @dragover.prevent
     @dragenter.prevent
+    id="dropzone1"
+    data-draglimit = "true"
   >
     <div
       class="drag-el"
@@ -62,9 +75,11 @@ document.body.addEventListener('drop',drop,true);
 <div class="interactivegame">
   <div
     class="drop-zone2"
-    @drop="onDrop($event, 2)"
+    @drop="onDrop($event, 2, 'dropzone2')"
     @dragover.prevent
     @dragenter.prevent
+    id="dropzone2"
+    data-draglimit = "true"
   >
     <div
       class="drag-el2 scale"
