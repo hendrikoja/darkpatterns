@@ -15573,6 +15573,7 @@ __webpack_require__.r(__webpack_exports__);
       hidden: true
     };
   },
+  mixins: [__webpack_require__(/*! ../MethodsVue.vue */ "./resources/js/components/MethodsVue.vue")],
   mounted: function mounted() {},
   methods: {},
   props: ["answer_data"]
@@ -16088,7 +16089,8 @@ var _hoisted_2 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     src: $props.answer_data['image_loc'],
-    "class": "scale"
+    "class": "scale",
+    tabindex: "1"
   }, null, 8
   /* PROPS */
   , _hoisted_2)]);
@@ -16762,7 +16764,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.QuestionsChoice1[data-v-6743a97e] {\r\n  max-width: 25vw;\r\n  height: auto;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.QuestionsChoice1[data-v-6743a97e] {\r\n    max-width: 25vw;\r\n    height: auto;\r\n    background: #2196F3;\r\n    border: 2px solid #222;\n}\n.QuestionsChoice1[data-v-6743a97e]:focus{\r\n    box-shadow: 0 0 2px 2px #000;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

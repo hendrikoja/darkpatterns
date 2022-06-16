@@ -5,6 +5,9 @@ export default{
           hidden: true,
         }
     },
+    mixins: [
+      require('../MethodsVue.vue')
+    ],
     mounted() {
     },
     methods: {
@@ -16,13 +19,19 @@ export default{
 
 <template>
     <div class="QuestionsChoice1">
-        <img v-bind:src="answer_data['image_loc']" class="scale">
+        <img v-bind:src="answer_data['image_loc']" class="scale" tabindex="1">
     </div>
 </template>
 
 <style scoped>
-.QuestionsChoice1 {
-  max-width: 25vw;
-  height: auto;
-}
+    .QuestionsChoice1 {
+    max-width: 25vw;
+    height: auto;
+    background: #2196F3;
+    border: 2px solid #222;
+    }
+
+    .QuestionsChoice1:focus{
+    box-shadow: 0 0 2px 2px #000;
+    }
 </style>
