@@ -56,6 +56,9 @@ document.body.addEventListener('drop',drop,true);
     </div>
   </div>
 </div>
+<div class="cooldrop">
+  <img src="../../static/isoef.jpg">
+</div>
 <div class="interactivegame">
   <div
     class="drop-zone2"
@@ -66,6 +69,42 @@ document.body.addEventListener('drop',drop,true);
     <div
       class="drag-el2"
       v-for="item in getList(2)"
+      :key="item.title"
+      draggable="true"
+      @dragstart="startDrag($event, item)"
+    >
+      <img :src = "item.image" class="scale2">
+    </div>
+  </div>
+</div>
+<div class="interactivegame">
+  <div
+    class="drop-zone3"
+    @drop="onDrop($event, 3)"
+    @dragover.prevent
+    @dragenter.prevent
+  >
+    <div
+      class="drag-el3"
+      v-for="item in getList(3)"
+      :key="item.title"
+      draggable="true"
+      @dragstart="startDrag($event, item)"
+    >
+      <img :src = "item.image" class="scale2">
+    </div>
+  </div>
+</div>
+<div class="interactivegame">
+  <div
+    class="drop-zone4"
+    @drop="onDrop($event, 4)"
+    @dragover.prevent
+    @dragenter.prevent
+  >
+    <div
+      class="drag-el4"
+      v-for="item in getList(4)"
       :key="item.title"
       draggable="true"
       @dragstart="startDrag($event, item)"
