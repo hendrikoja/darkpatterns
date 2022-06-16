@@ -260,7 +260,8 @@ input:checked + .slider {
   height: 5vh;
   font-size: 1.5vw;
   cursor: pointer;
-  top: 60%;
+  top: 95%;
+  right: 0%;
   position: absolute;
 }
 .center {
@@ -416,26 +417,35 @@ html{
 
 
 .drop-zone {
-  background-color: rgb(168, 53, 53);
-  margin-bottom: 10px;
-  padding: 10px;
+  background: linear-gradient(to left, #ffffff, #838383);
+  width: 10vw;
+  height: 95vh;
 }
 .drag-el {
-  background-color: rgb(155, 62, 62);
-  margin-bottom: 10px;
-  padding: 5px;
+  background: linear-gradient(to left, #ffffff, #838383);
+  width: 10vw;
+  height: 15vh;
 }
+.drop-zone2 {
+  background-color: rgba(255,255,255);
+  width: 10vw;
+  height: 15vh;
+}
+.drag-el2 {
+  background-color: rgba(255,255,255);
+  width: 10vw;
+  height: 15vh;
+}
+
 .menu {
   position: absolute;
-  right: 5%;
-  top: 5%;
-  width: auto;
+  right: 0%;
+  top: 0%;
 }
 .interactivegame {
   position: absolute;
-  left: 5%;
-  top: 5%;
-  width: auto;
+  left: 10%;
+  top: 10%;
 }
 .QuestionsChoice1 {
   position: absolute;
@@ -526,6 +536,12 @@ canvas
   height: 100%;
   width: 100%;
   object-fit: fill;
+}
+
+.scale2 {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 /*

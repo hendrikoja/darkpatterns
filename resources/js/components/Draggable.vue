@@ -11,7 +11,7 @@ export default{
     const items = ref([
       { id: 0, title: 'oh', list: 1, image: "../images/boss2.png" },
       { id: 1, title: 'the', list: 1, image: "../images/boss2.png" },
-      { id: 2, title: 'misery', list: 2, image: "../images/boss2.png" },
+      { id: 2, title: 'misery', list: 1, image: "../images/boss2.png" },
     ])
     const getList = (list) => {
       return items.value.filter((item) => item.list == list)
@@ -51,27 +51,26 @@ document.body.addEventListener('drop',drop,true);
       v-for="item in getList(1)"
       :key="item.title"
       draggable="true"
-      @dragstart="startDrag($event, item)"
-    >
-      <img :src = "item.image">
+      @dragstart="startDrag($event, item)" >
+      <img :src = "item.image" class="scale2">
     </div>
   </div>
 </div>
 <div class="interactivegame">
   <div
-    class="drop-zone"
+    class="drop-zone2"
     @drop="onDrop($event, 2)"
     @dragover.prevent
     @dragenter.prevent
   >
     <div
-      class="drag-el"
+      class="drag-el2"
       v-for="item in getList(2)"
       :key="item.title"
       draggable="true"
       @dragstart="startDrag($event, item)"
     >
-      <img :src = "item.image">
+      <img :src = "item.image" class="scale2">
     </div>
   </div>
 </div>
