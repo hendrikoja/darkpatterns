@@ -11,7 +11,10 @@ export default{
     const items = ref([
       { id: 0, title: 'oh', list: 1, image: "../images/30dayfreetrial.png" },
       { id: 1, title: 'the', list: 1, image: "../images/adidas.png" },
-      { id: 2, title: 'misery', list: 1, image: "../images/1000.png" },
+      { id: 2, title: 'misery', list: 1, image: "../images/1000.png"},
+      { id: 3, title: 'everybody', list: 1, image: "../images/mostpopularplan.png"},
+      { id: 4, title: 'wants', list: 1, image: "../images/freeplan.png"},
+      { id: 5, title: 'to', list: 1, image: "../images/trqsted.png"},
     ])
     const getList = (list) => {
       return items.value.filter((item) => item.list == list)
@@ -106,6 +109,60 @@ document.body.addEventListener('drop',drop,true);
     <div
       class="drag-el4"
       v-for="item in getList(4)"
+      :key="item.title"
+      draggable="true"
+      @dragstart="startDrag($event, item)"
+    >
+      <img :src = "item.image" class="scale2">
+    </div>
+  </div>
+</div>
+<div class="interactivegame">
+  <div
+    class="drop-zone5"
+    @drop="onDrop($event, 5)"
+    @dragover.prevent
+    @dragenter.prevent
+  >
+    <div
+      class="drag-el5"
+      v-for="item in getList(5)"
+      :key="item.title"
+      draggable="true"
+      @dragstart="startDrag($event, item)"
+    >
+      <img :src = "item.image" class="scale2">
+    </div>
+  </div>
+</div>
+<div class="interactivegame">
+  <div
+    class="drop-zone6"
+    @drop="onDrop($event, 6)"
+    @dragover.prevent
+    @dragenter.prevent
+  >
+    <div
+      class="drag-el6"
+      v-for="item in getList(6)"
+      :key="item.title"
+      draggable="true"
+      @dragstart="startDrag($event, item)"
+    >
+      <img :src = "item.image" class="scale2">
+    </div>
+  </div>
+</div>
+<div class="interactivegame">
+  <div
+    class="drop-zone7"
+    @drop="onDrop($event, 7)"
+    @dragover.prevent
+    @dragenter.prevent
+  >
+    <div
+      class="drag-el7"
+      v-for="item in getList(7)"
       :key="item.title"
       draggable="true"
       @dragstart="startDrag($event, item)"
