@@ -10,8 +10,9 @@ class QuestionController extends Controller
 {
     public function index()
     {
-        $questions = Question::with("answers", "boss_answers", "question_story") -> get();
-        return response() -> json($questions);
+        $questions_regular = Question::with("answers", "boss_answers", "question_story") -> where("category_id", "=", 1) -> get();
+        $questions_draggable = Question::with("draggable_answers", "boss_answers", "question_story") -> where("category_id", "=", 2) -> get();
+        return response() -> json($questions_regular -> merge($questions_draggable));
     }
 
     public function add_question(Request $request) {
