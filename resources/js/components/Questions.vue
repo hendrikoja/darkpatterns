@@ -24,8 +24,11 @@ export default{
       :prompt="this.question_data['description']"
     />
     <div class="questionContainer">
-      <Answer @click="$emit('questionevent')" />
-      <Answer @click="$emit('questionevent')" />
+      <Answer v-for="(k, v) in this.question_data['answers']"
+        :key = v
+        :answer_data="k"
+        @click="$emit('questionevent')"
+      />
     </div>
   <button v-if="answered" name="Answer" class="answerbutton" @click="$emit('questionevent')">Answer</button>
 </div> 
