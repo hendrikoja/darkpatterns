@@ -1,5 +1,6 @@
 <script setup>
   import Story from './Story.vue'
+  import Feedback from './Feedback.vue'
   import Questions from './Questions.vue'
   import Openingscreen from './Openingscreen.vue'
   import Settings from './Settings.vue'
@@ -7,7 +8,11 @@
   import background from './background.js'
   import EndScreen from './EndScreen.vue'
   import Leaderboard from './Leaderboard.vue'
+<<<<<<< HEAD
   import sex from './sex.js'
+=======
+  import Points from './UI/Points.vue'
+>>>>>>> c891f5f038e2c6945e0768244d33a9b95656d899
 
   import axios from 'axios';
 </script>
@@ -34,8 +39,13 @@
         settingsmenu: false,
         story: false,
         gamestarted: false,
-        gamecounter: 0,
         question: false,
+        //bossi tagasiside ekraan or some shit go fuck yourself
+        feedback: false,
+        
+        correct_answer: false,
+
+        gamecounter: 0,
         file: "../../assets/Testmusic.mp3",
         points: 0,
         questions: null,
@@ -69,8 +79,11 @@
 <template>
 
   <main>
-
-    <div class="points"><p>{{points}}</p></div>
+    <div class="topBar" v-if="gamestarted">
+      <Points
+        :points="this.points"
+      />
+    </div>
 
     <button class="settings" @click="settingsfunc()"></button>
 
@@ -91,13 +104,20 @@
 
       <Questions
         v-if="settingsmenu == false && question && questions[gamecounter].category_id == 1"
-        @questionevent="nextquestion()"
+        @questionevent="nextquestion"
         :question_data="questions[gamecounter]"
+      />
+
+      <Feedback
+        v-if="feedback && settingsmenu == false"
+        @storyevent="nextfeedback()"
+        :story_data="questions[gamecounter]['boss_answers']"
+        :correct="correct_answer"
       />
 
       <Draggable 
         v-if="settingsmenu == false && question && ready && questions[gamecounter].category_id == 2"
-        @questionevent="nextquestion()"
+        @questionevent="nextquestion"
        />
 
     </div>

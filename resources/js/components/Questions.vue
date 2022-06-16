@@ -24,7 +24,7 @@ export default{
       <Answer v-for="(k, v) in this.question_data['answers']"
         :key = v
         :answer_data="k"
-        @click="$emit('questionevent')"
+        @click="$emit('questionevent', k['correct'], this.question_data['points'])"
       />
     </div>
 </div> 
@@ -34,11 +34,16 @@ export default{
   .questionContainer {
     display:flex;
     position: absolute;
-    bottom: 30vh;
+    bottom: -50vh;
     justify-content: center;
     align-items: flex-end;
     height: 15vh;
     width: 100vw;
     gap: 3vw;
+  }
+  .questionPage {
+    display:flex;
+    position: absolute;
+    top: 15vh;
   }
 </style>
