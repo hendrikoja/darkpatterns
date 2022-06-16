@@ -7,6 +7,7 @@
   import background from './background.js'
   import EndScreen from './EndScreen.vue'
   import Leaderboard from './Leaderboard.vue'
+  import sex from './sex.js'
 
   import axios from 'axios';
 </script>

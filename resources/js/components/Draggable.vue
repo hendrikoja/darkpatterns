@@ -9,9 +9,9 @@ function drop(e) {
 export default{
   setup() {
     const items = ref([
-      { id: 0, title: 'oh', list: 1, image: "../images/boss2.png" },
-      { id: 1, title: 'the', list: 1, image: "../images/boss2.png" },
-      { id: 2, title: 'misery', list: 1, image: "../images/boss2.png" },
+      { id: 0, title: 'oh', list: 1, image: "../images/30dayfreetrial.png" },
+      { id: 1, title: 'the', list: 1, image: "../images/adidas.png" },
+      { id: 2, title: 'misery', list: 1, image: "../images/1000.png" },
     ])
     const getList = (list) => {
       return items.value.filter((item) => item.list == list)
@@ -67,13 +67,14 @@ document.body.addEventListener('drop',drop,true);
     @dragenter.prevent
   >
     <div
-      class="drag-el2"
+      class="drag-el2 scale"
       v-for="item in getList(2)"
       :key="item.title"
       draggable="true"
       @dragstart="startDrag($event, item)"
     >
       <img :src = "item.image" class="scale2">
+      
     </div>
   </div>
 </div>
