@@ -20,19 +20,34 @@ module.exports = {
       settingsfunc() {
         this.settingsmenu = !this.settingsmenu;
       },
+      nextfeedback() {
+        this.story = true;
+        this.feedback = false;
+        this.question = false;
+      },
       nextstory() {
         this.story = false;
+        this.feedback = false;
         this.question = true;
       },
-      nextquestion(correct, points) {
+      nextfeedback() {
         this.gamecounter++;
+
         this.story = true;
         this.question = false;
-        console.log("POINT STUFF", correct, points)
+        this.feedback = false;
+      },
+      nextquestion(correct, points) {
         if (correct) {
+          this.correct_answer = true;
           this.points += points;
+        } else {
+          this.correct_answer = false;
         }
-        console.log(this.gamecounter)
+
+        this.story = false;
+        this.feedback = true;
+        this.question = false;
       },
       console() {
         console.log(this.file)

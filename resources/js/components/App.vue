@@ -1,5 +1,6 @@
 <script setup>
   import Story from './Story.vue'
+  import Feedback from './Feedback.vue'
   import Questions from './Questions.vue'
   import Openingscreen from './Openingscreen.vue'
   import Settings from './Settings.vue'
@@ -34,8 +35,13 @@
         settingsmenu: false,
         story: false,
         gamestarted: false,
-        gamecounter: 0,
         question: false,
+        //bossi tagasiside ekraan or some shit go fuck yourself
+        feedback: false,
+        
+        correct_answer: false,
+
+        gamecounter: 0,
         file: "../../assets/Testmusic.mp3",
         points: 0,
         questions: null,
@@ -96,6 +102,13 @@
         v-if="settingsmenu == false && question && questions[gamecounter].category_id == 1"
         @questionevent="nextquestion"
         :question_data="questions[gamecounter]"
+      />
+
+      <Feedback
+        v-if="feedback && settingsmenu == false"
+        @storyevent="nextfeedback()"
+        :story_data="questions[gamecounter]['boss_answers']"
+        :correct="correct_answer"
       />
 
       <Draggable 

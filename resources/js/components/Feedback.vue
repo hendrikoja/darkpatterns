@@ -12,13 +12,19 @@ export default{
     },
     mounted() {
        console.log("Story data: " + this.story_data);
+       console.log("correctimus" + this.correct)
     },
     methods: {
 
     },
     props: [
-        "story_data",
-    ]
+        "story_data", "correct"
+    ],
+    computed: {
+      responses: function() {
+        return this.correct ? this.story_data.filter(i => i.correct === 1) : this.story_data.filter(i => i.correct === 0);
+      }
+    }
 }
 </script>
 
@@ -30,7 +36,7 @@ export default{
   </div>
   <div class="storyContainer">
     <Storybubble
-      v-for="(k, v) in this.story_data"
+      v-for="(k, v) in this.responses"
       :key=k
       :prompt="k['description']"
       :order_number = v />
