@@ -437,28 +437,6 @@ html{
   top: 5%;
   width: auto;
 }
-.QuestionsChoice1 {
-  position: absolute;
-  width: 25vw;
-  height: 25vh;
-  top: 70%;
-  left: 20%;
-}
-.QuestionsChoice2 {
-  position: absolute;
-  width: 25vw;
-  height: 25vh;
-  top: 70%;
-  right: 20%;
-}
-.QuestionsTextbubble {
-  position:absolute;
-  width: 94vw;
-  height: 30vh;
-  top: 8%;
-  border-radius: 100px;
-}
-
 
 .💄 {
   position: relative;
