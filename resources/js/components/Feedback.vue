@@ -10,10 +10,6 @@ export default{
             rand_story_data: "",
         }
     },
-    mounted() {
-       console.log("Story data: " + this.story_data);
-       console.log("correctimus" + this.correct)
-    },
     methods: {
 
     },
@@ -43,3 +39,48 @@ export default{
   </div>
 </div> 
 </template>
+
+<style scoped>
+  .bounce-enter-active {
+    animation: bounce-in 0.5s;
+  }
+  .bounce-leave-active {
+    animation: bounce-in 0.5s reverse;
+  }
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.25);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+.next{
+  display: flex;
+  background: linear-gradient(to right, #040404, #0d024e);
+  border-color: yellow;
+  border-radius: 9px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2rem;
+  width: 20vw;
+  height: 6vh;
+  font-size: 1.5vw;
+  cursor: pointer;
+  position: absolute;
+  top: 72%;
+  left: 67.5%;
+}
+.storyContainer {
+  display:flex;
+  flex-direction: column;
+  gap: 1vh;
+  position: absolute;
+  top: 10vh;
+}
+</style>
