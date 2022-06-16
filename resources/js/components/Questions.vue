@@ -6,8 +6,6 @@
 export default{
     data(){
         return {
-            count: 0,
-            answered: false
         }
     },
     mixins: [
@@ -29,7 +27,6 @@ export default{
         @click="$emit('questionevent')"
       />
     </div>
-  <button v-if="answered" name="Answer" class="answerbutton" @click="$emit('questionevent')">Answer</button>
 </div> 
 </template>
 
@@ -37,11 +34,11 @@ export default{
   .questionContainer {
     display:flex;
     position: absolute;
-    bottom: 1vh;
+    bottom: 30vh;
     justify-content: center;
     align-items: flex-end;
     height: 15vh;
     width: 100vw;
-    gap: 1vw;
+    gap: 3vw;
   }
 </style>

@@ -19,7 +19,7 @@ export default{
 
 <template>
     <div class="QuestionsChoice1">
-        <img v-bind:src="answer_data['image_loc']" class="scale" tabindex="1">
+        <img v-bind:src="answer_data['image_loc']" class="scale">
     </div>
 </template>
 
@@ -31,7 +31,7 @@ export default{
     border: 2px solid #222;
     }
 
-    .QuestionsChoice1:focus{
-    box-shadow: 0 0 2px 2px #000;
+    .QuestionsChoice1:hover{
+    box-shadow: 0 0 2px 2px greenyellow;
     }
 </style>

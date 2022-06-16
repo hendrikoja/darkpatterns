@@ -43,9 +43,6 @@ module.exports = {
       next() {
         this.gamecounter++;
       },
-      answeredfunc() {
-        this.answered = !this.answered;
-      },
   },
 }
 </script>
