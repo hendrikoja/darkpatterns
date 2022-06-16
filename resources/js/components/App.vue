@@ -8,11 +8,7 @@
   import background from './background.js'
   import EndScreen from './EndScreen.vue'
   import Leaderboard from './Leaderboard.vue'
-<<<<<<< HEAD
-  import sex from './sex.js'
-=======
   import Points from './UI/Points.vue'
->>>>>>> c891f5f038e2c6945e0768244d33a9b95656d899
 
   import axios from 'axios';
 </script>
