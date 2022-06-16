@@ -28,7 +28,7 @@ module.exports = {
         this.gamecounter++;
         this.story = true;
         this.question = false;
-        console.log(correct, points)
+        console.log("POINT STUFF", correct, points)
         if (correct) {
           this.points += points;
         }
