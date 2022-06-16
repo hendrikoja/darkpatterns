@@ -82,7 +82,6 @@
     </div>
 
     <button class="settings" @click="settingsfunc()"></button>
-
     <Openingscreen v-if="gamestarted == false && settingsmenu == false"
       @openingevent="userdatabase()"
       @usernameChange="usernameChange($event)"
@@ -122,7 +121,7 @@
 
 
 
-    <EndScreen v-if="gamecounter == 3 && settingsmenu == false" @Endevent="next()" />
+    <EndScreen v-if="gamecounter == 3 && settingsmenu == false" @Endevent="next()" :score="points" />
 
     <Leaderboard v-if="gamecounter == 4 && settingsmenu == false" />
 
