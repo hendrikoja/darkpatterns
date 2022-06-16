@@ -69,8 +69,8 @@
 <template>
 
   <main>
-    <div class="topBar">
-      <Points 
+    <div class="topBar" v-if="gamestarted">
+      <Points
         :points="this.points"
       />
     </div>

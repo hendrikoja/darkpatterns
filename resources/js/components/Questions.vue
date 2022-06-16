@@ -44,6 +44,6 @@ export default{
   .questionPage {
     display:flex;
     position: absolute;
-    top: 10vh;
+    top: 15vh;
   }
 </style>

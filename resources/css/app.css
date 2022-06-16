@@ -181,12 +181,6 @@ canvas
   object-fit: fill;
 }
 
-.scale2 {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
-
 *,
 *:before,
 *:after {
@@ -220,8 +214,11 @@ a {
   display: flex;
   background-color: white;
   position: absolute;
-  width: 30vw;
-  height: 7vh;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+  width: 15vw;
+  height: 10vh;
   top: -0.5vw;
   left: -1vh;
   border-radius: 10px;
