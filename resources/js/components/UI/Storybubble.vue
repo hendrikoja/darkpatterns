@@ -24,7 +24,7 @@ export default{
   <Transition name="bounce">
   <div class="storybubbles" v-if="!hidden">
       <div class="storybosspics">
-        <img src="../../../static/boss2.png" class="storybosspng">
+        <img src="../../../static/boss.png" class="storybosspng">
       </div>
       <div class="bossitekst">
         <p>{{prompt}}</p>
