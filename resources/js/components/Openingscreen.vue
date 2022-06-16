@@ -33,3 +33,99 @@ export default{
   </div>
 </div>
 </template>
+
+<style scoped>
+.button1 {
+  background-color: rgba(4, 22, 99, 0.87);
+  border-color: yellow;
+  border-radius: 9px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2rem;
+  width: 10vw;
+  height: 5vh;
+  font-size: 1.5vw;
+  cursor: pointer;
+  top:95%;
+  left: 90%;
+  position: absolute;
+}
+.user {
+  background: linear-gradient(to right, #040404, #0d024e);
+  border-color: yellow;
+  border-radius: 9px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2rem;
+  width: 10vw;
+  height: 5vh;
+  font-size: 1.5vw;
+  cursor: pointer;
+  top:63%;
+  left: 45%;
+  position: absolute;
+}
+.enteruser {
+  background: linear-gradient(to right, #040404, #0d024e);
+  border-color: yellow;
+  border-radius: 9px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2rem;
+  width: 10vw;
+  height: 4vh;
+  font-size: 1.5vw;
+  cursor: pointer;
+  top:72%;
+  left: 45%;
+  position: absolute;
+}
+.mainmenutextbubble {
+  width: 70vw;
+  height: 40vh;
+  top: 15%;
+  left: 14.8%;
+  position: absolute;
+  top: 10%;
+  z-index: -1;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
+}
+.mainmenuusernameplay{
+  width: 15vw;
+  height: 20vh;
+  left: 42.5%;
+  top: 60%;
+  position: absolute;
+  background-color: white;
+  border-radius: 25px;
+  z-index: -1;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
+}
+.startScreenIntroText {
+  padding-right: 1vh;
+  padding-left: 1vh;
+  text-align: justify;
+  line-height: 3vh;
+  color:rgb(0, 0, 0);
+  font-size: 2vh;
+  overflow: hidden;
+}
+.gameTitle {
+  text-align:center;
+  padding-top: 1vh;
+  font-size: 4vh;
+  font-weight: bold;
+}
+</style>
