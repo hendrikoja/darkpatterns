@@ -72,8 +72,8 @@ document.body.addEventListener('drop',drop,true);
     </div>
   </div>
 </div>
-<div class="cooldrop">
-  <img src="../../static/isoef.jpg">
+<div>
+  <img src="../../static/isoef.jpg" class="cooldrop">
 </div>
 <div class="interactivegame">
   <div

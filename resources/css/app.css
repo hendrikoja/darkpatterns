@@ -97,10 +97,10 @@ html{
 }
 .cooldrop {
   position: absolute;
-  top: 5%;
+  top: 4.5%;
   left: 17%;
-  width: 90vw;
-  height: 70vw;
+  width: 60vw;
+  height: 45vw;
   z-index: -1;
 
 }
