@@ -46,7 +46,9 @@
         gamecounter: 0,
         file: "../../assets/Testmusic.mp3",
         points: 0,
+        correct_answers: 0,
         questions: null,
+        start_date: null,
         leaderboard: null,
         //Kas küsimused on ABst käes
         ready: false,
@@ -64,14 +66,34 @@
           this.ready = true;
           console.log(this.questions);
         });
-      axios
-      .get("/leaderboard")
-      .then(
-        response =>{
+    },
+    methods: {
+      submitUserScores() {
+        if (this.username) {
+          axios
+          .post("/addtest/add", {
+            username: this.username,
+            start: this.start_date,
+            stop: new Date(),
+            points: this.points,
+            correct_answers: this.correct_answers,
+          })
+          console.log("Adding user to db");
+        } else {
+          console.log("No username, not adding");
+        }
+      },
+      getLeaderboard() {
+        console.log("Getting leaderboard");
+        var leaderboard = null;
+        axios
+        .get("/leaderboard")
+        .then(
+          response =>{
           (this.leaderboard = response["data"]);
-          this.ready = true;
-          console.log(this.leaderboard);
-          });
+        });
+        return this.leaderboard;
+      },
     },
     computed: {
       question_amount: {
@@ -130,11 +152,16 @@
     </div>
     <!-- Mängu loop lõpeb -->
     <div v-else>
-      <EndScreen v-if="gamestarted && !leaderboard_visible" @Endevent="next()" :score="points" />
+      <EndScreen
+        v-if="gamestarted && !leaderboard_visible"
+        @Endevent="next()"
+        @databaseEvent="submitUserScores()"
+        :score="points"
+      />
 
       <Leaderboard 
         v-if="leaderboard_visible"
-        :leaderboard_data="leaderboard"
+        :leaderboard_data="getLeaderboard()"
         :question_amount="question_amount"
       />
     </div>

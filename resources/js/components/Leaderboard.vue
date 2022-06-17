@@ -26,9 +26,6 @@ export default{
 			}
         }
     },
-    mixins: [
-      require('./MethodsVue.vue')
-    ],
     props:["leaderboard_data", "question_amount"],
 }
 </script>

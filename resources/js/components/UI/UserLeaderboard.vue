@@ -29,9 +29,11 @@ export default{
             get() {
                 var start_date = new Date(this.user_data.start);
                 var stop_date = new Date(this.user_data.stop);
+                var calculated_date = new Date(stop_date - start_date);
+                var time_string = calculated_date.getMinutes() + "m " + calculated_date.getSeconds() + "s";
                 console.log(start_date);
                 console.log(stop_date);
-                return this.user_data.start ? Math.floor((stop_date - start_date) / (1000 * 60 * 60)) : "Time";
+                return this.user_data.start ? time_string : "Time";
             }
         },
         question_or_header: {

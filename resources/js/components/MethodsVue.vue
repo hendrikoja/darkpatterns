@@ -15,6 +15,7 @@ module.exports = {
           } else {
             return;
           }
+          this.start_date = new Date();
         /*}*/
       },
       settingsfunc() {
@@ -41,6 +42,7 @@ module.exports = {
         if (correct) {
           this.correct_answer = true;
           this.points += points;
+          this.correct_answers += 1;
         } else {
           this.correct_answer = false;
         }

@@ -14,6 +14,7 @@ class UserController extends Controller
         $user->start = date("Y-m-d H:i:s", strtotime($request->start));
         $user->stop = date("Y-m-d H:i:s", strtotime($request->stop));
         $user->points = $request->points;
+        $user->correct_answers = $request->correct_answers;
 
         $saved = $user->save();
 

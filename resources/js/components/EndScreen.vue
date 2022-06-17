@@ -4,6 +4,9 @@ export default{
         return {
         }
     },
+    mounted() {
+      this.$emit('databaseEvent');
+    },
     props:["score", "q_amount"],
 }
 </script>
