@@ -1,54 +1,54 @@
 <script setup>
   import LeaderboardUI from './UI/LeaderboardUI.vue'
+  import UserLeaderboard from './UI/UserLeaderboard.vue'
 </script>
 
 
 <script>
 export default{
+	components: {
+		LeaderboardUI,
+		UserLeaderboard,
+    },
     data(){
         return {
+			headernames: {
+				username:"Username",
+				points: "Score",
+				time: "Time",
+				questions_correct: "Questions"
+			},
+			testdata: {
+				username:"Urmas",
+				points: "1500",
+				time: "1h 30min",
+				questions_correct: "3/5"
+			}
         }
     },
     mixins: [
       require('./MethodsVue.vue')
     ],
-    props:["leaderboard_data"],
+    props:["leaderboard_data", "question_amount"],
 }
 </script>
 
 <template>
 <div class="Leaderboard2">
-    <img class="scale" src="../../static/interactivescreenbig.png">
 	<div class="container">
-		<div class="leaderboard">
-			<div class="head">
-				<i class="fas fa-crown"></i>
-				<h1>Top Scores</h1>
-			</div>
-			<div class="body">
-				<ol>
-					<li>
-						<mark>Andrus Ansip</mark>
-						<small>948</small>
-					</li>
-					<li>
-						<mark>Peeter Parkija</mark>
-						<small>750</small>
-					</li>
-					<li>
-						<mark>Mari Maasikas</mark>
-						<small>684</small>
-					</li>
-					<li>
-						<mark>Ämber Höörd</mark>
-						<small>335</small>
-					</li>
-					<li>
-						<mark>Egon Ubina</mark>
-						<small>-1000</small>
-					</li>
-				</ol>
-			</div>
+		<div class="leaderboardHead">
+			<UserLeaderboard 
+				:place="-1"
+				:user_data="headernames"
+			/>
+		</div>
+		<div class="scores">
+			<UserLeaderboard
+				v-for="(k, v) in this.leaderboard_data"
+				:key=k
+				:user_data="k"
+				:place = v
+				:question_amount = "question_amount"/> 
 		</div>
 	</div>
 </div>
@@ -69,8 +69,9 @@ export default{
   height: 80vh;
   text-align: center;
   color:rgb(0, 0, 0);
+  background-color: white;
+  border-radius: 25px;
   font-size: 5vh;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .container {
 	width: 100vh;
@@ -79,24 +80,27 @@ export default{
   top: 0%;
   left: 0%;
 }
-.leaderboard {
-	background: linear-gradient(to bottom, #3a404d, #181c26);
-}
-
-.leaderboard .head {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.leaderboardHead {
 	padding: 2vh 1.6vh;
-	color: snow;
-	font-size: 5vh;
-	text-align: center;
+	font-size: 3vh;
+	display: flex;
+	justify-content: center;
+    text-align: center;
+	font-family: "Roboto", sans-serif;
 }
 .leaderboard .head h1 {
 	display: inline-block;
 	margin-left: 1vh;
 }
 
-.leaderboard .body {
+.scores{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1vh;
 	color: rgb(3, 3, 3);
-	font-size: 4vh;
+	font-size: 3vh;
 }
 .leaderboard ol {
 	counter-reset: number;
