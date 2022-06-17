@@ -1,3 +1,8 @@
+<script setup>
+  import LeaderboardUI from './UI/LeaderboardUI.vue'
+</script>
+
+
 <script>
 export default{
     data(){
@@ -47,10 +52,10 @@ export default{
 		</div>
 	</div>
 </div>
-<div class="leaderoardPage">
-    <div class="leaderboardContainer">
-<p>{{this.story_data}}</p>
-    </div>
+<div class="leaderboardPage">
+	<LeaderboardUI
+		:game_scores="this.leaderboard_data"
+	 />
 </div>
 </template>
 

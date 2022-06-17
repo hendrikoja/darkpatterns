@@ -45,6 +45,7 @@
         file: "../../assets/Testmusic.mp3",
         points: 0,
         questions: null,
+        leaderboard: null,
         //Kas küsimused on ABst käes
         ready: false,
       }
@@ -65,9 +66,9 @@
       .get("/leaderboard")
       .then(
         response =>{
-          (this.questions = response["data"]);
+          (this.leaderboard = response["data"]);
           this.ready = true;
-          console.log(this.questions);
+          console.log(this.leaderboard);
           });
     },
     computed: {
@@ -134,7 +135,7 @@
 
     <Leaderboard 
     v-if="gamecounter == 4 && settingsmenu == false"
-    :leaderboard_data="users[1]" />
+    :leaderboard_data="leaderboard" />
 
   </main>
 
