@@ -119,6 +119,7 @@
         :correct="correct_answer"
       />
 
+
       <Draggable 
         v-if="settingsmenu == false && question && ready && questions[gamecounter].category_id == 2"
         @questionevent="nextquestion"
@@ -130,10 +131,10 @@
 
 
 
-    <EndScreen v-if="gamecounter == 3 && settingsmenu == false" @Endevent="next()" :score="points" />
+    <EndScreen v-if="gamecounter == 4 && settingsmenu == false" @Endevent="next()" :score="points" />
 
     <Leaderboard 
-    v-if="gamecounter == 4 && settingsmenu == false"
+    v-if="gamecounter == 5 && settingsmenu == false"
     :leaderboard_data="leaderboard" />
 
   </main>
