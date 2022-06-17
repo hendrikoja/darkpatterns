@@ -46,6 +46,15 @@ export default{
         const dropzone = document.getElementById("dropzone" +i)
         dropzone.dataset.draglimit = "true"
       }
+      for(let i=1; i<8; i++){
+        var funky = getList(i)
+        for(var g = 0; g < funky.length; g++){
+          for(let e=0; e<6; e++){
+            const item = items.value.find((item) => item.id == e)
+            if(item != null){item.list = 1}
+          }
+        }
+      }
     }
     return {
       getList,

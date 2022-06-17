@@ -15377,6 +15377,26 @@ function drop(e) {
         var dropzone = document.getElementById("dropzone" + i);
         dropzone.dataset.draglimit = "true";
       }
+
+      for (var _i = 1; _i < 8; _i++) {
+        var funky = getList(_i);
+
+        for (var g = 0; g < funky.length; g++) {
+          var _loop = function _loop(e) {
+            var item = items.value.find(function (item) {
+              return item.id == e;
+            });
+
+            if (item != null) {
+              item.list = 1;
+            }
+          };
+
+          for (var e = 0; e < 6; e++) {
+            _loop(e);
+          }
+        }
+      }
     };
 
     return {
