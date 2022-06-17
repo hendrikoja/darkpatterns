@@ -49,6 +49,7 @@
         correct_answers: 0,
         questions: null,
         start_date: null,
+        stop_date: null,
         leaderboard: null,
         //Kas küsimused on ABst käes
         ready: false,
@@ -69,12 +70,13 @@
     },
     methods: {
       submitUserScores() {
+        this.stop_date = new Date();
         if (this.username) {
           axios
           .post("/addtest/add", {
             username: this.username,
             start: this.start_date,
-            stop: new Date(),
+            stop: this.stop_date,
             points: this.points,
             correct_answers: this.correct_answers,
           })
@@ -157,6 +159,7 @@
         @Endevent="next()"
         @databaseEvent="submitUserScores()"
         :score="points"
+        :start_time="start_date"
       />
 
       <Leaderboard 
