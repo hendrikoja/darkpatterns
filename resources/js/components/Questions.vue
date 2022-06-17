@@ -33,13 +33,14 @@ export default{
 <style scoped>
   .questionContainer {
     display:flex;
+    flex-wrap: wrap;
     position: absolute;
-    bottom: -50vh;
+    bottom: -22vh;
     justify-content: center;
     align-items: flex-end;
     height: 15vh;
     width: 100vw;
-    gap: 3vw;
+    gap: 1vw;
   }
   .questionPage {
     display:flex;
