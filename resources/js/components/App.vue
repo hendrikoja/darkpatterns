@@ -121,6 +121,7 @@
         :correct="correct_answer"
       />
 
+
       <Draggable 
         v-if="settingsmenu == false && question && ready && questions[gamecounter].category_id == 2"
         @questionevent="nextquestion"
