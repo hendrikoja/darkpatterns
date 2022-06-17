@@ -98,7 +98,7 @@ html{
 .cooldrop {
   position: absolute;
   top: 4.5%;
-  left: 17%;
+  left: 16%;
   width: 60vw;
   height: 45vw;
   z-index: -1;
@@ -107,10 +107,12 @@ html{
 .drop-zone2 {
   position: relative;
   background-color: rgba(255,255,255);
-  width: 16.5vw;
-  height: 2.5vw;
+  border-color:rgb(0, 0, 0);
+  border-width: 0.1vw;
+  width: 17.5vw;
+  height: 2.1vw;
   top: 2.2vw;
-  left: 18.8vw;
+  left: 18.6vw;
 }
 .drag-el2 {
   background-color: rgba(255,255,255);
@@ -119,11 +121,11 @@ html{
 .drop-zone3 {
   position: relative;
   border-color:rgb(0, 0, 0);
-  border-width: 2px;
+  border-width: 0.1vw;
   background-color: rgba(255,255,255);
   width: 5vw;
   height: 5vw;
-  top: 31vw;
+  top: 30.8vw;
   left: 10vw;
 }
 .drag-el3 {
@@ -133,9 +135,11 @@ html{
 .drop-zone4 {
   position: relative;
   background-color: rgba(255,255,255);
-  width: 26.8vw;
+  border-color:rgb(0, 0, 0);
+  border-width: 0.1vw;
+  width: 28vw;
   height: 1.3vw;
-  top: 4.8vw;
+  top: 4.6vw;
   left: 12.8vw;
 }
 .drag-el4 {
@@ -144,10 +148,12 @@ html{
 
 .drop-zone5 {
   position: relative;
-  background-color: rgba(255,255,255);;
+  background-color: rgba(255,255,255);
+  border-color:rgb(0, 0, 0);
+  border-width: 0.1vw;
   width: 8.1vw;
   height: 1vw;
-  top: 24vw;
+  top: 23.7vw;
   left: 12vw;
 }
 .drag-el5 {
@@ -158,11 +164,11 @@ html{
   position: relative;
   background-color: rgba(255,255,255);
   border-color:rgb(0, 0, 0);
-  border-width: 2px;
-  width: 45vw;
+  border-width: 0.1vw;
+  width: 47vw;
   height: 4vw;
   top: 26.5vw;
-  left: 13.6vw;
+  left: 12.6vw;
 }
 .drag-el6 {
   background-color: rgba(255,255,255);
@@ -171,12 +177,12 @@ html{
 .drop-zone7 {
   position: relative;
   border-color:rgb(0, 0, 0);
-  border-width: 2px;
+  border-width: 0.1vw;
   background-color: rgba(255,255,255);
-  width: 10vw;
+  width: 11vw;
   height: 1.3vw;
-  top: 11.8vw;
-  left: 35.8vw;
+  top: 11.5vw;
+  left: 37.2vw;
 }
 .drag-el7 {
   background-color: rgba(255,255,255);
