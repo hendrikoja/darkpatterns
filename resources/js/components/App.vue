@@ -90,7 +90,7 @@
       />
     </div>
 
-    <button class="settings" @click="settingsfunc()"></button>
+   <!-- <button class="settings" @click="settingsfunc()"></button> -->
     <Openingscreen v-if="gamestarted == false && settingsmenu == false"
       @openingevent="userdatabase()"
       @usernameChange="usernameChange($event)"
