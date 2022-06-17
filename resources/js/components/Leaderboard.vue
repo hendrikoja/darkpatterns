@@ -1,5 +1,4 @@
 <script setup>
-  import LeaderboardUI from './UI/LeaderboardUI.vue'
   import UserLeaderboard from './UI/UserLeaderboard.vue'
 </script>
 
@@ -7,7 +6,6 @@
 <script>
 export default{
 	components: {
-		LeaderboardUI,
 		UserLeaderboard,
     },
     data(){
@@ -48,11 +46,6 @@ export default{
 				:question_amount = "question_amount"/> 
 		</div>
 	</div>
-</div>
-<div class="leaderboardPage">
-	<LeaderboardUI
-		:game_scores="this.leaderboard_data"
-	 />
 </div>
 </template>
 
