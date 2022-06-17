@@ -12,7 +12,7 @@ export default{
       funny: 0,
     }
   },
-  setup() {
+  setup() { /* crush javascripts balls*/
     const items = ref([
       { id: 0, list: 1, image: "../images/30dayfreetrial.png" },
       { id: 1, list: 1, image: "../images/adidas.png" },

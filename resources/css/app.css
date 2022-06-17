@@ -113,6 +113,7 @@ html{
   top: 14.25%;
   left: 28.5%;
   z-index: 0;
+  overflow: auto;
 }
 .drag-el2 {
   background-color: rgba(255,255,255);
@@ -128,6 +129,7 @@ html{
   top: 72%;
   left: 19.5%;
   z-index: 0;
+  overflow: auto;
 }
 .drag-el3 {
   background-color: rgba(255,255,255);
@@ -143,6 +145,7 @@ html{
   top: 19.25%;
   left: 23%;
   z-index: 0;
+  overflow: auto;
 }
 .drag-el4 {
   background-color: rgba(255,255,255);
@@ -158,6 +161,7 @@ html{
   top: 57.5%;
   left: 22.45%;
   z-index: 0;
+  overflow: auto;
 }
 .drag-el5 {
   background-color: rgba(255,255,255);
@@ -173,6 +177,7 @@ html{
   top: 63.5%;
   left: 22.75%;
   z-index: 0;
+  overflow: auto;
 }
 .drag-el6 {
   background-color: rgba(255,255,255);
@@ -188,6 +193,7 @@ html{
   top: 32.75%;
   left: 47%;
   z-index: 0;
+  overflow: auto;
 }
 .drag-el7 {
   background-color: rgba(255,255,255);
