@@ -101,88 +101,93 @@ html{
   left: 16%;
   width: 60vw;
   height: 45vw;
-  z-index: -1;
-
+  z-index: -2;
 }
 .drop-zone2 {
-  position: relative;
+  position: absolute;
   background-color: rgba(255,255,255);
   border-color:rgb(0, 0, 0);
   border-width: 0.1vw;
   width: 17.5vw;
   height: 2.1vw;
-  top: 2.2vw;
-  left: 18.6vw;
+  top: 14.25%;
+  left: 28.5%;
+  z-index: 0;
 }
 .drag-el2 {
   background-color: rgba(255,255,255);
 }
 
 .drop-zone3 {
-  position: relative;
+  position: absolute;
   border-color:rgb(0, 0, 0);
   border-width: 0.1vw;
   background-color: rgba(255,255,255);
   width: 5vw;
   height: 5vw;
-  top: 30.8vw;
-  left: 10vw;
+  top: 72%;
+  left: 19.5%;
+  z-index: 0;
 }
 .drag-el3 {
   background-color: rgba(255,255,255);
 }
 
 .drop-zone4 {
-  position: relative;
+  position: absolute;
   background-color: rgba(255,255,255);
   border-color:rgb(0, 0, 0);
   border-width: 0.1vw;
   width: 28vw;
   height: 1.3vw;
-  top: 4.6vw;
-  left: 12.8vw;
+  top: 19.25%;
+  left: 23%;
+  z-index: 0;
 }
 .drag-el4 {
   background-color: rgba(255,255,255);
 }
 
 .drop-zone5 {
-  position: relative;
+  position: absolute;
   background-color: rgba(255,255,255);
   border-color:rgb(0, 0, 0);
   border-width: 0.1vw;
   width: 8.1vw;
   height: 1vw;
-  top: 23.7vw;
-  left: 12vw;
+  top: 57.5%;
+  left: 22.45%;
+  z-index: 0;
 }
 .drag-el5 {
   background-color: rgba(255,255,255);
 }
 
 .drop-zone6 {
-  position: relative;
+  position: absolute;
   background-color: rgba(255,255,255);
   border-color:rgb(0, 0, 0);
   border-width: 0.1vw;
   width: 47vw;
   height: 4vw;
-  top: 26.5vw;
-  left: 12.6vw;
+  top: 63.5%;
+  left: 22.75%;
+  z-index: 0;
 }
 .drag-el6 {
   background-color: rgba(255,255,255);
 }
 
 .drop-zone7 {
-  position: relative;
+  position: absolute;
   border-color:rgb(0, 0, 0);
   border-width: 0.1vw;
   background-color: rgba(255,255,255);
   width: 11vw;
   height: 1.3vw;
-  top: 11.5vw;
-  left: 37.2vw;
+  top: 32.75%;
+  left: 47%;
+  z-index: 0;
 }
 .drag-el7 {
   background-color: rgba(255,255,255);
@@ -202,18 +207,13 @@ html{
   right: 0%;
   top: 0%;
 }
-.interactivegame {
-  position: absolute;
-  left: 10%;
-  top: 10%;
-}
 
 canvas
 {
   position:fixed;
   top:0px;
   left:0px;
-  z-index: -2;
+  z-index: -3;
 }
 
 .scale {

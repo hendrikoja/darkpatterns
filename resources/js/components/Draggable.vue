@@ -69,6 +69,7 @@ document.body.addEventListener('drop',drop,true);
 
 
 <template>
+<img src="../../static/isoef.jpg" class="cooldrop">
 <div class="menu">
   <div
     class="drop-zone"
@@ -89,9 +90,6 @@ document.body.addEventListener('drop',drop,true);
   </div>
 </div>
 <div>
-  <img src="../../static/isoef.jpg" class="cooldrop">
-</div>
-<div class="interactivegame">
   <div
     class="drop-zone2"
     @drop="onDrop($event, 2, 'dropzone2')"
@@ -108,11 +106,8 @@ document.body.addEventListener('drop',drop,true);
       @dragstart="startDrag($event, item)"
     >
       <img :src = "item.image" class="scale2">
-      
     </div>
   </div>
-</div>
-<div class="interactivegame">
   <div
     class="drop-zone3"
     @drop="onDrop($event, 3, 'dropzone3')"
@@ -131,8 +126,6 @@ document.body.addEventListener('drop',drop,true);
       <img :src = "item.image" class="scale2">
     </div>
   </div>
-</div>
-<div class="interactivegame">
   <div
     class="drop-zone4"
     @drop="onDrop($event, 4, 'dropzone4')"
@@ -151,8 +144,6 @@ document.body.addEventListener('drop',drop,true);
       <img :src = "item.image" class="scale2">
     </div>
   </div>
-</div>
-<div class="interactivegame">
   <div
     class="drop-zone5"
     @drop="onDrop($event, 5, 'dropzone5')"
@@ -171,8 +162,6 @@ document.body.addEventListener('drop',drop,true);
       <img :src = "item.image" class="scale2">
     </div>
   </div>
-</div>
-<div class="interactivegame">
   <div
     class="drop-zone6"
     @drop="onDrop($event, 6, 'dropzone6')"
@@ -191,8 +180,6 @@ document.body.addEventListener('drop',drop,true);
       <img :src = "item.image" class="scale2">
     </div>
   </div>
-</div>
-<div class="interactivegame">
   <div
     class="drop-zone7"
     @drop="onDrop($event, 7, 'dropzone7')"
