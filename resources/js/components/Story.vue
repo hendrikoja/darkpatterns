@@ -26,7 +26,7 @@ export default{
 <template>
 <div class="story">
   <div class="localisation">
-    <button class="next" @click="$emit('storyevent')">Answer</button>
+    <button class="next" @click="$emit('storyevent')">Next Question</button>
   </div>
   <div class="storyContainer">
     <Storybubble

@@ -13,6 +13,5 @@ export default{
 
 <template>
     <div class="leaderboardContainer">
-        <p>{{this.game_scores}}</p>
     </div>
 </template>
