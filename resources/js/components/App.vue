@@ -22,7 +22,8 @@
       Settings,
       Draggable,
       EndScreen,
-      Leaderboard
+      Leaderboard,
+      Points
     },
     mixins: [
       require('./MethodsVue.vue')
@@ -36,6 +37,7 @@
         story: false,
         gamestarted: false,
         question: false,
+        leaderboard_visible: false,
         //bossi tagasiside ekraan or some shit go fuck yourself
         feedback: false,
         
@@ -126,16 +128,15 @@
 
     </div>
     <!-- Mängu loop lõpeb -->
+    <div v-else>
+      <EndScreen v-if="gamestarted && !leaderboard_visible" @Endevent="next()" :score="points" />
 
-
-
-
-    <EndScreen v-if="gamecounter == 3 && settingsmenu == false" @Endevent="next()" :score="points" />
-
-    <Leaderboard 
-    v-if="gamecounter == 4 && settingsmenu == false"
-    :leaderboard_data="leaderboard" />
-
+      <Leaderboard 
+        v-if="leaderboard_visible"
+        :leaderboard_data="leaderboard"
+        :question_amount="question_amount"
+      />
+    </div>
   </main>
 
 </template>

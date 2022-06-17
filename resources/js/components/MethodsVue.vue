@@ -60,7 +60,7 @@ module.exports = {
         this.username = data;   
       },
       next() {
-        this.gamecounter++;
+        this.leaderboard_visible = true;
       },
   },
 }
