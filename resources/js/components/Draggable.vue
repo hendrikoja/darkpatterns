@@ -7,11 +7,19 @@ function drop(e) {
 }
 
 export default{
+  data(){
+    return{
+      funny: 0,
+    }
+  },
   setup() {
     const items = ref([
-      { id: 0, title: 'oh', list: 1, image: "../images/boss2.png" },
-      { id: 1, title: 'the', list: 1, image: "../images/boss2.png" },
-      { id: 2, title: 'misery', list: 1, image: "../images/boss2.png" },
+      { id: 0, list: 1, image: "../images/30dayfreetrial.png" },
+      { id: 1, list: 1, image: "../images/adidas.png" },
+      { id: 2, list: 1, image: "../images/1000.png"},
+      { id: 3, list: 1, image: "../images/mostpopularplan.png"},
+      { id: 4, list: 1, image: "../images/freeplan.png"},
+      { id: 5, list: 1, image: "../images/trqsted.png"},
     ])
     const getList = (list) => {
       return items.value.filter((item) => item.list == list)
@@ -22,10 +30,16 @@ export default{
       event.dataTransfer.effectAllowed = 'move'
       event.dataTransfer.setData('itemID', item.id)
     }
-    const onDrop = (event, list) => {
+    const onDrop = (event, list, ele) => {
+      var id = ele
+      const dropzone = document.getElementById(id)
+      var funny = dropzone.dataset.draglimit
+    if(funny != "false"){
+      dropzone.dataset.draglimit = "false"
       const itemID = event.dataTransfer.getData('itemID')
       const item = items.value.find((item) => item.id == itemID)
       item.list = list
+    }
     }
     return {
       getList,
@@ -42,9 +56,11 @@ document.body.addEventListener('drop',drop,true);
 <div class="menu">
   <div
     class="drop-zone"
-    @drop="onDrop($event, 1)"
+    @drop="onDrop($event, 1, 'dropzone1')"
     @dragover.prevent
     @dragenter.prevent
+    id="dropzone1"
+    data-draglimit = "true"
   >
     <div
       class="drag-el"
@@ -56,33 +72,38 @@ document.body.addEventListener('drop',drop,true);
     </div>
   </div>
 </div>
-<div class="cooldrop">
-  <img src="../../static/isoef.jpg">
+<div>
+  <img src="../../static/isoef.jpg" class="cooldrop">
 </div>
 <div class="interactivegame">
   <div
     class="drop-zone2"
-    @drop="onDrop($event, 2)"
+    @drop="onDrop($event, 2, 'dropzone2')"
     @dragover.prevent
     @dragenter.prevent
+    id="dropzone2"
+    data-draglimit = "true"
   >
     <div
-      class="drag-el2"
+      class="drag-el2 scale"
       v-for="item in getList(2)"
       :key="item.title"
       draggable="true"
       @dragstart="startDrag($event, item)"
     >
       <img :src = "item.image" class="scale2">
+      
     </div>
   </div>
 </div>
 <div class="interactivegame">
   <div
     class="drop-zone3"
-    @drop="onDrop($event, 3)"
+    @drop="onDrop($event, 3, 'dropzone3')"
     @dragover.prevent
     @dragenter.prevent
+    id="dropzone3"
+    data-draglimit = "true"
   >
     <div
       class="drag-el3"
@@ -98,13 +119,75 @@ document.body.addEventListener('drop',drop,true);
 <div class="interactivegame">
   <div
     class="drop-zone4"
-    @drop="onDrop($event, 4)"
+    @drop="onDrop($event, 4, 'dropzone4')"
     @dragover.prevent
     @dragenter.prevent
+    id="dropzone4"
+    data-draglimit = "true"
   >
     <div
       class="drag-el4"
       v-for="item in getList(4)"
+      :key="item.title"
+      draggable="true"
+      @dragstart="startDrag($event, item)"
+    >
+      <img :src = "item.image" class="scale2">
+    </div>
+  </div>
+</div>
+<div class="interactivegame">
+  <div
+    class="drop-zone5"
+    @drop="onDrop($event, 5, 'dropzone5')"
+    @dragover.prevent
+    @dragenter.prevent
+    id="dropzone5"
+    data-draglimit = "true"
+  >
+    <div
+      class="drag-el5"
+      v-for="item in getList(5)"
+      :key="item.title"
+      draggable="true"
+      @dragstart="startDrag($event, item)"
+    >
+      <img :src = "item.image" class="scale2">
+    </div>
+  </div>
+</div>
+<div class="interactivegame">
+  <div
+    class="drop-zone6"
+    @drop="onDrop($event, 6, 'dropzone6')"
+    @dragover.prevent
+    @dragenter.prevent
+    id="dropzone6"
+    data-draglimit = "true"
+  >
+    <div
+      class="drag-el6"
+      v-for="item in getList(6)"
+      :key="item.title"
+      draggable="true"
+      @dragstart="startDrag($event, item)"
+    >
+      <img :src = "item.image" class="scale2">
+    </div>
+  </div>
+</div>
+<div class="interactivegame">
+  <div
+    class="drop-zone7"
+    @drop="onDrop($event, 7, 'dropzone7')"
+    @dragover.prevent
+    @dragenter.prevent
+    id="dropzone7"
+    data-draglimit = "true"
+  >
+    <div
+      class="drag-el7"
+      v-for="item in getList(7)"
       :key="item.title"
       draggable="true"
       @dragstart="startDrag($event, item)"

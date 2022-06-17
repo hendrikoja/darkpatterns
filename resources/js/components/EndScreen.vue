@@ -1,56 +1,36 @@
 <script>
-
+export default{
+    data(){
+        return {
+        }
+    },
+    props:["score", "q_amount"],
+}
 </script>
 
 <template>
-<div class="💄">
-    <div class="😂">Congratulations! You got to the end</div>
-    <div class="🥺">Your score was (score) points. Good job!</div>
-    <img class="👨‍💼" src="../../static/bosssmiling.jpg">
-    <img src="../../static/interactivescreenbig.png">
+<div class="endContainer">
+    <p>Congratulations!</p>
+    <p>Score: {{score}}</p>
     <button class="🔘" @click="$emit('endevent')">Leaderboard</button> <!--Disainimeeskonna probleem :sunglasses:-->
     </div>
 </template>
 
 <style scoped>
-.💄 {
-  position: relative;
-  text-align: center;
-  color:rgb(0, 0, 0);
-  font-size: 5vh;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.👨‍💼 {
-  position: absolute;
-  width: 75vh;
-  height: 37vh;
-  top:27%;
-  left:30%;
-}
-
-
-.🥺 {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-.😂 {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.🔘 {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 5vh;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
+  .endContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    color:rgb(0, 0, 0);
+    background-color: white;
+    font-size: 5vh;
+    width: 60vw;
+    height: 60vh;
+    left: 15%;
+    top: 15%;
+    border-radius: 25px;
+    gap: 5vh;
+  }
 </style>
