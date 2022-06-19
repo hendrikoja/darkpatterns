@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2022 Hendrik Oja
+Copyright (c) 2022 Hendrik Oja, Kristo Aaslaid, Egon Ubina, Andrus Peegel, Christopher Tokko
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
