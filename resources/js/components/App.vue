@@ -108,8 +108,8 @@
 </script>
 
 <template>
+
   <main>
-    <body>
     <div class="topBar" v-if="gamestarted">
       <Points
         :points="this.points"
@@ -168,7 +168,6 @@
         :question_amount="question_amount"
       />
     </div>
-    </body>
   </main>
 
 </template>

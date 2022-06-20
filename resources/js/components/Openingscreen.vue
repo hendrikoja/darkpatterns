@@ -22,15 +22,15 @@ export default{
 <div class="Openingscreen">
   <div class="center">
     <button name="openscreen" class="button1" @click="countup()">{{count}}</button>
-    <div class="mainmenuusernameplay center">
-      <input class="user center" v-model="username" placeholder="Username" maxlength="14" @change="emitUsernameChange()">
-      <button class="enteruser center" @click="$emit('openingevent')">Start game</button>
-       </div>
+    <input class="user" v-model="username" placeholder="Username" maxlength="14" @change="emitUsernameChange()">
+    <button class="enteruser" @click="$emit('openingevent')">Start game</button>
     <div class="mainmenutextbubble">
         <h2 class="gameTitle">Dark Patterns</h2><br><p class="startScreenIntroText">Dark patterns are tricks used in websites and apps that make you do things that you didn’t mean to, like buying or signing up for something.<br>(Brignull, 2018)</p>
         <h2 class="gameTitle">The Game</h2><br><p class="startScreenIntroText">In the following game, you'll assume the role of an UX designer in a Fortune 500 company, where you're attempting to bring the company as much profit as possible by implementing dark patterns into your company's practices. You'll get points for making decisions which are good for the company, but bad for the user.</p>
     </div>
+    <div class="mainmenuusernameplay">
     </div>
+  </div>
 </div>
 </template>
 
@@ -59,13 +59,14 @@ export default{
   color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
-  display: flex;
+  display: inline-block;
   padding: 0.2rem;
   width: 10vw;
   height: 5vh;
   font-size: 1.5vw;
   cursor: pointer;
-  top:23%;
+  top:63%;
+  left: 45%;
   position: absolute;
 }
 .enteruser {
@@ -75,13 +76,14 @@ export default{
   color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
-  display: flex;
+  display: inline-block;
   padding: 0.2rem;
   width: 10vw;
   height: 4vh;
   font-size: 1.5vw;
   cursor: pointer;
   top:72%;
+  left: 45%;
   position: absolute;
 }
 .mainmenutextbubble {
@@ -101,6 +103,7 @@ export default{
 .mainmenuusernameplay{
   width: 15vw;
   height: 20vh;
+  left: 42.5%;
   top: 60%;
   position: absolute;
   background-color: white;
