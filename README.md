@@ -16,7 +16,6 @@ The game was made by Tallinn University students from the School of Digital Tech
 - Laravel 8.75
 - Vue.js 3.2.36
 - MariaDB 10.5.15
-- Ubuntu 16.04
 
 ## Authors
 
@@ -27,8 +26,14 @@ The game was made by Tallinn University students from the School of Digital Tech
 - Christopher Tokko
 
 ### Setup
-
-
+Get Laravel requirements (https://laravel.com/docs/9.x/deployment)
+Get Composer (https://getcomposer.org/Composer-Setup.exe)
+Clone repository
+Run composer install
+Copy the .env.example file to .env (cp .env.example .env)
+Edit the .env file to reflect your own database
+Run php artisan key:generate
+Run php artisan migrate
 
 ## License
 
