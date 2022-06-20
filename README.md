@@ -26,14 +26,14 @@ The game was made by Tallinn University students from the School of Digital Tech
 - Christopher Tokko
 
 ### Setup
-Get Laravel requirements (https://laravel.com/docs/9.x/deployment)
-Get Composer (https://getcomposer.org/Composer-Setup.exe)
-Clone repository
-Run composer install
-Copy the .env.example file to .env (cp .env.example .env)
-Edit the .env file to reflect your own database
-Run php artisan key:generate
-Run php artisan migrate
+Get Laravel requirements (https://laravel.com/docs/9.x/deployment)<br>
+Get Composer (https://getcomposer.org/Composer-Setup.exe)<br>
+Clone repository<br>
+Run composer install<br>
+Copy the .env.example file to .env (cp .env.example .env)<br>
+Edit the .env file to reflect your own database<br>
+Run php artisan key:generate<br>
+Run php artisan migrate<br>
 
 ## License
 
