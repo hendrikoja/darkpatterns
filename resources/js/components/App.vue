@@ -5,7 +5,7 @@
   import Openingscreen from './Openingscreen.vue'
   import Settings from './Settings.vue'
   import Draggable from './Draggable.vue'
-  import background from './background.js'
+  /*import background from './background.js'*/
   import EndScreen from './EndScreen.vue'
   import Leaderboard from './Leaderboard.vue'
   import Points from './UI/Points.vue'

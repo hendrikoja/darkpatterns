@@ -5,7 +5,7 @@
 }
 
 html {
-  background-color: rgba(0,0,0,0.75);
+  background-color: #0B0B45;
   background-size: 100% 100%;
   animation: gradient 180s infinite;
   overflow: hidden;
