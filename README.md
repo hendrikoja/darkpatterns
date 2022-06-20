@@ -6,7 +6,7 @@
 
 This game was made to raise awareness of dark patterns also known as deceptive design patterns. Dark Patterns are tricks used in websites and apps that make you do things that you didn't mean to, like buying or signing up for something. Our game will show how some of these dark patterns are used by UX designers. 
 
-Game link: 
+Game link: http://34.88.10.11/
 
 The game was made by Tallinn University students from the School of Digital Technologies Institute. This project was made for our summer practice.
 
