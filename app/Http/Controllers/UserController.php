@@ -9,6 +9,12 @@ class UserController extends Controller
 {
     public function store(Request $request)
     {
+        $username =  $request->username;
+        //User liiga pikk või puudub
+        if (strlen($username) > 14 || strlen($username) < 1) {
+            return;
+        }
+
         $user = new User;
         $user->username = $request->username;
         $user->start = date("Y-m-d H:i:s", strtotime($request->start));

@@ -16365,6 +16365,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render)
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var _static_trophy_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../static/trophy.png */ "./resources/static/trophy.png");
+
 
 
 var _withScopeId = function _withScopeId(n) {
@@ -16381,17 +16383,33 @@ var _hoisted_2 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
+var _hoisted_3 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Check leaderboard!", -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_4 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    "class": "leaderboardImage",
+    src: _static_trophy_png__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_5 = [_hoisted_3, _hoisted_4];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Score: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.score), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Speed: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.speedrun_score), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    "class": "🔘",
+    "class": "leaderboardButton",
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return _ctx.$emit('endevent');
     })
-  }, "Leaderboard"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Disainimeeskonna probleem :sunglasses:")]);
+  }, _hoisted_5), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Disainimeeskonna probleem :sunglasses:")]);
 }
 
 /***/ }),
@@ -17558,7 +17576,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.endContainer[data-v-1d08a3cc] {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    position: absolute;\r\n    text-align: center;\r\n    color:rgb(0, 0, 0);\r\n    background-color: white;\r\n    font-size: 5vh;\r\n    width: 60vw;\r\n    height: 60vh;\r\n    left: 15%;\r\n    top: 15%;\r\n    border-radius: 25px;\r\n    gap: 5vh;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.endContainer[data-v-1d08a3cc] {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    position: absolute;\r\n    text-align: center;\r\n    color:rgb(0, 0, 0);\r\n    background-color: white;\r\n    font-size: 5vh;\r\n    width: 60vw;\r\n    height: 60vh;\r\n    left: 15%;\r\n    top: 15%;\r\n    border-radius: 25px;\r\n    gap: 5vh;\n}\n.leaderboardButton[data-v-1d08a3cc] {\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    background-color: white;\r\n    padding-right: 5vw;\r\n    align-items: center;\r\n    font-size: 2vh;\n}\n.leaderboardImage[data-v-1d08a3cc] {\r\n    display: flex;\r\n    width: 5vw;\r\n    height: 5vh;\r\n    -o-object-fit: contain;\r\n       object-fit: contain;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -18074,6 +18092,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/settings.png?bc257c69c090a3cc4e877febdd106b22");
+
+/***/ }),
+
+/***/ "./resources/static/trophy.png":
+/*!*************************************!*\
+  !*** ./resources/static/trophy.png ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/trophy.png?57b44fd0b79491705e1bd263055657a8");
 
 /***/ }),
 

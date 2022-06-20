@@ -27,7 +27,7 @@ export default{
     <p>Congratulations!</p>
     <p>Score: {{score}}</p>
     <p>Speed: {{speedrun_score}}</p>
-    <button class="🔘" @click="$emit('endevent')">Leaderboard</button> <!--Disainimeeskonna probleem :sunglasses:-->
+    <button class="leaderboardButton" @click="$emit('endevent')"><p>Check leaderboard!</p><img class="leaderboardImage" src="../../static/trophy.png"></button> <!--Disainimeeskonna probleem :sunglasses:-->
     </div>
 </template>
 
@@ -47,5 +47,19 @@ export default{
     top: 15%;
     border-radius: 25px;
     gap: 5vh;
+  }
+  .leaderboardButton {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    padding-right: 5vw;
+    align-items: center;
+    font-size: 2vh;
+  }
+  .leaderboardImage {
+    display: flex;
+    width: 5vw;
+    height: 5vh;
+    object-fit: contain;
   }
 </style>
