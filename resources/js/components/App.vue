@@ -38,7 +38,7 @@
         gamestarted: false,
         question: false,
         leaderboard_visible: false,
-        //bossi tagasiside ekraan or some shit go fuck yourself
+        //bossi tagasiside ekraan
         feedback: false,
         
         correct_answer: false,
