@@ -72,7 +72,7 @@ export default{
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 .leaderboardHead {
-	padding: 2vh 1.6vh;
+	padding: 1vh 1.6vh;
 	font-size: 3vh;
 	display: flex;
 	justify-content: center;

@@ -24,7 +24,7 @@ class UserController extends Controller
     public function getLeaderboard(Request $request)
     {
         $users = User::orderBy("points", "desc")
-        -> take(10)
+        -> take(12)
         -> get();
 
         return response() -> json($users);
