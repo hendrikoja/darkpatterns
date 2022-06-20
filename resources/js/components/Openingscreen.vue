@@ -25,7 +25,7 @@ export default{
     <input class="user" v-model="username" placeholder="Username" maxlength="14" @change="emitUsernameChange()">
     <button class="enteruser" @click="$emit('openingevent')">Start game</button>
     <div class="mainmenutextbubble">
-        <h2 class="gameTitle">Dark Patterns</h2><br><p class="startScreenIntroText">A dark pattern is a user interface that has been carefully crafted to trick users into doing things, such as buying overpriced insurance with their purchase or signing up for recurring bills.</p>
+        <h2 class="gameTitle">Dark Patterns</h2><br><p class="startScreenIntroText">Dark patterns are tricks used in websites and apps that make you do things that you didn’t mean to, like buying or signing up for something.<br>(Brignull, 2018)</p>
         <h2 class="gameTitle">The Game</h2><br><p class="startScreenIntroText">In the following game, you'll assume the role of an UX designer in a Fortune 500 company, where you're attempting to bring the company as much profit as possible by implementing dark patterns into your company's practices. You'll get points for making decisions which are good for the company, but bad for the user.</p>
     </div>
     <div class="mainmenuusernameplay">
